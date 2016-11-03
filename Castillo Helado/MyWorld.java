@@ -18,18 +18,29 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
+        prepare();
     }
-    
+
     public void LluviaPinguino()
     {
         pinguino = new Pinguino();
         for(int cont=0;cont<5;cont++){
-        addObject(pinguino,Greenfoot.getRandomNumber(800),Greenfoot.getRandomNumber(50) );
+            addObject(pinguino,Greenfoot.getRandomNumber(800),Greenfoot.getRandomNumber(50) );
         }
     }
-    
+
     public void act()
     {
         LluviaPinguino();
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        ReyHelado reyhelado = new ReyHelado();
+        addObject(reyhelado,352,460);
     }
 }

@@ -15,5 +15,16 @@ public class ReyHelado extends Actor
     public void act() 
     {
         // Add your action code here.
+        mueve();
     }    
+    
+    public void mueve()
+    {
+         if(Greenfoot.isKeyDown("left")){
+           move(-3);
+       } 
+        if(Greenfoot.isKeyDown("right")){
+           move(3);
+       } 
+    }
 }
