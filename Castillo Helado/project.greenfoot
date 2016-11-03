@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.GifImage.superclass=
 class.Marceline.image=images.png
 class.Marceline.superclass=greenfoot.Actor
 class.MyWorld.image=bloggif_581adb9526455.jpeg
