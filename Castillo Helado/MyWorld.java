@@ -23,15 +23,23 @@ public class MyWorld extends World
 
     public void LluviaPinguino()
     {
+        int y=5;
+        int ypos=0;
         pinguino = new Pinguino();
         for(int cont=0;cont<5;cont++){
             addObject(pinguino,Greenfoot.getRandomNumber(800),Greenfoot.getRandomNumber(50) );
+            pinguino.setLocation(Greenfoot.getRandomNumber(800),ypos=ypos+y);
         }
     }
 
     public void act()
     {
-        LluviaPinguino();
+        int x;
+        pinguino = new Pinguino();
+        if (Greenfoot.getRandomNumber(500) < 10) {
+            x=Greenfoot.getRandomNumber(500);
+            this.addObject(pinguino,x,30);
+                    }
     }
 
     /**
