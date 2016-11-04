@@ -50,5 +50,7 @@ public class MyWorld extends World
     {
         ReyHelado reyhelado = new ReyHelado();
         addObject(reyhelado,352,460);
+        Marceline marceline = new Marceline();
+        addObject(marceline,655,231);
     }
 }
