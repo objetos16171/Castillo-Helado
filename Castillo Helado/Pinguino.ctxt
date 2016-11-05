@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=Pinguino
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pinguino\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pinguino\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Karolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ Escobar\ Chavez\ \r\n\ @version\ 4\ de\ Noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Pinguino\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ caida()
+comment2.text=Se\ establecio\ una\ imagen\ gif\ para\ simular\ la\ caida\ del\ pinguino\r\nse\ accede\ a\ los\ metodos\ del\ mundo\ usando\ una\ variable\ de\ tipo\ World\r\npara\ abrir\ una\ concidion\ en\ caso\ de\ que\ el\ objeto\ llegue\ a\ los\ \r\n\ limites\ de\ la\ altura\ quitar\ el\ objeto\ de\ su\ mismo\ tipo.\r\n\ y\ simular\ el\ descenso\ con\ la\ varible\ de\ instancia\ velocidadDeCaida.\r\n
 numComments=3
