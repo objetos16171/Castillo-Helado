@@ -9,7 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     private Pinguino pinguino;
-
+    private Counter contadorPinguinos;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,6 +19,8 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
+        contadorPinguinos = new Counter("pingüinos: ");
+        addObject(contadorPinguinos,631,27);
         prepare();
     }
         
@@ -41,7 +44,12 @@ public class MyWorld extends World
     {
         LluviaPinguino();           
     }
-
+    
+    public void incrementaPinguinos()
+    {
+        contadorPinguinos.add(1);
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -54,7 +62,6 @@ public class MyWorld extends World
         addObject(marceline,655,231);
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,340);
-        //plataforma.setLocation(123,340);
         Arcoiris arcoiris = new Arcoiris();
         addObject(arcoiris,191,99);
         arcoiris.setLocation(180,100);
@@ -64,5 +71,6 @@ public class MyWorld extends World
         arcoiris2.setLocation(183,92);
         removeObject(arcoiris2);
         arcoiris.setLocation(184,102);
+        
     }
 }

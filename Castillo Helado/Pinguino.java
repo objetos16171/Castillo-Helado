@@ -10,10 +10,12 @@ public class Pinguino extends Actor
 {
     private int velocidadCaida=5;
     private GifImage gifPinguino = new GifImage("pinguinoMejorado2.gif");
+    
     /**
      * Act - do whatever the Pinguino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
     public void act() 
     {
         caida();

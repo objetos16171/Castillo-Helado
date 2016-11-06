@@ -76,13 +76,13 @@ public class ReyHelado extends Actor
      */
     public void agarraPinguino()
     {
-
+        MyWorld mundo = (MyWorld)getWorld();
+       
         Actor Pinguino;
         Pinguino = getOneObjectAtOffset(0,0,Pinguino.class);
         if(Pinguino != null)
         {
-            World mundo;
-            mundo = getWorld();
+            mundo.incrementaPinguinos();
             mundo.removeObject(Pinguino);
         }
         
