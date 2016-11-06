@@ -55,5 +55,8 @@ public class MyWorld extends World
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,340);
         //plataforma.setLocation(123,340);
+        Arcoiris arcoiris = new Arcoiris();
+        addObject(arcoiris,191,99);
+        arcoiris.setLocation(180,100);
     }
 }
