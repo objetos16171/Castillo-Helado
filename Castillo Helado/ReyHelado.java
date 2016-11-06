@@ -3,18 +3,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class ReyHelado here.
  * 
- * @author Soto Avila Karolina, Jose Emmanuel Escobar Chavez
+ * @author Soto Avila Carolina, Jose Emmanuel Escobar Chavez
  * @version 4 de Noviembre del 2016
  */
 public class ReyHelado extends Actor
 {
+    private int velX = 2;
+    private int velY = 2;
+    private int ydireccion=460;
+    private int xdireccion=352;
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
+        ydireccion= ydireccion + velY*1;
+        xdireccion= xdireccion + velX*1;
+        setLocation(xdireccion,ydireccion);  
+        
         mueve();
         agarraPinguino();
     }    
@@ -25,12 +32,21 @@ public class ReyHelado extends Actor
     public void mueve()
     {
          if(Greenfoot.isKeyDown("left")){
-           move(-3);
+           velX = -3;
        } 
         if(Greenfoot.isKeyDown("right")){
-           move(3);
+           velX = 3;
        } 
+        if(Greenfoot.isKeyDown("up")){
+           velY = -3;
+       }  
+       if(ydireccion < 200){
+            velY = 3;
+            
+        }
     }
+    
+    
     
     /**
      * Este método nos ayudara para poder 

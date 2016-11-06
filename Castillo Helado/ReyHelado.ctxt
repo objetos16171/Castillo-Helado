@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ReyHelado
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ReyHelado\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Karolina,\ Jose\ Emmanuel\ Escobar\ Chavez\r\n\ @version\ 4\ de\ Noviembre\ del\ 2016\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ReyHelado\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Carolina,\ Jose\ Emmanuel\ Escobar\ Chavez\r\n\ @version\ 4\ de\ Noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ ReyHelado\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
