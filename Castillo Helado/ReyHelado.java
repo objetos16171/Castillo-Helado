@@ -12,6 +12,8 @@ public class ReyHelado extends Actor
     private int velY = 2;
     private int ydireccion=460;
     private int xdireccion=352;
+    private int ypdireccion=340;
+    private int xpdireccion=120;
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,10 +22,13 @@ public class ReyHelado extends Actor
     {
         ydireccion= ydireccion + velY*1;
         xdireccion= xdireccion + velX*1;
+        ypdireccion= ypdireccion + velY*1;
+        xpdireccion= xpdireccion + velX*1;
         setLocation(xdireccion,ydireccion);  
         
         mueve();
         agarraPinguino();
+        siguientePlataforma();
     }    
     
    /**
@@ -46,7 +51,15 @@ public class ReyHelado extends Actor
         }
     }
     
-    
+    public void siguientePlataforma(){
+        if(isTouching(plataforma.class)){
+            setLocation(xpdireccion,ypdireccion);
+        }
+        if(ydireccion < 100){
+            velY = 3;
+            
+        }
+    }
     
     /**
      * Este método nos ayudara para poder 
