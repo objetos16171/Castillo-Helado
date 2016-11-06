@@ -58,5 +58,11 @@ public class MyWorld extends World
         Arcoiris arcoiris = new Arcoiris();
         addObject(arcoiris,191,99);
         arcoiris.setLocation(180,100);
+        Arcoiris arcoiris2 = new Arcoiris();
+        addObject(arcoiris2,190,77);
+        arcoiris2.setLocation(181,80);
+        arcoiris2.setLocation(183,92);
+        removeObject(arcoiris2);
+        arcoiris.setLocation(184,102);
     }
 }
