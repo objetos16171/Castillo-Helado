@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class ReyHelado here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Karolina, Jose Emmanuel Escobar Chavez
+ * @version 4 de Noviembre del 2016
  */
 public class ReyHelado extends Actor
 {
@@ -16,8 +16,12 @@ public class ReyHelado extends Actor
     {
         // Add your action code here.
         mueve();
+        agarraPinguino();
     }    
     
+   /**
+    * Mueve al ReyHelado con las teclas izquierda y derecha
+    */
     public void mueve()
     {
          if(Greenfoot.isKeyDown("left")){
@@ -26,5 +30,25 @@ public class ReyHelado extends Actor
         if(Greenfoot.isKeyDown("right")){
            move(3);
        } 
+    }
+    
+    /**
+     * Este método nos ayudara para poder 
+     * agarrar pinguinos que van cayendo del cielo 
+     * usa el metodo getOneObjectAtOffset usando como de referencia la
+     * posicion de este mismo objeto accediendo al mundo para eliminarlo.
+     */
+    public void agarraPinguino()
+    {
+
+        Actor Pinguino;
+        Pinguino = getOneObjectAtOffset(0,0,Pinguino.class);
+        if(Pinguino != null)
+        {
+            World mundo;
+            mundo = getWorld();
+            mundo.removeObject(Pinguino);
+        }
+        
     }
 }
