@@ -8,12 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ReyHelado extends Actor
 {
-    private int velX = 2;
-    private int velY = 2;
+    private int velX;
+    private int velY;
     private int ydireccion=460;
     private int xdireccion=352;
-    private int ypdireccion=340;
-    private int xpdireccion=120;
+    private int velXp;
+    private int velYp;
+    private int ypdireccion=338;
+    private int xpdireccion=118;
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,8 +24,8 @@ public class ReyHelado extends Actor
     {
         ydireccion= ydireccion + velY*1;
         xdireccion= xdireccion + velX*1;
-        ypdireccion= ypdireccion + velY*1;
-        xpdireccion= xpdireccion + velX*1;
+        ypdireccion= ypdireccion + velYp*1;
+        xpdireccion= xpdireccion + velXp*1;
         setLocation(xdireccion,ydireccion);  
         
         mueve();
@@ -47,7 +49,9 @@ public class ReyHelado extends Actor
        }  
        if(ydireccion < 200){
             velY = 3;
-            
+        }
+       if(ydireccion > 500){
+            velY=-3;
         }
     }
     
@@ -55,12 +59,22 @@ public class ReyHelado extends Actor
         if(isTouching(plataforma.class)){
             setLocation(xpdireccion,ypdireccion);
         }
-        if(ydireccion < 100){
-            velY = 3;
-            
+         if(Greenfoot.isKeyDown("left")){
+           velXp = -3;
+        } 
+        if(Greenfoot.isKeyDown("right")){
+           velXp = 3;
+        } 
+        if(Greenfoot.isKeyDown("up")){
+           velYp = -3;
+        }  
+        if(ydireccion < 200){
+            velYp = 3;
+        }
+        if(ydireccion > 500){
+            velYp =-3;
         }
     }
-    
     /**
      * Este método nos ayudara para poder 
      * agarrar pinguinos que van cayendo del cielo 
