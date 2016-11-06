@@ -53,7 +53,7 @@ public class MyWorld extends World
         Marceline marceline = new Marceline();
         addObject(marceline,655,231);
         plataforma plataforma = new plataforma();
-        addObject(plataforma,123,303);
-        plataforma.setLocation(123,340);
+        addObject(plataforma,120,340);
+        //plataforma.setLocation(123,340);
     }
 }
