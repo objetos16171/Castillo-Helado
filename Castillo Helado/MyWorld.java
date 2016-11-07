@@ -10,6 +10,7 @@ public class MyWorld extends World
 {
     private Pinguino pinguino;
     private Counter contadorPinguinos;
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     
     /**
      * Constructor for objects of class MyWorld.
@@ -40,15 +41,36 @@ public class MyWorld extends World
         }
     }
     
+    /** 
+     * Metodo que controla el inicio de la música 
+     */
+    public void started()
+    {
+       
+        musicaDeFondo.playLoop();
+        
+    }
+    
+    /**
+     * Metodo que detiene el fondo musical
+     */
+    public void stopped()
+    {
+        musicaDeFondo.stop();
+    }
+    
     public void act()
     {
         LluviaPinguino();           
+        
     }
     
     public void incrementaPinguinos()
     {
         contadorPinguinos.add(1);
     }
+    
+    
     
     /**
      * Prepare the world for the start of the program.
@@ -71,6 +93,7 @@ public class MyWorld extends World
         arcoiris2.setLocation(183,92);
         removeObject(arcoiris2);
         arcoiris.setLocation(184,102);
+        
         
     }
 }
