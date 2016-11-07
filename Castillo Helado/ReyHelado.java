@@ -12,6 +12,11 @@ public class ReyHelado extends Actor
     private int velY;
     private int ydireccion=460;
     private int xdireccion=352;
+    
+    private GreenfootSound agarrarPrincesa = new GreenfootSound ("amoAlasprincesas.wav");
+    private GreenfootSound reyHeladoGrito = new GreenfootSound ("reyHeladoGritando.wav");
+    private GreenfootSound agarraPinguino = new GreenfootSound ("quien te dijo que puedes Volar.wav");
+    
     //private int velXp;
     //private int velYp;
     //private int ypdireccion=338;
@@ -84,6 +89,14 @@ public class ReyHelado extends Actor
         {
             mundo.incrementaPinguinos();
             mundo.removeObject(Pinguino);
+            if(Greenfoot.getRandomNumber(5)<2){
+                Greenfoot.playSound("quien te dijo que puedes Volar.wav");
+            }
+            else
+            {
+            Greenfoot.playSound("reyHeladoGritando.wav");
+            }
+            
         }
         
     }

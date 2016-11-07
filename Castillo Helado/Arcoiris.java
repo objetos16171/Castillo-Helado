@@ -17,6 +17,15 @@ public class Arcoiris extends Actor
     {
         setImage(gifArcoiris.getCurrentImage());
         
+        ataca();
         // Add your action code here.
-    }    
+    }
+    
+    /**
+     * Metodo que se encargara de quitarle puntos de vida al rey helado 
+     */
+    public void ataca()
+    {
+        move(-10);
+    }
 }
