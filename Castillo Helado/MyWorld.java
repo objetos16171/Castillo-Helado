@@ -30,15 +30,34 @@ public class MyWorld extends World
     * y estableciendo un rango para generarlos a partir del ancho del mundo
     * y bajando a partir  del inicio del alto del mundo 
     */
-    public void LluviaPinguino()
+    public void lluviaPinguino()
     {
         int x;
         pinguino = new Pinguino();
         if (Greenfoot.getRandomNumber(getWidth()) < 10) 
         {
-            
             addObject(pinguino,Greenfoot.getRandomNumber(getWidth()),0);        
         }
+    }
+    
+    /**
+     * Este metodo aparecera princesas aleatoriamente en el mundo
+     */
+    public void aparecePrincesa()
+    {
+        if (Greenfoot.getRandomNumber(4000) < 5) 
+        {
+            addObject(new PrincesaDeFuego(),0 ,300);
+        }
+        if (Greenfoot.getRandomNumber(1000) < 5)
+        {
+            addObject(new princesaEsqueleto(),0 ,getHeight()/2);
+        }
+        if (Greenfoot.getRandomNumber(2000) < 10) 
+        {
+            addObject(new princesaFantasma(), 0 ,100);
+        }
+        
     }
     
     /** 
@@ -61,7 +80,8 @@ public class MyWorld extends World
     
     public void act()
     {
-        LluviaPinguino();           
+        lluviaPinguino();   
+        aparecePrincesa();
         
     }
     

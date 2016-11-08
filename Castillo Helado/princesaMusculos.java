@@ -14,6 +14,7 @@ public class princesaMusculos extends Princesa
      */
     public void act() 
     {
+        super.act();
         // Add your action code here.
     }    
 }

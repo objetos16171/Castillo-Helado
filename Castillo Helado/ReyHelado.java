@@ -32,10 +32,10 @@ public class ReyHelado extends Actor
         //ypdireccion= ypdireccion + velYp*1;
         //xpdireccion= xpdireccion + velXp*1;
         setLocation(xdireccion,ydireccion);  
-        
         mueve();
         agarraPinguino();
         siguientePlataforma();
+        agarraPrincesa();
     }    
     
    /**
@@ -97,6 +97,19 @@ public class ReyHelado extends Actor
             Greenfoot.playSound("reyHeladoGritando.wav");
             }
             
+        }
+        
+    }
+    
+    public void agarraPrincesa()
+    {     
+        if (isTouching(Princesa.class))
+        {
+            Princesa  princesa = (Princesa) this.getOneIntersectingObject(Princesa.class);
+            MyWorld mundo = getWorldOfType(MyWorld.class);
+            
+            Greenfoot.playSound("amoAlasprincesas.wav");
+            mundo.removeObject(princesa);
         }
         
     }
