@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class panDeCanela extends Actor
+public class panDeCanela extends DulceGente
 {
     /**
      * Act - do whatever the panDeCanela wants to do. This method is called whenever
