@@ -102,15 +102,14 @@ public class ReyHelado extends Actor
     }
     
     public void agarraPrincesa()
-    {     
-        if (isTouching(Princesa.class))
+    {   
+        World mundo =getWorld();
+        Actor Princesa;
+        Princesa = getOneObjectAtOffset(0,0,Princesa.class);
+        if(Princesa!=null)
         {
-            Princesa  princesa = (Princesa) this.getOneIntersectingObject(Princesa.class);
-            MyWorld mundo = getWorldOfType(MyWorld.class);
-            
-            Greenfoot.playSound("amoAlasprincesas.wav");
-            mundo.removeObject(princesa);
+           mundo.removeObject(Princesa);
+           Greenfoot.playSound("amoAlasprincesas.wav");
         }
-        
     }
 }

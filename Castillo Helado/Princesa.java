@@ -10,7 +10,6 @@ public abstract class Princesa extends Actor
 {
     
     private int velocidad=5;
-    private int vuelo=4;
     /**
      * Act - do whatever the Princesa wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,17 +19,14 @@ public abstract class Princesa extends Actor
 
         World mundo = getWorld();
 
-        setLocation(getX()+velocidad, getY()+vuelo);
+        setLocation(getX()+velocidad, getY());
         if(Greenfoot.getRandomNumber(10)<5)
         {
-            vuelo = vuelo * -1;
-            
-           
+            turn(+1);
         }
         else
         {
-            vuelo = vuelo * -1;
-            turn(-2);
+            turn(-3);
         }
         
         if (getX()>= mundo.getWidth() - 10) 

@@ -45,17 +45,24 @@ public class MyWorld extends World
      */
     public void aparecePrincesa()
     {
-        if (Greenfoot.getRandomNumber(4000) < 5) 
+        if (Greenfoot.getRandomNumber(10000) < 5) 
         {
             addObject(new PrincesaDeFuego(),0 ,300);
         }
-        if (Greenfoot.getRandomNumber(1000) < 5)
+        
+        if (Greenfoot.getRandomNumber(20000) < 5)
         {
-            addObject(new princesaEsqueleto(),0 ,getHeight()/2);
+            addObject(new princesaEsqueleto(),0 ,100);
         }
-        if (Greenfoot.getRandomNumber(2000) < 10) 
+        
+        if (Greenfoot.getRandomNumber(30000) < 5) 
         {
-            addObject(new princesaFantasma(), 0 ,100);
+            addObject(new princesaDeTrapo(), 0 ,400);
+        }
+        
+        if (Greenfoot.getRandomNumber(40000) < 5)
+        {
+            addObject(new princesaAngel(), 0 ,200);
         }
         
     }
@@ -91,7 +98,6 @@ public class MyWorld extends World
     }
     
     
-    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -100,20 +106,7 @@ public class MyWorld extends World
     {
         ReyHelado reyhelado = new ReyHelado();
         addObject(reyhelado,352,460);
-        Marceline marceline = new Marceline();
-        addObject(marceline,655,231);
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,340);
-        Arcoiris arcoiris = new Arcoiris();
-        addObject(arcoiris,191,99);
-        arcoiris.setLocation(180,100);
-        Arcoiris arcoiris2 = new Arcoiris();
-        addObject(arcoiris2,190,77);
-        arcoiris2.setLocation(181,80);
-        arcoiris2.setLocation(183,92);
-        removeObject(arcoiris2);
-        arcoiris.setLocation(184,102);
-        
-        
     }
 }
