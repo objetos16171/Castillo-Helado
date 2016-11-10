@@ -20,7 +20,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPinguinos = new Counter("pingüinos: ");
+        contadorPinguinos = new Counter("puntos: ");
         addObject(contadorPinguinos,631,27);
         prepare();
     }

@@ -8,40 +8,38 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ReyHelado extends Actor
 {
-    private int velX;
-    private int velY;
-    private int ydireccion=460;
-    private int xdireccion=352;
+    //private int velX;
+    //private int velY;
+    //private int ydireccion=460;
+    //private int xdireccion=352;
+    private int velocidad=5;
     
     private GreenfootSound agarrarPrincesa = new GreenfootSound ("amoAlasprincesas.wav");
     private GreenfootSound reyHeladoGrito = new GreenfootSound ("reyHeladoGritando.wav");
     private GreenfootSound agarraPinguino = new GreenfootSound ("quien te dijo que puedes Volar.wav");
     
-    //private int velXp;
-    //private int velYp;
-    //private int ypdireccion=338;
-    //private int xpdireccion=118;
+    
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        ydireccion= ydireccion + velY*1;
-        xdireccion= xdireccion + velX*1;
-        //ypdireccion= ypdireccion + velYp*1;
-        //xpdireccion= xpdireccion + velXp*1;
-        setLocation(xdireccion,ydireccion);  
-        mueve();
+        //ydireccion= ydireccion + velY*1;
+        //xdireccion= xdireccion + velX*1;
+        //setLocation(xdireccion,ydireccion);  
+        //mueve();
+        go();
+        DetectaTecla();
         agarraPinguino();
-        siguientePlataforma();
+        //siguientePlataforma();
         agarraPrincesa();
     }    
     
    /**
     * Mueve al ReyHelado con las teclas izquierda y derecha
     */
-    public void mueve()
+   /** public void mueve()
     {
          if(Greenfoot.isKeyDown("left")){
            velX = -3;
@@ -71,7 +69,7 @@ public class ReyHelado extends Actor
           }
           velY=0;
         }
-       }
+       }*/
     
     /**
      * Este método nos ayudara para poder 
@@ -112,4 +110,71 @@ public class ReyHelado extends Actor
            Greenfoot.playSound("amoAlasprincesas.wav");
         }
     }
+    
+     public void go()
+    {
+        if (Greenfoot.isKeyDown("right"))
+        {
+          //      setImage(rR);
+            setLocation(getX()+5, getY());
+        }
+        if (Greenfoot.isKeyDown("left"))
+        {
+           //    setImage(rL);
+            setLocation(getX()-5, getY());
+        }
+
+    }
+    
+    public void salta(){
+        setLocation(getX(),getY()-velocidad);
+    }
+    
+    public boolean onFloor()
+    {
+        Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(), plataforma.class);  
+        return below != null; 
+    }
+ 
+    public void checkFall()
+    {
+        if (onFloor())
+        {
+           Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(), plataforma.class);
+           setLocation(below.getX(), below.getY());
+
+        }
+        
+    }
+    
+    public void fall()
+    {
+        if (!onFloor())
+        {
+            World mundo=getWorld();
+            if(getY()<=mundo.getHeight()-20)
+            setLocation(getX(), getY() + velocidad);
+                    
+        }
+    }
+    
+    public boolean DetectaTecla(){
+        boolean TeclaPresionada = false;
+        if (Greenfoot.isKeyDown("space")) 
+        {
+            if (!TeclaPresionada) 
+            {
+              TeclaPresionada = true;
+              //System.out.println("Estoy presionando espacio");
+              salta();
+            }
+        }
+        else{
+          TeclaPresionada = false;
+          //System.out.println("No se presiono espacio");
+          fall();
+        }
+        return TeclaPresionada ;
+    }
+    
 }
