@@ -24,6 +24,7 @@ public class MyWorld extends World
         contadorPinguinos = new Counter("puntos: ");
         addObject(contadorPinguinos,631,27);
         contadorVidas = new Counter("vidas: ");
+        contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         prepare();
     }
@@ -97,9 +98,13 @@ public class MyWorld extends World
     
     public void incrementaPinguinos()
     {
-        contadorPinguinos.add(1);
+        contadorPinguinos.add(10);
     }
     
+    public void decrementaVidas()
+    {
+        contadorVidas.add(-1);
+    }
     
     /**
      * Prepare the world for the start of the program.
@@ -108,7 +113,7 @@ public class MyWorld extends World
     private void prepare()
     {
         ReyHelado reyhelado = new ReyHelado();
-        addObject(reyhelado,352,460);
+        addObject(reyhelado,352,450);
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,340);
         

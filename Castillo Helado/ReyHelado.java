@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ReyHelado extends Actor
 {
-    //private int velX;
-    //private int velY;
+    //private int velX = 2;
+    //private int velY = 2;
     //private int ydireccion=460;
     //private int xdireccion=352;
     private int velocidad=5;
@@ -27,49 +27,13 @@ public class ReyHelado extends Actor
     {
         //ydireccion= ydireccion + velY*1;
         //xdireccion= xdireccion + velX*1;
-        //setLocation(xdireccion,ydireccion);  
-        //mueve();
+        //setLocation(xdireccion,ydireccion); 
         go();
         DetectaTecla();
         agarraPinguino();
-        //siguientePlataforma();
         agarraPrincesa();
     }    
     
-   /**
-    * Mueve al ReyHelado con las teclas izquierda y derecha
-    */
-   /** public void mueve()
-    {
-         if(Greenfoot.isKeyDown("left")){
-           velX = -3;
-       } 
-        if(Greenfoot.isKeyDown("right")){
-           velX = 3;
-       } 
-        if(Greenfoot.isKeyDown("up")){
-           velY = -3;
-       }  
-       if(ydireccion < 200){
-            velY = 3;
-        }
-       if(ydireccion > 500){
-            velY=-3;
-        }
-    }
-    
-    public void siguientePlataforma(){
-        if(isTouching(plataforma.class)){
-           ydireccion=280;
-           if(xdireccion>700){
-            velX=-2;
-          }
-           if(xdireccion<2){
-            velX=2;
-          }
-          velY=0;
-        }
-       }*/
     
     /**
      * Este método nos ayudara para poder 
@@ -113,14 +77,14 @@ public class ReyHelado extends Actor
     
      public void go()
     {
+       
         if (Greenfoot.isKeyDown("right"))
         {
-          //      setImage(rR);
             setLocation(getX()+5, getY());
         }
         if (Greenfoot.isKeyDown("left"))
         {
-           //    setImage(rL);
+
             setLocation(getX()-5, getY());
         }
 
@@ -151,15 +115,15 @@ public class ReyHelado extends Actor
     {
         if (!onFloor())
         {
-            World mundo=getWorld();
+            MyWorld mundo=(MyWorld)getWorld();
             if(getY()<=mundo.getHeight()-20)
-            setLocation(getX(), getY() + velocidad);
-                    
+            setLocation(getX(), getY()+ velocidad);
         }
     }
     
     public boolean DetectaTecla(){
         boolean TeclaPresionada = false;
+        
         if (Greenfoot.isKeyDown("space")) 
         {
             if (!TeclaPresionada) 

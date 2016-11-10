@@ -1,22 +1,23 @@
-#Greenfoot project file
-editor.fx.0.height=700
+#Greenfoot properties
+#Thu Nov 10 14:24:23 CST 2016
+project.charset=windows-1252
+mainWindow.height=317
+readme.y=10
 editor.fx.0.width=700
-editor.fx.0.x=0
+readme.x=10
+editor.swing.0.y=0
+editor.swing.0.x=0
+version=2.8.0
+readme.height=58
 editor.fx.0.y=0
+mainWindow.y=40
+mainWindow.x=40
+editor.fx.0.x=0
+readme.width=47
 editor.swing.0.height=0
 editor.swing.0.width=0
-editor.swing.0.x=0
-editor.swing.0.y=0
-mainWindow.height=317
-mainWindow.width=813
-mainWindow.x=40
-mainWindow.y=40
+editor.fx.0.height=700
 package.numDependencies=0
 package.numTargets=0
-project.charset=windows-1252
-readme.height=58
+mainWindow.width=813
 readme.name=@README
-readme.width=47
-readme.x=10
-readme.y=10
-version=2.8.0
