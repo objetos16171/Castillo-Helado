@@ -10,6 +10,7 @@ public class MyWorld extends World
 {
     private Pinguino pinguino;
     private Counter contadorPinguinos;
+    private Counter contadorVidas;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     
     /**
@@ -22,6 +23,8 @@ public class MyWorld extends World
         super(700, 500, 1); 
         contadorPinguinos = new Counter("puntos: ");
         addObject(contadorPinguinos,631,27);
+        contadorVidas = new Counter("vidas: ");
+        addObject(contadorVidas,532,27);
         prepare();
     }
         
@@ -108,5 +111,7 @@ public class MyWorld extends World
         addObject(reyhelado,352,460);
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,340);
+        
+        
     }
 }
