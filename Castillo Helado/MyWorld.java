@@ -116,7 +116,8 @@ public class MyWorld extends World
         addObject(reyhelado,352,450);
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,340);
-        
-        
+        plataforma2 plataforma2 = new plataforma2();
+        addObject(plataforma2,558,185);
+       
     }
 }

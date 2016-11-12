@@ -80,12 +80,12 @@ public class ReyHelado extends Actor
        
         if (Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX()+5, getY());
+            setLocation(getX()+5, getY()-10);
         }
         if (Greenfoot.isKeyDown("left"))
         {
 
-            setLocation(getX()-5, getY());
+            setLocation(getX()-5, getY()-10);
         }
 
     }
@@ -96,18 +96,24 @@ public class ReyHelado extends Actor
     
     public boolean onFloor()
     {
-        Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(), plataforma.class);  
-        return below != null; 
-    }
+        
+        Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(),plataforma.class );
+         return below != null; 
+       }
+        
+         
+    
  
     public void checkFall()
     {
         if (onFloor())
         {
-           Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(), plataforma.class);
-           setLocation(below.getX(), below.getY());
-
-        }
+           
+            Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(), plataforma.class);
+            setLocation(below.getX(), below.getY());
+          
+           
+       }
         
     }
     
