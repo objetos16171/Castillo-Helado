@@ -18,6 +18,13 @@ public class ReyHelado extends Actor
     private GreenfootSound reyHeladoGrito = new GreenfootSound ("reyHeladoGritando.wav");
     private GreenfootSound agarraPinguino = new GreenfootSound ("quien te dijo que puedes Volar.wav");
     
+    private GifImage gifReyHelado = new GifImage("gifReyNuevo.gif");
+    
+    private GreenfootImage reyHeladoIzquierda = new GreenfootImage("sprite2Izquierda.png");
+    private GreenfootImage reyHeladoDerecha = new GreenfootImage("sprite3Derecha.png");
+    private GreenfootImage reyHeladoEspacio = new GreenfootImage("spriteSalto.png");
+    
+    
     
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
@@ -25,6 +32,7 @@ public class ReyHelado extends Actor
      */
     public void act() 
     {
+        setImage(gifReyHelado.getCurrentImage());
         //ydireccion= ydireccion + velY*1;
         //xdireccion= xdireccion + velX*1;
         //setLocation(xdireccion,ydireccion); 
@@ -32,7 +40,7 @@ public class ReyHelado extends Actor
         DetectaTecla();
         agarraPinguino();
         agarraPrincesa();
-        
+       
     }    
     
     
@@ -81,49 +89,39 @@ public class ReyHelado extends Actor
        
         if (Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX()+5, getY()-10);
+            setLocation(getX()+5, getY());
+            setImage(reyHeladoDerecha);
         }
         if (Greenfoot.isKeyDown("left"))
         {
 
-            setLocation(getX()-5, getY()-10);
+            setLocation(getX()-5, getY());
+            setImage(reyHeladoIzquierda);
         }
-
+        
+          
     }
     
     public void salta(){
         setLocation(getX(),getY()-velocidad);
+        
     }
     
     public boolean onFloor()
     {
-        
-        Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(),plataforma.class );
-         return below != null; 
-       }
-        
+        Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class );
+        System.out.println("estoy parado ");
+        return actor != null;
          
-    
- 
-    public void checkFall()
-    {
-        if (onFloor())
-        {
-           
-            Actor below = getOneObjectAtOffset (getImage().getWidth(), getImage().getHeight(), plataforma.class);
-            setLocation(below.getX(), below.getY());
-          
-           
-       }
+    } 
         
-    }
-    
+        
     public void fall()
     {
         if (!onFloor())
         {
             MyWorld mundo=(MyWorld)getWorld();
-            if(getY()<=mundo.getHeight()-20)
+            if(getY()<=mundo.getHeight()-getImage().getWidth()/2)
             setLocation(getX(), getY()+ velocidad);
         }
     }
@@ -138,13 +136,17 @@ public class ReyHelado extends Actor
               TeclaPresionada = true;
               //System.out.println("Estoy presionando espacio");
               salta();
+              setImage(reyHeladoEspacio);
             }
         }
         else{
           TeclaPresionada = false;
           //System.out.println("No se presiono espacio");
-          fall();
+        fall();
+          
         }
         return TeclaPresionada ;
     }
+    
+   
 }

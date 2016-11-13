@@ -33,7 +33,7 @@ public class Jake extends Actor
       World mundo = getWorld();
        velX=-2;
        if(xdireccion<2){
-            ((MyWorld)mundo).jake();
+           ((MyWorld)mundo).enemigojake();
             getWorld().removeObject(this);
         }
        
@@ -48,5 +48,6 @@ public class Jake extends Actor
              getWorld().removeObject(this);
             ((MyWorld)mundo).juegoPerdido();
         }
+        
     }
 }

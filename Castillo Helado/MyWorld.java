@@ -30,6 +30,7 @@ public class MyWorld extends World
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
+        
         //inmune();
         prepare();
     }
@@ -98,21 +99,21 @@ public class MyWorld extends World
     {
         lluviaPinguino();   
         aparecePrincesa();
-        jake();
-        //tiempoinmunidad();
+        enemigojake();
+        
         
     }
     
-    public void jake()
+    public void enemigojake()
     {
         if(reloj.millisElapsed()>120000){
-            Jake jake = new Jake();
+            Jake jake=new Jake();
             addObject(jake,650,450);
             reloj.mark();
         }
     }
     
-    public void inmune()
+    /*public void inmune()
     {
         if(contadorPuntos.getValue() >100)
         {
@@ -126,7 +127,6 @@ public class MyWorld extends World
          }
         
     }
-    
     public void tiempoinmunidad()
     {
        if(reloj.millisElapsed() > 1000){
@@ -137,7 +137,7 @@ public class MyWorld extends World
                 this.removeObject(tiempoAyuda);
             }
        }
-    }
+    }*/
     
     public void incrementaPinguinos()
     {
@@ -165,9 +165,17 @@ public class MyWorld extends World
         ReyHelado reyhelado = new ReyHelado();
         addObject(reyhelado,352,450);
         plataforma plataforma = new plataforma();
+
         addObject(plataforma,120,340);
-        plataforma2 plataforma2 = new plataforma2();
-        addObject(plataforma2,558,185);
-       
+        
+        plataforma plataforma2 = new plataforma();
+        addObject(plataforma2,551,185);
+        plataforma.setLocation(114,385);
+        plataforma2.setLocation(563,265);
+        plataforma2.setLocation(563,269);
+        plataforma2.setLocation(563,265);
+        plataforma plataforma3 = new plataforma();
+        addObject(plataforma3,232,145);
+        
     }
 }
