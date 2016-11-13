@@ -12,7 +12,7 @@ public class MyWorld extends World
     private Counter contadorPinguinos;
     private Counter contadorVidas;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
-    
+    private SimpleTimer reloj;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -26,6 +26,7 @@ public class MyWorld extends World
         contadorVidas = new Counter("vidas: ");
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
+        reloj = new SimpleTimer();
         prepare();
     }
         
@@ -72,11 +73,11 @@ public class MyWorld extends World
     }
     
     /** 
-     * Metodo que controla el inicio de la música 
+     * Metodo que controla el inicio de la música y el inicio del tiempo
      */
     public void started()
     {
-       
+        reloj.mark();
         musicaDeFondo.playLoop();
         
     }
@@ -93,9 +94,17 @@ public class MyWorld extends World
     {
         lluviaPinguino();   
         aparecePrincesa();
-        
+        jake();
     }
     
+    public void jake()
+    {
+        if(reloj.millisElapsed()>120000){
+            Jake jake = new Jake();
+            addObject(jake,650,450);
+            reloj.mark();
+        }
+    }
     public void incrementaPinguinos()
     {
         contadorPinguinos.add(10);
