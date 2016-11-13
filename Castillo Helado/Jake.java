@@ -16,6 +16,7 @@ public class Jake extends Actor
     
     private int ydireccion=450;
     private int xdireccion=650;
+     
     /**
      * Act - do whatever the Jake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -25,15 +26,27 @@ public class Jake extends Actor
        xdireccion= xdireccion + velX*1;
        setLocation(xdireccion,ydireccion); 
        mueveJake();
+       ataque();
     }    
     public void mueveJake()
     {
-       World mundo = getWorld();
+      World mundo = getWorld();
        velX=-2;
        if(xdireccion<2){
             ((MyWorld)mundo).jake();
             getWorld().removeObject(this);
         }
        
+    }
+    
+    public void ataque()
+    {
+        World mundo = getWorld();
+        if(isTouching(ReyHelado.class))
+        {
+            ((MyWorld)mundo).decrementaVidas();
+             getWorld().removeObject(this);
+            ((MyWorld)mundo).juegoPerdido();
+        }
     }
 }

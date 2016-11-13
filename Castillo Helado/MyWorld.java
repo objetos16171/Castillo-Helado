@@ -115,6 +115,13 @@ public class MyWorld extends World
         contadorVidas.add(-1);
     }
     
+    public void juegoPerdido()
+    {
+        if(contadorVidas.getValue()==0){
+            Greenfoot.stop();
+        }
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

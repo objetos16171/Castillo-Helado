@@ -32,6 +32,7 @@ public class ReyHelado extends Actor
         DetectaTecla();
         agarraPinguino();
         agarraPrincesa();
+        
     }    
     
     
@@ -146,5 +147,4 @@ public class ReyHelado extends Actor
         }
         return TeclaPresionada ;
     }
-    
 }
