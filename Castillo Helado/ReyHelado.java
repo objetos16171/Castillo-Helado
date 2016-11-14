@@ -71,10 +71,12 @@ public class ReyHelado extends Actor
         World mundo =getWorld();
         Actor Princesa;
         Princesa = getOneObjectAtOffset(0,0,Princesa.class);
+        
         if(Princesa!=null)
         {
            mundo.removeObject(Princesa);
            Greenfoot.playSound("amoAlasprincesas.wav");
+           ((MyWorld)mundo).incrementaPrincesas();
         }
     }
     

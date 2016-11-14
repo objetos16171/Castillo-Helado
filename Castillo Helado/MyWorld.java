@@ -165,6 +165,11 @@ public class MyWorld extends World
         contadorPuntos.add(10);
     }
     
+    public void incrementaPrincesas()
+    {
+        contadorPuntos.add(20);
+    }
+    
     public void decrementaVidas()
     {
         contadorVidas.add(-1);
