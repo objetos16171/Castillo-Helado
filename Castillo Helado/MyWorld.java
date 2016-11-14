@@ -18,6 +18,7 @@ public class MyWorld extends World
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
     private ReyHelado reyHelado;
+    private Counter contadorPuntosExtra ;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -26,14 +27,16 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPuntos = new Counter("puntos: ");
-        addObject(contadorPuntos,631,27);
-        contadorVidas = new Counter("vidas: ");
+        contadorPuntos = new Counter("Puntos: ");
+        addObject(contadorPuntos,651,50);
+        contadorVidas = new Counter("Vidas: ");
         contadorVidas.setValue(3);
-        addObject(contadorVidas,532,27);
+        addObject(contadorVidas,550,50);
         reloj = new SimpleTimer();
         
-        
+        contadorPuntosExtra = new Counter("Puntos Extra: ");
+        addObject(contadorPuntosExtra,430,50);
+        contadorPuntosExtra.setValue(0);
         
         //inmune();
         prepare();
@@ -48,9 +51,10 @@ public class MyWorld extends World
     {
         int x;
         pinguino = new Pinguino();
-        if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+        if (Greenfoot.getRandomNumber(getWidth()-20) < 10) 
         {
-            addObject(pinguino,Greenfoot.getRandomNumber(getWidth()),0);        
+            addObject(pinguino,Greenfoot.getRandomNumber(getWidth()-20),0);
+            Greenfoot.playSound("gunter.wav");
         }
     }
     
@@ -62,21 +66,25 @@ public class MyWorld extends World
         if (Greenfoot.getRandomNumber(1000) < 5) 
         {
             addObject(new PrincesaDeFuego(),0 ,300);
+            Greenfoot.playSound("risaPrincesa.wav");
         }
         
-        if (Greenfoot.getRandomNumber(2000) < 5)
+        if (Greenfoot.getRandomNumber(20000) < 5)
         {
             addObject(new princesaEsqueleto(),0 ,100);
+            Greenfoot.playSound("princesaGrito.wav");
         }
         
-        if (Greenfoot.getRandomNumber(3000) < 5) 
+        if (Greenfoot.getRandomNumber(30000) < 5) 
         {
             addObject(new princesaDeTrapo(), 0 ,400);
+            Greenfoot.playSound("risaPrincesa.wav");
         }
         
-        if (Greenfoot.getRandomNumber(4000) < 5)
+        if (Greenfoot.getRandomNumber(40000) < 5)
         {
             addObject(new princesaAngel(), 0 ,200);
+            Greenfoot.playSound("princesaGrito.wav");
         }
         
     }
@@ -101,7 +109,7 @@ public class MyWorld extends World
     
     public void ataqueArcoiris()
     {
-        if(reyHelado.getY()==30 && reyHelado.getX()==30 )
+        if(reyHelado.getY()<=30 && (reyHelado.getX()==50)  || (reyHelado.getX()==60) )
         {
         arcoiris = new Arcoiris();
         addObject(arcoiris,61,87);
@@ -124,6 +132,7 @@ public class MyWorld extends World
         
         
     }
+    
     
     public void enemigojake()
     {
@@ -160,9 +169,16 @@ public class MyWorld extends World
        }
     }*/
     
+    
+    
     public void incrementaPinguinos()
     {
         contadorPuntos.add(10);
+    }
+    
+    public void incrementaPrincesas()
+    {
+        contadorPuntosExtra.add(+1);
     }
     
     public void decrementaVidas()
@@ -183,7 +199,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-         reyHelado = new ReyHelado();
+        reyHelado = new ReyHelado();
         addObject(reyHelado,352,450);
         plataforma plataforma = new plataforma();
 
@@ -197,6 +213,19 @@ public class MyWorld extends World
         plataforma2.setLocation(563,265);
         plataforma plataforma3 = new plataforma();
         addObject(plataforma3,232,145);
+        paredDeHielo pareddehielo = new paredDeHielo();
+        addObject(pareddehielo,663,49);
+        paredDeHielo pareddehielo2 = new paredDeHielo();
+        addObject(pareddehielo2,583,54);
+        pareddehielo2.setLocation(585,48);
+        pareddehielo2.setLocation(579,48);
+        pareddehielo2.setLocation(576,49);
+        paredDeHielo pareddehielo3 = new paredDeHielo();
+        addObject(pareddehielo3,496,54);
+        pareddehielo3.setLocation(489,49);
 
+        paredDeHielo pareddehielo4 = new paredDeHielo();
+        addObject(pareddehielo4,409,56);
+        pareddehielo4.setLocation(403,50);
     }
 }

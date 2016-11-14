@@ -29,10 +29,11 @@ public class ReyHelado extends Actor
     public void act() 
     {
         setImage(gifReyHelado.getCurrentImage());
-        go();
+        control();
         DetectaTecla();
         agarraPinguino();
         agarraPrincesa();
+        golpeAlReyHelado();
        
     }    
     
@@ -56,9 +57,9 @@ public class ReyHelado extends Actor
             if(Greenfoot.getRandomNumber(5)<2){
                 Greenfoot.playSound("quien te dijo que puedes Volar.wav");
             }
-            else
+            else if(Greenfoot.getRandomNumber(8)<2)
             {
-                        Greenfoot.playSound("reyHeladoGritando.wav");
+                        Greenfoot.playSound("que.wav");
             
             }
             
@@ -68,19 +69,20 @@ public class ReyHelado extends Actor
     
     public void agarraPrincesa()
     {   
-        World mundo =getWorld();
+        
+        MyWorld mundo =(MyWorld)getWorld();
         Actor Princesa;
         Princesa = getOneObjectAtOffset(0,0,Princesa.class);
         if(Princesa!=null)
         {
            mundo.removeObject(Princesa);
+           mundo.incrementaPrincesas();
            Greenfoot.playSound("amoAlasprincesas.wav");
         }
     }
     
-     public void go()
+     public void control()
     {
-       
         if (Greenfoot.isKeyDown("right"))
         {
             setLocation(getX()+5, getY());
@@ -88,7 +90,6 @@ public class ReyHelado extends Actor
         }
         if (Greenfoot.isKeyDown("left"))
         {
-
             setLocation(getX()-5, getY());
             setImage(reyHeladoIzquierda);
         }
@@ -136,9 +137,17 @@ public class ReyHelado extends Actor
         
         fall();  
         }
-
         return TeclaPresionada ;
     }
     
+    public void golpeAlReyHelado(){
+        MyWorld mundo=(MyWorld)getWorld();
+        if(isTouching(Arcoiris.class))
+        {
+            mundo.decrementaVidas();
+            this.setLocation( getWorld().getWidth()/2 , 0 );
+            Greenfoot.playSound("si yo no hice nada.wav");
+        }
+    }
    
 }
