@@ -18,6 +18,7 @@ public class Pinguino extends Actor
     
     public void act() 
     {
+        
         caida();
     }
     
