@@ -20,7 +20,7 @@ public class ReyHelado extends Actor
     private GreenfootImage reyHeladoDerecha = new GreenfootImage("sprite3Derecha.png");
     private GreenfootImage reyHeladoEspacio = new GreenfootImage("spriteSalto.png");
     
-    
+     private boolean bajaConPlataforma2 = true;
     
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
@@ -28,15 +28,41 @@ public class ReyHelado extends Actor
      */
     public void act() 
     {
+   
+        
         setImage(gifReyHelado.getCurrentImage());
-        control();
-        DetectaTecla();
+        controlIzqDer();
+        bajaConPlataforma();
+        saltoConGravedad();
         agarraPinguino();
         agarraPrincesa();
         golpeAlReyHelado();
        
     }    
     
+    /**
+     * Este metodo se encarga de subir al rey helado en la plataformas que se elevan y bajan mediante una variable boleeana y al tocar la plataforma  
+     */
+    public void bajaConPlataforma(){    
+        if (isTouching(plataforma2.class)) 
+        {
+            if(this.getY() >= getWorld().getHeight()) {
+                bajaConPlataforma2 = true;
+            }
+            else if(this.getY() <= 0)
+            {
+                bajaConPlataforma2 = false;
+            }
+            if(bajaConPlataforma2) 
+            {
+                setLocation( this.getX() , this.getY()-10 );
+            }
+            else 
+            {
+                setLocation ( this.getX() , this.getY()+10 ); 
+            }
+        }
+    }
     
     /**
      * Este método nos ayudara para poder 
@@ -83,7 +109,7 @@ public class ReyHelado extends Actor
         }
     }
     
-     public void control()
+     public void controlIzqDer()
     {
         if (Greenfoot.isKeyDown("right"))
         {
@@ -106,10 +132,10 @@ public class ReyHelado extends Actor
     
     public boolean onFloor()
     {
-        Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class );
+        Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class);    
         return actor != null;
     } 
-        
+    
         
     public void fall()
     {
@@ -120,9 +146,11 @@ public class ReyHelado extends Actor
             setLocation(getX(), getY()+ velocidad);
 
         }
+        
     }
     
-    public boolean DetectaTecla(){
+    
+    public boolean saltoConGravedad(){
         boolean TeclaPresionada = false;
         
         if (Greenfoot.isKeyDown("space")) 
@@ -136,8 +164,8 @@ public class ReyHelado extends Actor
         }
         else{
         TeclaPresionada = false;
-        
-        fall();  
+        fall();
+       
         }
         return TeclaPresionada ;
     }

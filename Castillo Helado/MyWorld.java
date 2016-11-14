@@ -18,6 +18,9 @@ public class MyWorld extends World
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
     private ReyHelado reyHelado;
+    
+    private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom.png");
+    private GreenfootImage imagenDeFondo2 = new GreenfootImage("Ice_Kingdom.png");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -114,9 +117,19 @@ public class MyWorld extends World
         }
     }
     
+    public void cambiaFondo(){
+        if(reyHelado.getY()>=20){
+            setBackground(imagenDeFondo1);
+        }
+        
+        if(reyHelado.getY()<=10){
+        }
+    
+    }
     
     public void act()
     {
+        cambiaFondo();
         lluviaPinguino();   
         aparecePrincesa();
         ataqueArcoiris();
@@ -188,7 +201,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-         reyHelado = new ReyHelado();
+        reyHelado = new ReyHelado();
         addObject(reyHelado,352,450);
         plataforma plataforma = new plataforma();
 
@@ -203,5 +216,7 @@ public class MyWorld extends World
         plataforma plataforma3 = new plataforma();
         addObject(plataforma3,232,145);
 
+        plataforma2 plataforma22 = new plataforma2();
+        addObject(plataforma22,609,395);
     }
 }
