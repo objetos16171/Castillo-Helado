@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class plataforma2 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
+ * @version 4 de Noviembre del 2016
  */
 public class plataforma2 extends Actor
 {
@@ -19,6 +19,11 @@ public class plataforma2 extends Actor
         muevePlataforma();
     }    
     
+    /**
+     * Movera la plataforma a lo alto del mundo cuando 
+     * sea mayor o menor segun en sus coordenadas cambiara mediande
+     * una multiplicacion su misma de la variable velY
+     */
     public void muevePlataforma(){
        World mundo = getWorld();
        if(getY()>=100)

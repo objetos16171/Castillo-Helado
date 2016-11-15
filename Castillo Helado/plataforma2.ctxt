@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=plataforma2
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ plataforma2\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ plataforma2\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Karolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ Escobar\ Chavez\ \r\n\ @version\ 4\ de\ Noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ plataforma2\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ muevePlataforma()
+comment2.text=\r\n\ Movera\ la\ plataforma\ a\ lo\ alto\ del\ mundo\ cuando\ \r\n\ sea\ mayor\ o\ menor\ segun\ en\ sus\ coordenadas\ cambiara\ mediande\r\n\ una\ multiplicacion\ su\ misma\ de\ la\ variable\ velY\r\n
 numComments=3

@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Jake here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
+ * @version 4 de Noviembre del 2016
  */
 public class Jake extends Actor
 {
@@ -16,13 +16,15 @@ public class Jake extends Actor
     
     private int ydireccion=450;
     private int xdireccion=650;
-     
+    
+   private GifImage jakeAnimado = new GifImage("JakeAnimado.gif");
     /**
      * Act - do whatever the Jake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+       setImage(jakeAnimado.getCurrentImage());
        xdireccion= xdireccion + velX*1;
        setLocation(xdireccion,ydireccion); 
        mueveJake();

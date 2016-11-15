@@ -202,7 +202,7 @@ public class MyWorld extends World
     private void prepare()
     {
         reyHelado = new ReyHelado();
-        addObject(reyHelado,352,450);
+        addObject(reyHelado, getWidth()/2 , getHeight()/2 );
         plataforma plataforma = new plataforma();
 
         addObject(plataforma,120,340);
@@ -218,5 +218,8 @@ public class MyWorld extends World
 
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
+
+        dulcePrincesa dulceprincesa = new dulcePrincesa();
+        addObject(dulceprincesa,76,125);
     }
 }

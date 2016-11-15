@@ -92,7 +92,10 @@ public class ReyHelado extends Actor
         }
         
     }
-    
+    /**
+     * Cuando el rey helado coincide con las coordenadas de un objeto tipo princesa
+     * es eliminado del mundo y se incrementa el contador de princesas
+     */
     public void agarraPrincesa()
     {   
         
@@ -109,6 +112,9 @@ public class ReyHelado extends Actor
         }
     }
     
+    /**
+     *Se utiliza para mover de izquierda y derecha al Rey Helado 
+     */
      public void controlIzqDer()
     {
         if (Greenfoot.isKeyDown("right"))
@@ -125,11 +131,21 @@ public class ReyHelado extends Actor
           
     }
     
-    public void salta(){
+    /**
+     * Se encarga de simular un salto mediante nuestro mundo utilizando
+     * el metodo setLocation y utilizando una variable de instancia para 
+     * desplazarse decrementando el valor de Y del objeto rey Helado
+     */
+    public void salta()
+    {
         setLocation(getX(),getY()-velocidad);
-        
     }
     
+    /**
+     * Devuelve las coordenadas del objeto tipo plataforma utilizando como
+     * valor valor central en y y todo el ancho de x estor siempre y cuando
+     * no sea 
+     */ 
     public boolean onFloor()
     {
         Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class);    

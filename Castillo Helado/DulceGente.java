@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class DulceGente here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
+ * @version 4 de Noviembre del 2016
  */
 public abstract class DulceGente extends Actor
 {
