@@ -13,11 +13,7 @@ public class ReyHelado extends Actor
     //private int ydireccion=460;
     //private int xdireccion=352;
     private int velocidad=5;
-    
-    private GreenfootSound agarrarPrincesa = new GreenfootSound ("amoAlasprincesas.wav");
-    private GreenfootSound reyHeladoGrito = new GreenfootSound ("reyHeladoGritando.wav");
-    private GreenfootSound agarraPinguino = new GreenfootSound ("quien te dijo que puedes Volar.wav");
-    
+     
     private GifImage gifReyHelado = new GifImage("gifReyNuevo.gif");
     
     private GreenfootImage reyHeladoIzquierda = new GreenfootImage("sprite2Izquierda.png");
@@ -33,9 +29,6 @@ public class ReyHelado extends Actor
     public void act() 
     {
         setImage(gifReyHelado.getCurrentImage());
-        //ydireccion= ydireccion + velY*1;
-        //xdireccion= xdireccion + velX*1;
-        //setLocation(xdireccion,ydireccion); 
         go();
         DetectaTecla();
         agarraPinguino();
@@ -65,7 +58,8 @@ public class ReyHelado extends Actor
             }
             else
             {
-            Greenfoot.playSound("reyHeladoGritando.wav");
+                        Greenfoot.playSound("reyHeladoGritando.wav");
+            
             }
             
         }
@@ -110,9 +104,7 @@ public class ReyHelado extends Actor
     public boolean onFloor()
     {
         Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class );
-        System.out.println("estoy parado ");
         return actor != null;
-         
     } 
         
         
@@ -123,6 +115,7 @@ public class ReyHelado extends Actor
             MyWorld mundo=(MyWorld)getWorld();
             if(getY()<=mundo.getHeight()-getImage().getWidth()/2)
             setLocation(getX(), getY()+ velocidad);
+
         }
     }
     
@@ -134,17 +127,16 @@ public class ReyHelado extends Actor
             if (!TeclaPresionada) 
             {
               TeclaPresionada = true;
-              //System.out.println("Estoy presionando espacio");
               salta();
               setImage(reyHeladoEspacio);
             }
         }
         else{
-          TeclaPresionada = false;
-          //System.out.println("No se presiono espacio");
-        fall();
-          
+        TeclaPresionada = false;
+        
+        fall();  
         }
+
         return TeclaPresionada ;
     }
     

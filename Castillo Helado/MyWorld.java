@@ -16,6 +16,8 @@ public class MyWorld extends World
     private Marceline marceline;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
+    private Arcoiris arcoiris;
+    private ReyHelado reyHelado;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -30,6 +32,8 @@ public class MyWorld extends World
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
+        
+        
         
         //inmune();
         prepare();
@@ -55,22 +59,22 @@ public class MyWorld extends World
      */
     public void aparecePrincesa()
     {
-        if (Greenfoot.getRandomNumber(10000) < 5) 
+        if (Greenfoot.getRandomNumber(1000) < 5) 
         {
             addObject(new PrincesaDeFuego(),0 ,300);
         }
         
-        if (Greenfoot.getRandomNumber(20000) < 5)
+        if (Greenfoot.getRandomNumber(2000) < 5)
         {
             addObject(new princesaEsqueleto(),0 ,100);
         }
         
-        if (Greenfoot.getRandomNumber(30000) < 5) 
+        if (Greenfoot.getRandomNumber(3000) < 5) 
         {
             addObject(new princesaDeTrapo(), 0 ,400);
         }
         
-        if (Greenfoot.getRandomNumber(40000) < 5)
+        if (Greenfoot.getRandomNumber(4000) < 5)
         {
             addObject(new princesaAngel(), 0 ,200);
         }
@@ -95,10 +99,27 @@ public class MyWorld extends World
         musicaDeFondo.stop();
     }
     
+    public void ataqueArcoiris()
+    {
+        if(reyHelado.getY()==30 && reyHelado.getX()==30 )
+        {
+        arcoiris = new Arcoiris();
+        addObject(arcoiris,61,87);
+        }
+        
+        if(reyHelado.getY()==0 && reyHelado.getX()==150 )
+        {
+        arcoiris = new Arcoiris();
+        addObject(arcoiris,61,87);
+        }
+    }
+    
+    
     public void act()
     {
         lluviaPinguino();   
         aparecePrincesa();
+        ataqueArcoiris();
         enemigojake();
         
         
@@ -162,12 +183,12 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        ReyHelado reyhelado = new ReyHelado();
-        addObject(reyhelado,352,450);
+         reyHelado = new ReyHelado();
+        addObject(reyHelado,352,450);
         plataforma plataforma = new plataforma();
 
         addObject(plataforma,120,340);
-        
+
         plataforma plataforma2 = new plataforma();
         addObject(plataforma2,551,185);
         plataforma.setLocation(114,385);
@@ -176,6 +197,6 @@ public class MyWorld extends World
         plataforma2.setLocation(563,265);
         plataforma plataforma3 = new plataforma();
         addObject(plataforma3,232,145);
-        
+
     }
 }
