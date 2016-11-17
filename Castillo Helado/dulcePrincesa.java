@@ -25,6 +25,8 @@ public class dulcePrincesa extends Actor
        avanzaRetrocede();
        arrojaCorazon();
        adios();
+       
+       
         
     }
     /**
@@ -101,4 +103,5 @@ public class dulcePrincesa extends Actor
          
        }
     }
+   
 }

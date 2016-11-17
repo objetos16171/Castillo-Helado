@@ -75,22 +75,22 @@ public class MyWorld extends World
      */
     public void aparecePrincesa()
     {
-        if (Greenfoot.getRandomNumber(1000) < 5) 
+        if (Greenfoot.getRandomNumber(10000) < 5) 
         {
             addObject(new PrincesaDeFuego(),0 ,300);
         }
         
-        if (Greenfoot.getRandomNumber(2000) < 5)
+        if (Greenfoot.getRandomNumber(20000) < 5)
         {
             addObject(new princesaEsqueleto(),0 ,100);
         }
         
-        if (Greenfoot.getRandomNumber(3000) < 5) 
+        if (Greenfoot.getRandomNumber(30000) < 5) 
         {
             addObject(new princesaDeTrapo(), 0 ,400);
         }
         
-        if (Greenfoot.getRandomNumber(4000) < 5)
+        if (Greenfoot.getRandomNumber(40000) < 5)
         {
             addObject(new princesaAngel(), 0 ,200);
         }
