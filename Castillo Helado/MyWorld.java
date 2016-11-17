@@ -1,5 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
+import java.util.List;
+import java.awt.Color;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -18,7 +20,9 @@ public class MyWorld extends World
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
     private ReyHelado reyHelado;
-    
+     
+    private ricardio vida;
+   
     private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom.png");
     private GreenfootImage imagenDeFondo2 = new GreenfootImage("Ice_Kingdom.png");
     /**
@@ -56,6 +60,29 @@ public class MyWorld extends World
             addObject(pinguino,Greenfoot.getRandomNumber(getWidth()),0);        
         }
     }
+    
+    public void cuentaCorazones()
+    {
+        int xPos=50;
+        int separacion=10;
+        
+        List lista = getObjects(ricardio.class);
+
+      /* if(lista.size()==0){
+            System.out.println("Sin vida");
+        }
+        */
+        int yPos = 20;
+        
+/*
+        // addObject(new Brick(Color.RED),4,0);
+        for (int row = 0; row < 5; row++, yPos = yPos + 10+separacion ){
+        
+                addObject(new cuadro(Color.PINK),xPos,yPos);
+        }*/
+        }
+        
+    
     
     /**
      * Este metodo aparecera princesas aleatoriamente en el mundo
@@ -117,23 +144,18 @@ public class MyWorld extends World
         }
     }
     
-    public void cambiaFondo(){
-        if(reyHelado.getY()>=20){
-            setBackground(imagenDeFondo1);
-        }
-        
-        if(reyHelado.getY()<=10){
-        }
-    
-    }
+   
     
     public void act()
     {
-        cambiaFondo();
+        setBackground(imagenDeFondo1);
+
+        
         lluviaPinguino();   
         aparecePrincesa();
         ataqueArcoiris();
         enemigojake();
+        cuentaCorazones();
         
         
     }
@@ -219,7 +241,9 @@ public class MyWorld extends World
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
 
+       
         dulcePrincesa dulceprincesa = new dulcePrincesa();
-        addObject(dulceprincesa,76,125);
+        addObject(dulceprincesa,181,462);
+        
     }
 }
