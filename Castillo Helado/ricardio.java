@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ricardio extends Actor
 {
-    private int velY=4;
-    private int posicionX=3;
+    private int velY=8;
+    private int posicionX=6;
     /**
      * Act - do whatever the ricardio wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,7 +18,6 @@ public class ricardio extends Actor
     {
         setLocation( this.getX()+posicionX , this.getY()- velY  );
         veHaciaElContador();
-        // Add your action code here.
     }
     
     public void veHaciaElContador()
@@ -36,12 +35,11 @@ public class ricardio extends Actor
 
         }
         
-        if(( this.getX()==567 || this.getX()==565) && (this.getY()==28) )
+        if(isTouching(Counter.class) )
         {
-           
             mundo.removeObject(this);
             ((MyWorld)(mundo)).aumentaCorazones();
-      
+            Greenfoot.playSound("sanando.wav");
         }
     }
 }

@@ -25,6 +25,8 @@ public class MyWorld extends World
    
     private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom.png");
     private GreenfootImage imagenDeFondo2 = new GreenfootImage("Ice_Kingdom.png");
+    
+
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -33,13 +35,13 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPuntos = new Counter("puntos: ");
+        contadorPuntos = new Counter("puntos ");
         addObject(contadorPuntos,631,27);
-        contadorVidas = new Counter("vidas: ");
+        contadorVidas = new Counter("vidas ");
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
-     
+        
         //inmune();
         prepare();
     }
@@ -145,7 +147,7 @@ public class MyWorld extends World
     
     public void enemigojake()
     {
-        if(reloj.millisElapsed()>120000){
+        if(reloj.millisElapsed()==12){
             Jake jake=new Jake();
             addObject(jake,650,450);
             reloj.mark();
@@ -229,19 +231,31 @@ public class MyWorld extends World
 
         plataforma plataforma2 = new plataforma();
         addObject(plataforma2,551,185);
-        
+
         plataforma.setLocation(114,385);
         plataforma2.setLocation(563,265);
-        
-       
+
         plataforma plataforma3 = new plataforma();
         addObject(plataforma3,232,145);
 
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
-        
+
         dulcePrincesa dulceprincesa = new dulcePrincesa();
-        addObject(dulceprincesa,181,462);
-        
+        addObject(dulceprincesa,652,454);
+        Finn finn = new Finn();
+        addObject(finn,66,476);
+        etiquetaVida etiquetavida = new etiquetaVida();
+        addObject(etiquetavida,542,35);
+        etiquetavida.setLocation(550,28);
+        etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
+        addObject(etiquetapuntos,648,33);
+
+        etiquetavida.setLocation(554,31);
+
+        etiquetapuntos.setLocation(647,32);
+        etiquetavida.setLocation(517,28);
+        etiquetapuntos.setLocation(618,28);
+        etiquetapuntos.setLocation(614,28);
     }
 }

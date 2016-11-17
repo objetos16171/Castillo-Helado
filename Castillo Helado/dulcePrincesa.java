@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class dulcePrincesa extends Actor
 {
-    private int velX=1;
+    private int velX=-4;
     private int dirY=2;
     private GifImage dulcePrincesaGifIzquierda = new GifImage("dulcePrincesa.gif");
     private GifImage dulcePrincesaGifDerecha = new GifImage("dulcePrincesa2.gif");
@@ -17,12 +17,28 @@ public class dulcePrincesa extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {        
+    {  
+        
        setImage(dulcePrincesaGifIzquierda.getCurrentImage());
        setLocation( getX()+velX , getY() + dirY );
        vuelaAterriza();
        avanzaRetrocede();
        arrojaCorazon();
+       adios();
+        
+    }
+    /**
+     * Este metodo quita a la dulce princesa cuando llega al inicio del ancho del
+     * mundo 
+     */
+    public void adios()
+    {
+        World mundo=getWorld();
+        
+        if( this.getX() <= 10){
+            mundo.removeObject(this);
+        }
+        
     }
     
     /**
@@ -35,11 +51,10 @@ public class dulcePrincesa extends Actor
        World mundo=getWorld();
        ricardio Ricardio= new ricardio();
         
-       if(this.getY()== 460 && ( ( this.getX() == 192 ) ||    
-                                 ( this.getX() == 316 ) ||
-                                 ( this.getX() == 378 ) ||
-                                 ( this.getX() == 502 ) 
-                                 ) )
+       if( ( this.getX() == 324 ) || ( this.getX() == 343 ) ||
+           ( this.getX() == 52 ) || ( this.getX() == 104 ) ||
+           ( this.getX() == 264  ) ) 
+           
        {    
        mundo.addObject(Ricardio, this.getX() ,this. getY());
        Greenfoot.playSound("ricardioUhSi.wav");
@@ -57,10 +72,11 @@ public class dulcePrincesa extends Actor
         
        if(getX()>10)
        {
-          velX = velX*-1;   
+          velX = velX*-1;
+          
        }
        
-       if(getX()<=getWorld().getWidth()-50)
+       if(getX()<=getWorld().getWidth()-10)
        {
           velX = velX*-1;
        }
@@ -76,11 +92,13 @@ public class dulcePrincesa extends Actor
         if(getY() >= 350)
        {
           dirY = dirY*-1;  
+          
        }
        
        if(getY()<=getWorld().getHeight()-30)
        {
           dirY = dirY*-1;
+         
        }
     }
 }

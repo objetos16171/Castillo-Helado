@@ -146,26 +146,32 @@ public class ReyHelado extends Actor
      * valor valor central en y y todo el ancho de x estor siempre y cuando
      * no sea 
      */ 
-    public boolean onFloor()
+    public boolean enPlataforma()
     {
         Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class);    
         return actor != null;
     } 
     
-        
+    /**
+     * Si el metodo enPlataforma no nos devuelve nada entonces el reyHelado caera hacia
+     * la parte inferior de nuestro mundo 
+     */    
     public void fall()
     {
-        if (!onFloor())
+        if (!enPlataforma())
         {
             MyWorld mundo=(MyWorld)getWorld();
             if(getY()<=mundo.getHeight()-getImage().getWidth()/2)
             setLocation(getX(), getY()+ velocidad);
-
         }
         
     }
     
-    
+    /**
+     * Este metdodo devuelve el metodo gravedad si no se ha presionado
+     * la tecla espacio por el contrario el rey helado saltara y
+     * se establecera su imagen al momento de presionar la imagen
+     */
     public boolean saltoConGravedad(){
         boolean TeclaPresionada = false;
         
@@ -186,12 +192,16 @@ public class ReyHelado extends Actor
         return TeclaPresionada ;
     }
     
+    /**
+     * Este metodo se encargara de detectar y colocar en un lugar diferente cuando el rey healdo es golpeado por algún 
+     * enemigo 
+     */
     public void golpeAlReyHelado(){
         MyWorld mundo=(MyWorld)getWorld();
         if(isTouching(Arcoiris.class))
         {
             mundo.decrementaVidas();
-            this.setLocation( getWorld().getWidth()/2 , 0 );
+            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight() );
             Greenfoot.playSound("si yo no hice nada.wav");
         }
     }
