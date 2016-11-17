@@ -1,7 +1,16 @@
 #BlueJ class context
 comment0.target=dulcePrincesa
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ dulcePrincesa\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ dulcePrincesa\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Karolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ \ \r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ dulcePrincesa\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment2.params=
+comment2.target=void\ arrojaCorazon()
+comment2.text=\r\nLa\ dulce\ princesa\ arrojara\ corazones\ hacia\ el\ contador\ cuando\ aparezca\ en\r\nel\ mundo\ creando\ un\ objeto\ de\ tipo\ ricardio\ que\ es\ un\ icono\ para\ las\ vidas\r\naccediendo\ al\ metodo\ agrgar\ objeto\ en\ MyWorld\ \ \r\n
+comment3.params=
+comment3.target=void\ avanzaRetrocede()
+comment3.text=\r\n\ Cambiara\ el\ sentido\ en\ el\ que\ la\ princesa\ avanza\ por\ el\ ancho\ del\ mundo\r\n\ modificando\ el\ valor\ de\ la\ variable\ velX\ de\ positivo\ y\ negativo\ llegando\r\n\ a\ los\ limites\ del\ ancho\ del\ mundo\ y\ al\ principio\ del\ mundo\ \r\n
+comment4.params=
+comment4.target=void\ vuelaAterriza()
+comment4.text=\r\n\ Cambiara\ la\ direccion\ de\ y\ cuando\ llege\ a\ limite\ establecido\r\n\ y\ bajara\ cuando\ llega\ a\ mas\ de\ la\ mitad\ del\ mundo\ mediante\ la\r\n\ modificacion\ de\ la\ variable\ dirY\r\n
+numComments=5

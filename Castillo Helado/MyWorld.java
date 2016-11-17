@@ -39,13 +39,11 @@ public class MyWorld extends World
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
-        
-        
-        
+     
         //inmune();
         prepare();
     }
-        
+    
     /** Hace una lluvia de pinguino añadiento un objeto de tipo pinguino
     * usando como ubicacion en su coordenada x el metodo getRandomNumber
     * y estableciendo un rango para generarlos a partir del ancho del mundo
@@ -61,29 +59,15 @@ public class MyWorld extends World
         }
     }
     
-    public void cuentaCorazones()
+    /**
+     * Cuando la dulce princesa aparezca incrementara las vidas al Rey Helado
+     */
+    public void aumentaCorazones()
     {
-        int xPos=50;
-        int separacion=10;
-        
-        List lista = getObjects(ricardio.class);
+        contadorVidas.add(+1);
 
-      /* if(lista.size()==0){
-            System.out.println("Sin vida");
-        }
-        */
-        int yPos = 20;
-        
-/*
-        // addObject(new Brick(Color.RED),4,0);
-        for (int row = 0; row < 5; row++, yPos = yPos + 10+separacion ){
-        
-                addObject(new cuadro(Color.PINK),xPos,yPos);
-        }*/
-        }
-        
-    
-    
+    }
+       
     /**
      * Este metodo aparecera princesas aleatoriamente en el mundo
      */
@@ -129,6 +113,10 @@ public class MyWorld extends World
         musicaDeFondo.stop();
     }
     
+    /**
+     * El actor arcoiris saldrad volando y rebotara hasta que 
+     * consiga pegarle al Rey Helado
+     */
     public void ataqueArcoiris()
     {
         if(reyHelado.getY()==30 && reyHelado.getX()==30 )
@@ -148,16 +136,11 @@ public class MyWorld extends World
     
     public void act()
     {
-        setBackground(imagenDeFondo1);
-
-        
+        setBackground(imagenDeFondo1);    
         lluviaPinguino();   
         aparecePrincesa();
         ataqueArcoiris();
         enemigojake();
-        cuentaCorazones();
-        
-        
     }
     
     public void enemigojake()
@@ -195,21 +178,36 @@ public class MyWorld extends World
        }
     }*/
     
+    
+    
+    /**
+     * Incrementa el contador al agarrar los pinguinos que caen del cielo
+     */
     public void incrementaPinguinos()
     {
         contadorPuntos.add(10);
     }
     
+    /**
+     * Incrementa el contador de puntos a agarrar las princesas que salen
+     * volando por los aires 
+     */
     public void incrementaPrincesas()
     {
         contadorPuntos.add(20);
     }
     
+    /**
+     * Disminuye las vidas al encontrarse con un enemigo 
+     */
     public void decrementaVidas()
     {
         contadorVidas.add(-1);
     }
     
+    /**
+     * Si las vidas llegan a cero el juego se termina y el juego se detiene 
+     */
     public void juegoPerdido()
     {
         if(contadorVidas.getValue()==0){
@@ -231,17 +229,17 @@ public class MyWorld extends World
 
         plataforma plataforma2 = new plataforma();
         addObject(plataforma2,551,185);
+        
         plataforma.setLocation(114,385);
         plataforma2.setLocation(563,265);
-        plataforma2.setLocation(563,269);
-        plataforma2.setLocation(563,265);
+        
+       
         plataforma plataforma3 = new plataforma();
         addObject(plataforma3,232,145);
 
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
-
-       
+        
         dulcePrincesa dulceprincesa = new dulcePrincesa();
         addObject(dulceprincesa,181,462);
         
