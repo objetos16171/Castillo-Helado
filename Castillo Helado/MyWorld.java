@@ -32,6 +32,11 @@ public class MyWorld extends World
      * 
      */
     public MyWorld()
+    {
+        this(new ReyHelado());
+    }
+    
+    public MyWorld(ReyHelado rey)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
@@ -257,6 +262,6 @@ public class MyWorld extends World
         etiquetavida.setLocation(517,28);
         etiquetapuntos.setLocation(618,28);
         etiquetapuntos.setLocation(614,28);
-        
+
     }
 }

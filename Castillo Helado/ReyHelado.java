@@ -8,11 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ReyHelado extends Actor
 {
-    //private int velX = 2;
-    //private int velY = 2;
-    //private int ydireccion=460;
-    //private int xdireccion=352;
+    
     private int velocidad=5;
+    private int nivel;
      
     private GifImage gifReyHelado = new GifImage("gifReyNuevo.gif");
     
@@ -21,6 +19,12 @@ public class ReyHelado extends Actor
     private GreenfootImage reyHeladoEspacio = new GreenfootImage("spriteSalto.png");
     
      private boolean bajaConPlataforma2 = true;
+    /**constructor */
+    
+    public ReyHelado()
+    {
+        nivel = 1;
+    }
     
     /**
      * Act - do whatever the ReyHelado wants to do. This method is called whenever
@@ -37,7 +41,7 @@ public class ReyHelado extends Actor
         agarraPinguino();
         agarraPrincesa();
         golpeAlReyHelado();
-       
+        siguienteNivel();
     }    
     
     /**
@@ -206,4 +210,22 @@ public class ReyHelado extends Actor
         }
     }
    
+    private void siguienteNivel()
+    {
+        MyWorld mundo=(MyWorld)getWorld();
+        
+        if (getY() < getWorld().getHeight()-450) {
+            if (nivel == 1) {
+                nivel = 2;
+                //getWorld().removeObject(this);
+                Greenfoot.setWorld(new MyWorld2(this));
+            }
+            else 
+            {
+                nivel = 1;
+                getWorld().removeObject(this);
+                Greenfoot.setWorld(new MyWorld(this));
+            }
+        }
+    }
 }
