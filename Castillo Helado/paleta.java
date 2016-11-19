@@ -15,5 +15,6 @@ public class paleta extends DulceGente
     public void act() 
     {
         // Add your action code here.
+        super.act();
     }    
 }

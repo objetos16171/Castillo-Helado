@@ -17,6 +17,10 @@ public class MyWorld2 extends World
     private Marceline marceline;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
+    private mentita menta;
+    private senorPanquesito senorP;
+    private panDeCanela pan;
+    private paleta paletita;
     
     /**
      * Constructor for objects of class MyWorld2.
@@ -41,7 +45,10 @@ public class MyWorld2 extends World
     {
             
         lluviaPinguino();   
-       
+        dulceMentita();
+        dulceSenorP();
+        dulcePanDeCanela();
+        dulcePaleta();
         
     }
     
@@ -90,6 +97,41 @@ public class MyWorld2 extends World
         }
     }
     
+    public void dulceMentita()
+    {
+       menta =new mentita(); 
+       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+        {
+         addObject(menta,Greenfoot.getRandomNumber(getWidth()),0);
+        }
+    }
+    
+    public void dulceSenorP()
+    {
+       senorP =new senorPanquesito(); 
+       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+        {
+         addObject(senorP,Greenfoot.getRandomNumber(getWidth()),0);
+        }
+    }
+    
+    public void dulcePanDeCanela()
+    {
+       pan =new panDeCanela(); 
+       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+        {
+         addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
+        }
+    }
+    
+    public void dulcePaleta()
+    {
+       paletita =new paleta(); 
+       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+        {
+         addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
+        }
+    }
     private void prepare()
     {
         reyhelado2 = new ReyHelado2();

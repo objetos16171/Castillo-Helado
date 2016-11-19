@@ -15,5 +15,6 @@ public class panDeCanela extends DulceGente
     public void act() 
     {
         // Add your action code here.
+        super.act();
     }    
 }

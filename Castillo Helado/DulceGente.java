@@ -8,12 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class DulceGente extends Actor
 {
+    private int velC=5;
+    
+    
     /**
-     * Act - do whatever the DulceGente wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     *act= contiene actos realizados por la dulce gente 
      */
+    
     public void act() 
     {
-        // Add your action code here.
-    }    
+        caida();
+    }
+    
+   
+    public void caida()
+    {
+        World mundo = getWorld();
+        setLocation(getX(), getY()+velC);
+        if (getY()>= mundo.getHeight() - 10) 
+        {
+            mundo.removeObject(this);
+        }
+    }
 }
