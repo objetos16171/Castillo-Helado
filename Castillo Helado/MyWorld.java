@@ -14,8 +14,8 @@ public class MyWorld extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private Counter tiempoAyuda;
-    private Marceline marceline;
+    //private Counter tiempoAyuda;
+    //private Marceline marceline;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
     private Arcoiris arcoiris;

@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ReyHelado here.
+ * Write a description of class ReyHelado2 here.
  * 
  * @author Soto Avila Carolina, Jose Emmanuel Escobar Chavez
  * @version 4 de Noviembre del 2016
  */
-public class ReyHelado extends Actor
+public class ReyHelado2 extends Actor
 {
     
     private int velocidad=5;
@@ -21,13 +21,13 @@ public class ReyHelado extends Actor
      private boolean bajaConPlataforma2 = true;
     /**constructor */
     
-    public ReyHelado()
+    public ReyHelado2()
     {
-        nivel = 1;
+        nivel = 2;
     }
     
     /**
-     * Act - do whatever the ReyHelado wants to do. This method is called whenever
+     * Act - do whatever the ReyHelado2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -41,7 +41,7 @@ public class ReyHelado extends Actor
         agarraPinguino();
         agarraPrincesa();
         golpeAlReyHelado();
-        siguienteNivel();
+        //siguienteNivel();
     }    
     
     /**
@@ -76,7 +76,7 @@ public class ReyHelado extends Actor
      */
     public void agarraPinguino()
     {
-        MyWorld mundo = (MyWorld)getWorld();
+        MyWorld2 mundo = (MyWorld2)getWorld();
        
         Actor Pinguino;
         Pinguino = getOneObjectAtOffset(0,0,Pinguino.class);
@@ -103,7 +103,7 @@ public class ReyHelado extends Actor
     public void agarraPrincesa()
     {   
         
-        MyWorld mundo =(MyWorld)getWorld();
+        MyWorld2 mundo =(MyWorld2)getWorld();
         Actor Princesa;
         Princesa = getOneObjectAtOffset(0,0,Princesa.class);
         
@@ -112,7 +112,7 @@ public class ReyHelado extends Actor
            mundo.removeObject(Princesa);
            mundo.incrementaPrincesas();
            Greenfoot.playSound("amoAlasprincesas.wav");
-           ((MyWorld)mundo).incrementaPrincesas();
+           
         }
     }
     
@@ -164,7 +164,7 @@ public class ReyHelado extends Actor
     {
         if (!enPlataforma())
         {
-            MyWorld mundo=(MyWorld)getWorld();
+            MyWorld2 mundo=(MyWorld2)getWorld();
             if(getY()<=mundo.getHeight()-getImage().getWidth()/2)
             setLocation(getX(), getY()+ velocidad);
         }
@@ -201,7 +201,7 @@ public class ReyHelado extends Actor
      * enemigo 
      */
     public void golpeAlReyHelado(){
-        MyWorld mundo=(MyWorld)getWorld();
+        MyWorld2 mundo=(MyWorld2)getWorld();
         if(isTouching(Arcoiris.class))
         {
             mundo.decrementaVidas();
@@ -210,19 +210,17 @@ public class ReyHelado extends Actor
         }
     }
    
-    private void siguienteNivel()
+    /*private void siguienteNivel()
     {
-        MyWorld mundo=(MyWorld)getWorld();
+        MyWorld2 mundo=(MyWorld2)getWorld();
         
         if (getY() < getWorld().getHeight()-450) {
-            if (nivel == 1) {
-                nivel = 2;
-                Greenfoot.setWorld(new MyWorld2(this));
+            if (nivel == 2) {
+                nivel = 3;
+                Greenfoot.setWorld(new MyWorld3(this));
                 
             }
             
         }
-    }
-    
-    
+    }*/
 }
