@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Jake here.
  * 
- * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
+ * @author Soto Avila Carolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
  * @version 4 de Noviembre del 2016
  */
 public class Jake extends Actor
@@ -12,10 +12,10 @@ public class Jake extends Actor
     private int velX=2;
     
     /** the amount of change in y during each act */
-    private int velY;
+    /*private int velY;
     
     private int ydireccion=450;
-    private int xdireccion=650;
+    private int xdireccion=650;*/
     
    private GifImage jakeAnimado = new GifImage("JakeAnimado.gif");
     /**
@@ -25,31 +25,31 @@ public class Jake extends Actor
     public void act() 
     {
        setImage(jakeAnimado.getCurrentImage());
-       xdireccion= xdireccion + velX*1;
-       setLocation(xdireccion,ydireccion); 
+       setLocation( getX()-velX , getY());
        mueveJake();
-       ataque();
+       
     }    
     public void mueveJake()
     {
       World mundo = getWorld();
-       velX=-2;
-       if(xdireccion<2){
+       //setLocation(getX()-5, getY());
+       if(getX()<2){
            ((MyWorld)mundo).enemigojake();
             getWorld().removeObject(this);
+            return;
         }
-       
-    }
-    
-    public void ataque()
-    {
-        World mundo = getWorld();
-        if(isTouching(ReyHelado.class))
+       if(isTouching(ReyHelado.class))
         {
             ((MyWorld)mundo).decrementaVidas();
              getWorld().removeObject(this);
-            ((MyWorld)mundo).juegoPerdido();
+            return;
         }
-        
     }
+    
+   /* public void ataque()
+    {
+        World mundo = getWorld();
+        
+        
+    }*/
 }

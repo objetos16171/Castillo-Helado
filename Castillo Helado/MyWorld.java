@@ -145,9 +145,9 @@ public class MyWorld extends World
         enemigojake();
     }
     
-    public void enemigojake()
+   public void enemigojake()
     {
-        if(reloj.millisElapsed()==12){
+        if(reloj.millisElapsed()> 20000){
             Jake jake=new Jake();
             addObject(jake,650,450);
             reloj.mark();
@@ -257,5 +257,6 @@ public class MyWorld extends World
         etiquetavida.setLocation(517,28);
         etiquetapuntos.setLocation(618,28);
         etiquetapuntos.setLocation(614,28);
+        
     }
 }
