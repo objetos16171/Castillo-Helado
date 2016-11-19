@@ -28,7 +28,21 @@ public class MyWorld2 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
+        contadorPuntos = new Counter("puntos ");
+        addObject(contadorPuntos,631,27);
+        contadorVidas = new Counter("vidas ");
+        contadorVidas.setValue(3);
+        addObject(contadorVidas,532,27);
+        reloj = new SimpleTimer();
         prepare();
+    }
+    
+    public void act()
+    {
+            
+        lluviaPinguino();   
+       
+        
     }
     
     public void lluviaPinguino()
@@ -81,7 +95,18 @@ public class MyWorld2 extends World
         reyhelado2 = new ReyHelado2();
         addObject(reyhelado2, getWidth()/2 , getHeight()/2 );
         plataforma plataforma = new plataforma();
-        addObject(plataforma,120,340);
+        addObject(plataforma,120,150);
+        plataforma2 plataforma2 = new plataforma2();
+        addObject(plataforma2,100,350);
+        plataforma2 plataforma3 = new plataforma2();
+        addObject(plataforma3,600,350);
+        etiquetaVida etiquetavida = new etiquetaVida();
+        addObject(etiquetavida,517,28);
+        etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
+        addObject(etiquetapuntos,614,28);
+        
+        
+        
         
     }
    

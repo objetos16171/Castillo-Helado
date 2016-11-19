@@ -46,10 +46,5 @@ public class Jake extends Actor
         }
     }
     
-   /* public void ataque()
-    {
-        World mundo = getWorld();
-        
-        
-    }*/
+   
 }
