@@ -14,8 +14,6 @@ public class MyWorld extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    //private Counter tiempoAyuda;
-    //private Marceline marceline;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
@@ -46,8 +44,6 @@ public class MyWorld extends World
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
-        
-        //inmune();
         prepare();
     }
     
@@ -158,34 +154,6 @@ public class MyWorld extends World
             reloj.mark();
         }
     }
-    
-    /*public void inmune()
-    {
-        if(contadorPuntos.getValue() >100)
-        {
-            tiempoAyuda = new Counter("inmunidad: ");
-            addObject(tiempoAyuda,420,27);
-            tiempoAyuda.setValue(INMUNIDAD);
-            marceline = new Marceline();
-            addObject(marceline,640,200);
-            
-            
-         }
-        
-    }
-    public void tiempoinmunidad()
-    {
-       if(reloj.millisElapsed() > 1000){
-            tiempoAyuda.add(-1);
-            reloj.mark();
-            if(tiempoAyuda.getValue()==0){
-                this.removeObject(marceline);
-                this.removeObject(tiempoAyuda);
-            }
-       }
-    }*/
-    
-    
     
     /**
      * Incrementa el contador al agarrar los pinguinos que caen del cielo

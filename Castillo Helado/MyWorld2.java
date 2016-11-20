@@ -10,17 +10,19 @@ public class MyWorld2 extends World
 {
     
     private ReyHelado2 reyhelado2; 
-    public final int INMUNIDAD = 30;
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private Marceline marceline;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
     private mentita menta;
     private senorPanquesito senorP;
     private panDeCanela pan;
     private paleta paletita;
+    //inmunidad
+    public final int INMUNIDAD = 30;
+    private Marceline marceline;
+    private SimpleTimer relojMarceline;
     
     /**
      * Constructor for objects of class MyWorld2.
@@ -38,6 +40,8 @@ public class MyWorld2 extends World
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
+        relojMarceline = new SimpleTimer();
+        marceline = new Marceline();
         prepare();
     }
     
@@ -49,6 +53,7 @@ public class MyWorld2 extends World
         dulceSenorP();
         dulcePanDeCanela();
         dulcePaleta();
+        inmune();
         
     }
     
@@ -132,6 +137,17 @@ public class MyWorld2 extends World
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
         }
     }
+    
+    public void inmune()
+    {
+        if(contadorPuntos.getValue() == 100)
+        {
+            addObject(marceline,500,300);
+            
+        }
+        
+    }
+    
     private void prepare()
     {
         reyhelado2 = new ReyHelado2();
@@ -146,10 +162,6 @@ public class MyWorld2 extends World
         addObject(etiquetavida,517,28);
         etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
         addObject(etiquetapuntos,614,28);
-        
-        
-        
-        
     }
    
 }
