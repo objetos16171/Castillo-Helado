@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Nov 20 04:54:13 CST 2016
+#Sun Nov 20 04:57:37 CST 2016
 target24.type=ClassTarget
 target16.name=dulcePrincesa
 target11.typeParameters=
@@ -293,6 +293,7 @@ dependency65.type=UsesDependency
 target10.y=130
 target10.x=10
 dependency40.type=UsesDependency
+class.MyWorld3.superclass=greenfoot.World
 dependency15.to=PrincesaDeFuego
 class.MyWorld.image=bathroom-tile.jpg
 target30.type=ClassTarget
