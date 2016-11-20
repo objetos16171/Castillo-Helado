@@ -42,6 +42,8 @@ public class ReyHelado2 extends Actor
         ataqueMentita();
         ataqueSenorP();
         ataquePanDeCanela();
+        ataquePaleta();
+        
         //siguienteNivel();
     }    
     
@@ -214,6 +216,18 @@ public class ReyHelado2 extends Actor
             
         }
     }
+    
+    public void ataquePaleta(){
+        MyWorld2 mundo = (MyWorld2)getWorld();
+        Actor paleta;
+        paleta = getOneObjectAtOffset(0,0,paleta.class);
+        if(paleta != null)
+        {
+            mundo. decrementaVidas();
+            mundo.removeObject(paleta);
+            
+        }
+     }
    
     /*private void siguienteNivel()
     {
