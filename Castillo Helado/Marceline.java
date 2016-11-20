@@ -19,5 +19,8 @@ public class Marceline extends Actor
     {
         setImage(gifMarceline.getCurrentImage());
         // Add your action code here.
+        
     }    
+    
+    
 }

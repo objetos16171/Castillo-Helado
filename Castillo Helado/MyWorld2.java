@@ -23,6 +23,8 @@ public class MyWorld2 extends World
     //inmunidad
     private Marceline marceline;
     private SimpleTimer relojMarceline;
+    public Counter tiempoInmune;
+    public final int TIEMPO = 30;
     
     /**
      * Constructor for objects of class MyWorld2.
@@ -35,13 +37,19 @@ public class MyWorld2 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
         contadorPuntos = new Counter("puntos ");
-        addObject(contadorPuntos,631,27);
         contadorVidas = new Counter("vidas ");
+        
+        addObject(contadorPuntos,631,27);
+        
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
         marceline = new Marceline();
+        
+        tiempoInmune.setValue(TIEMPO);
+        addObject(tiempoInmune,420,27);
+        
         prepare();
     }
     
@@ -55,6 +63,7 @@ public class MyWorld2 extends World
         dulcePaleta();
         inmune();
         
+        
     }
     
     public void lluviaPinguino()
@@ -66,6 +75,7 @@ public class MyWorld2 extends World
             addObject(pinguino,Greenfoot.getRandomNumber(getWidth()),0);        
         }
     }
+    
     
     /**
      * Incrementa el contador al agarrar los pinguinos que caen del cielo
@@ -140,17 +150,55 @@ public class MyWorld2 extends World
     
     public void inmune()
     {
-        if(contadorPuntos.getValue()>= 100)
-        {
-            addObject(marceline,500,300);
-            relojMarceline.mark();
-            this.removeObject(menta);
-            this.removeObject(senorP);
-            this.removeObject(pan);
-            this.removeObject(paletita);
-            
-        }
         
+         if(contadorPuntos.getValue()>= 100)
+            {
+              
+               addObject(marceline,500,300);
+               this.removeObject(menta);
+               this.removeObject(senorP);
+               this.removeObject(pan);
+               this.removeObject(paletita);
+               
+              inmuneReturn();
+              
+             
+               
+         }
+         
+         if(contadorPuntos.getValue()>= 150)  
+         {
+             this.removeObject(marceline);
+             this.removeObject(tiempoInmune);    
+             dulceMentita();
+             dulceSenorP();
+             dulcePanDeCanela();
+             dulcePaleta();
+         }     
+         
+    }
+    
+    public void inmuneReturn(){
+        
+        if(relojMarceline.millisElapsed() >= 1000){
+                 tiempoInmune.add(-1);
+                 relojMarceline.mark();
+              }
+        eliminaMarceline();
+    }
+    
+    public void eliminaMarceline()
+    {
+        if(tiempoInmune.getValue() == 0)
+         {
+                    this.removeObject(marceline);
+                    this.removeObject(tiempoInmune);
+                    dulceMentita();
+                    dulceSenorP();
+                    dulcePanDeCanela();
+                    dulcePaleta();
+                    
+         }
     }
     
     private void prepare()
@@ -169,4 +217,5 @@ public class MyWorld2 extends World
         addObject(etiquetapuntos,614,28);
     }
    
-}
+   }
+

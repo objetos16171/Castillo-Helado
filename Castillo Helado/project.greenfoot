@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Nov 19 21:54:47 CST 2016
+#Sun Nov 20 02:09:12 CST 2016
 target24.type=ClassTarget
 target16.name=dulcePrincesa
 target11.typeParameters=
@@ -378,7 +378,7 @@ dependency28.to=Jake
 target30.typeParameters=
 dependency55.type=UsesDependency
 target18.type=ClassTarget
-editor.swing.0.height=700
+editor.swing.0.height=735
 dependency30.type=UsesDependency
 target21.showInterface=false
 target20.type=ClassTarget
@@ -422,7 +422,7 @@ target27.y=610
 target27.x=100
 target34.typeParameters=
 dependency58.to=Counter
-editor.swing.0.width=700
+editor.swing.0.width=687
 target29.naviview.expanded=true
 target29.height=50
 dependency6.from=ReyHelado
@@ -441,9 +441,9 @@ dependency31.type=UsesDependency
 dependency1.to=Pinguino
 target18.showInterface=false
 target21.type=ClassTarget
-mainWindow.y=-8
+mainWindow.y=0
 target13.name=princesaMusculos
-mainWindow.x=-8
+mainWindow.x=-7
 target16.y=490
 target16.x=100
 dependency28.from=ReyHelado
@@ -540,8 +540,8 @@ target26.showInterface=false
 target28.name=princesaDeTrapo
 dependency66.to=mentita
 editor.swing.0.y=0
-editor.swing.0.x=0
-mainWindow.height=744
+editor.swing.0.x=686
+mainWindow.height=735
 class.princesaDeTrapo.image=princesaDeTrapo.png
 dependency8.from=ReyHelado
 class.Princesa.superclass=greenfoot.Actor
