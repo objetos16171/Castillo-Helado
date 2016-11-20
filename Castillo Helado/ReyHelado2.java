@@ -40,6 +40,7 @@ public class ReyHelado2 extends Actor
         saltoConGravedad();
         agarraPinguino();
         ataqueMentita();
+        ataqueSenorP();
         
         //siguienteNivel();
     }    
@@ -186,6 +187,18 @@ public class ReyHelado2 extends Actor
         {
             mundo. decrementaVidas();
             mundo.removeObject(mentita);
+            
+        }
+    }
+    
+    public void ataqueSenorP(){
+        MyWorld2 mundo = (MyWorld2)getWorld();
+        Actor senorPanquesito;
+        senorPanquesito = getOneObjectAtOffset(0,0,senorPanquesito.class);
+        if(senorPanquesito != null)
+        {
+            mundo. decrementaVidas();
+            mundo.removeObject(senorPanquesito);
             
         }
     }
