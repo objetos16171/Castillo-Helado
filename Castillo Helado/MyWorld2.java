@@ -62,7 +62,7 @@ public class MyWorld2 extends World
         dulcePanDeCanela();
         dulcePaleta();
         inmune();
-        
+        juegoPerdido();
         
     }
     
