@@ -116,7 +116,7 @@ public class MyWorld2 extends World
     public void dulceMentita()
     {
        menta =new mentita(); 
-       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+       if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(menta,Greenfoot.getRandomNumber(getWidth()),0);
         }
@@ -125,7 +125,7 @@ public class MyWorld2 extends World
     public void dulceSenorP()
     {
        senorP =new senorPanquesito(); 
-       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+       if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(senorP,Greenfoot.getRandomNumber(getWidth()),0);
         }
@@ -134,7 +134,7 @@ public class MyWorld2 extends World
     public void dulcePanDeCanela()
     {
        pan =new panDeCanela(); 
-       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+       if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
         }
@@ -143,7 +143,7 @@ public class MyWorld2 extends World
     public void dulcePaleta()
     {
        paletita =new paleta(); 
-       if (Greenfoot.getRandomNumber(getWidth()) < 10) 
+       if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
         }
