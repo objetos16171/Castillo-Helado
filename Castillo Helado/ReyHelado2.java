@@ -41,7 +41,7 @@ public class ReyHelado2 extends Actor
         agarraPinguino();
         ataqueMentita();
         ataqueSenorP();
-        
+        ataquePanDeCanela();
         //siguienteNivel();
     }    
     
@@ -199,6 +199,18 @@ public class ReyHelado2 extends Actor
         {
             mundo. decrementaVidas();
             mundo.removeObject(senorPanquesito);
+            
+        }
+    }
+    
+    public void ataquePanDeCanela(){
+        MyWorld2 mundo = (MyWorld2)getWorld();
+        Actor panDeCanela;
+        panDeCanela = getOneObjectAtOffset(0,0,panDeCanela.class);
+        if(panDeCanela != null)
+        {
+            mundo. decrementaVidas();
+            mundo.removeObject(panDeCanela);
             
         }
     }
