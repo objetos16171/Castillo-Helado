@@ -39,8 +39,8 @@ public class ReyHelado2 extends Actor
         bajaConPlataforma();
         saltoConGravedad();
         agarraPinguino();
-        agarraPrincesa();
-        golpeAlReyHelado();
+        ataqueMentita();
+        
         //siguienteNivel();
     }    
     
@@ -96,25 +96,7 @@ public class ReyHelado2 extends Actor
         }
         
     }
-    /**
-     * Cuando el rey helado coincide con las coordenadas de un objeto tipo princesa
-     * es eliminado del mundo y se incrementa el contador de princesas
-     */
-    public void agarraPrincesa()
-    {   
-        
-        MyWorld2 mundo =(MyWorld2)getWorld();
-        Actor Princesa;
-        Princesa = getOneObjectAtOffset(0,0,Princesa.class);
-        
-        if(Princesa!=null)
-        {
-           mundo.removeObject(Princesa);
-           mundo.incrementaPrincesas();
-           Greenfoot.playSound("amoAlasprincesas.wav");
-           
-        }
-    }
+    
     
     /**
      *Se utiliza para mover de izquierda y derecha al Rey Helado 
@@ -196,17 +178,15 @@ public class ReyHelado2 extends Actor
         return TeclaPresionada ;
     }
     
-    /**
-     * Este metodo se encargara de detectar y colocar en un lugar diferente cuando el rey healdo es golpeado por algún 
-     * enemigo 
-     */
-    public void golpeAlReyHelado(){
-        MyWorld2 mundo=(MyWorld2)getWorld();
-        if(isTouching(Arcoiris.class))
+    public void ataqueMentita(){
+        MyWorld2 mundo = (MyWorld2)getWorld();
+        Actor mentita;
+        mentita = getOneObjectAtOffset(0,0,mentita.class);
+        if(mentita != null)
         {
-            mundo.decrementaVidas();
-            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight() );
-            Greenfoot.playSound("si yo no hice nada.wav");
+            mundo. decrementaVidas();
+            mundo.removeObject(mentita);
+            
         }
     }
    

@@ -162,6 +162,7 @@ public class MyWorld2 extends World
                this.removeObject(paletita);
                
               inmuneReturn();
+              return;
               
              
                
@@ -175,6 +176,7 @@ public class MyWorld2 extends World
              dulceSenorP();
              dulcePanDeCanela();
              dulcePaleta();
+             
          }     
          
     }
@@ -201,6 +203,7 @@ public class MyWorld2 extends World
                     
          }
     }
+     
     
     private void prepare()
     {

@@ -16,5 +16,6 @@ public class mentita extends DulceGente
     {
         // Add your action code here.
         super.act();
+       
     }    
 }
