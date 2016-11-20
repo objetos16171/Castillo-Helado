@@ -21,8 +21,8 @@ public class MyWorld extends World
      
     private ricardio vida;
    
-    private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom.png");
-    private GreenfootImage imagenDeFondo2 = new GreenfootImage("Ice_Kingdom.png");
+    private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom2.png");
+    private GreenfootImage imagenDeFondo2 = new GreenfootImage("Ice_Kingdom2.png");
     
 
     /**
