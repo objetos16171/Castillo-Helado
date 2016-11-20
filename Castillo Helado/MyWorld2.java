@@ -15,12 +15,12 @@ public class MyWorld2 extends World
     private Counter contadorVidas;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
+    //dulce gente
     private mentita menta;
     private senorPanquesito senorP;
     private panDeCanela pan;
     private paleta paletita;
     //inmunidad
-    public final int INMUNIDAD = 30;
     private Marceline marceline;
     private SimpleTimer relojMarceline;
     
@@ -140,9 +140,14 @@ public class MyWorld2 extends World
     
     public void inmune()
     {
-        if(contadorPuntos.getValue() == 100)
+        if(contadorPuntos.getValue()>= 100)
         {
             addObject(marceline,500,300);
+            relojMarceline.mark();
+            this.removeObject(menta);
+            this.removeObject(senorP);
+            this.removeObject(pan);
+            this.removeObject(paletita);
             
         }
         
