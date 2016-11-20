@@ -38,7 +38,7 @@ public class MyWorld2 extends World
         super(700, 500, 1); 
         contadorPuntos = new Counter("puntos ");
         contadorVidas = new Counter("vidas ");
-        
+        tiempoInmune = new Counter("inmunidad ");
         addObject(contadorPuntos,631,27);
         
         contadorVidas.setValue(3);
@@ -75,6 +75,7 @@ public class MyWorld2 extends World
             addObject(pinguino,Greenfoot.getRandomNumber(getWidth()),0);        
         }
     }
+    
     
     
     /**

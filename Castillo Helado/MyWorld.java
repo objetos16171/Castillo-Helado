@@ -5,7 +5,7 @@ import java.awt.Color;
 /**
  * Write a description of class MyWorld here.
  * 
- * @Soto Avila Karolina, Escobar Chavez Jose Emmanuel 
+ * @Soto Avila Carolina, Escobar Chavez Jose Emmanuel 
  * @3 de Noviembre del 2016
  */
 public class MyWorld extends World
