@@ -61,7 +61,7 @@ public class MyWorld2 extends World
         dulceSenorP();
         dulcePanDeCanela();
         dulcePaleta();
-        inmune();
+        //inmune();
         juegoPerdido();
         
     }
@@ -84,6 +84,7 @@ public class MyWorld2 extends World
     public void incrementaPinguinos()
     {
         contadorPuntos.add(10);
+        
     }
     
     /**
@@ -93,6 +94,7 @@ public class MyWorld2 extends World
     public void incrementaPrincesas()
     {
         contadorPuntos.add(20);
+        
     }
     
     /**
@@ -128,6 +130,7 @@ public class MyWorld2 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(senorP,Greenfoot.getRandomNumber(getWidth()),0);
+         Greenfoot.playSound("azucar.wav");
         }
     }
     
@@ -137,6 +140,7 @@ public class MyWorld2 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
+         Greenfoot.playSound("azucar.wav");
         }
     }
     
@@ -146,6 +150,7 @@ public class MyWorld2 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
+         Greenfoot.playSound("azucar.wav");
         }
     }
     
@@ -156,6 +161,7 @@ public class MyWorld2 extends World
             {
               
                addObject(marceline,500,300);
+               
                this.removeObject(menta);
                this.removeObject(senorP);
                this.removeObject(pan);

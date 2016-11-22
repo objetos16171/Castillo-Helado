@@ -41,6 +41,7 @@ public class ReyHelado extends Actor
         agarraPinguino();
         agarraPrincesa();
         golpeAlReyHelado();
+        tocaDisparoTronquitos();
         siguienteNivel();
     }    
     
@@ -205,8 +206,15 @@ public class ReyHelado extends Actor
         if(isTouching(Arcoiris.class))
         {
             mundo.decrementaVidas();
-            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight() );
+            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight()/2 );
             Greenfoot.playSound("si yo no hice nada.wav");
+        }
+        
+        if(isTouching(Finn.class))
+        {
+            mundo.decrementaVidas();
+            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight()/2 );
+            
         }
     }
    
@@ -218,11 +226,19 @@ public class ReyHelado extends Actor
             if (nivel == 1) {
                 nivel = 2;
                 Greenfoot.setWorld(new MyWorld2(this));
-                
+                Greenfoot.playSound("que me da que me da.wav");
             }
             
         }
     }
     
+    public void tocaDisparoTronquitos()
+    {
+        if(isTouching(tronquitos.class))
+        {
+            World mundo = getWorld();
+            setLocation( 50  , getWorld().getHeight()/3 );
+        }
+    }
     
 }

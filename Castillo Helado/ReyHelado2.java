@@ -229,17 +229,18 @@ public class ReyHelado2 extends Actor
         }
      }
    
-    /*private void siguienteNivel()
+    private void siguienteNivel()
     {
-        MyWorld2 mundo=(MyWorld2)getWorld();
+        MyWorld3 mundo=(MyWorld3)getWorld();
         
-        if (getY() < getWorld().getHeight()-450) {
+        if (getY() < getWorld().getHeight()-150) {
             if (nivel == 2) {
                 nivel = 3;
-                Greenfoot.setWorld(new MyWorld3(this));
+                Greenfoot.setWorld(new MyWorld3( ));
+                
                 
             }
             
         }
-    }*/
+    }
 }

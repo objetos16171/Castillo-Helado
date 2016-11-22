@@ -17,12 +17,17 @@ public class MyWorld extends World
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
+    
     private ReyHelado reyHelado;
-     
+    
+    private Finn finn;
     private ricardio vida;
    
     private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom2.png");
-    private GreenfootImage imagenDeFondo2 = new GreenfootImage("Ice_Kingdom2.png");
+    
+    
+    private dulcePrincesa dulceprincesa;
+    private perdiste Perdiste; 
     
 
     /**
@@ -44,6 +49,8 @@ public class MyWorld extends World
         contadorVidas.setValue(3);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
+        arcoiris = new Arcoiris();
+        finn = new Finn();
         prepare();
     }
     
@@ -70,7 +77,23 @@ public class MyWorld extends World
         contadorVidas.add(+1);
 
     }
-       
+    
+   
+    
+    /**
+     * Aparace la dulce princesa en el mundo cuando se junta cierta cantidad de puntuación
+     * 
+     */
+    public void ayudaAlRey()
+    {   
+        if(contadorPuntos.getValue()>=35 && contadorPuntos.getValue()<=40    )
+        {
+            dulceprincesa = new dulcePrincesa();
+            addObject(dulceprincesa, getWidth()-20 , getHeight()-30 );
+            Greenfoot.playSound("risaPrincesa.wav");
+        }   
+    }
+    
     /**
      * Este metodo aparecera princesas aleatoriamente en el mundo
      */
@@ -122,19 +145,22 @@ public class MyWorld extends World
      */
     public void ataqueArcoiris()
     {
-        if(reyHelado.getY()==30 && reyHelado.getX()==30 )
+        if( ( ( reyHelado.getX() >= 0 ) && ( reyHelado.getX() <= 40 )  )  )
         {
-        arcoiris = new Arcoiris();
         addObject(arcoiris,61,87);
         }
         
-        if(reyHelado.getY()==0 && reyHelado.getX()==150 )
-        {
-        arcoiris = new Arcoiris();
-        addObject(arcoiris,61,87);
-        }
     }
     
+    public void ataqueFinn()
+    {
+        if( ( ( reyHelado.getX()>= 0 ) || ( reyHelado.getX() <= getWidth()/2 ) )
+          &&( ( reyHelado.getY()>= 450 )  ))
+        {
+            addObject(finn, 20, 400);   
+        }
+       
+    }
    
     
     public void act()
@@ -144,6 +170,12 @@ public class MyWorld extends World
         aparecePrincesa();
         ataqueArcoiris();
         enemigojake();
+        ataqueFinn();
+        juegoPerdido();
+        
+        
+        
+        
     }
     
    public void enemigojake()
@@ -161,6 +193,7 @@ public class MyWorld extends World
     public void incrementaPinguinos()
     {
         contadorPuntos.add(10);
+        ayudaAlRey();
     }
     
     /**
@@ -170,6 +203,7 @@ public class MyWorld extends World
     public void incrementaPrincesas()
     {
         contadorPuntos.add(20);
+        ayudaAlRey();
     }
     
     /**
@@ -185,9 +219,16 @@ public class MyWorld extends World
      */
     public void juegoPerdido()
     {
-        if(contadorVidas.getValue()==0){
+        if(contadorVidas.getValue()==0)
+        {
+            
+            Perdiste = new perdiste();
+            addObject( Perdiste, getWidth()/2 , getHeight()/2  );
+            
             Greenfoot.stop();
+           
         }
+        
     }
     
     /**
@@ -214,10 +255,8 @@ public class MyWorld extends World
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
 
-        dulcePrincesa dulceprincesa = new dulcePrincesa();
-        addObject(dulceprincesa,652,454);
-        Finn finn = new Finn();
-        addObject(finn,66,476);
+        
+        
         etiquetaVida etiquetavida = new etiquetaVida();
         addObject(etiquetavida,542,35);
         etiquetavida.setLocation(550,28);

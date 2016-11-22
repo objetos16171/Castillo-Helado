@@ -14,6 +14,7 @@ public class tronquitos extends Actor
      */
     public void act() 
     {
+        
         setLocation( getX() + Greenfoot.getRandomNumber(20) , getY() - Greenfoot.getRandomNumber(4) );
         quitaTronquitos();
         // Add your action code here.

@@ -81,6 +81,7 @@ public class dulcePrincesa extends Actor
        if(getX()<=getWorld().getWidth()-10)
        {
           velX = velX*-1;
+          
        }
     }
     
@@ -93,6 +94,7 @@ public class dulcePrincesa extends Actor
         
         if(getY() >= 350)
        {
+           
           dirY = dirY*-1;  
           
        }
@@ -104,4 +106,5 @@ public class dulcePrincesa extends Actor
        }
     }
    
+    
 }
