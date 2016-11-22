@@ -171,8 +171,7 @@ public class MyWorld2 extends World
                
               inmuneReturn();
               return;
-              
-      
+             
          }
          
          if(contadorPuntos.getValue()>= 150)  
