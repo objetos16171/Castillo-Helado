@@ -10,7 +10,8 @@ public class Marceline extends Actor
 {
     
     private GifImage gifMarceline= new GifImage("marcelineCanta.gif");
-    
+    private int xPos=4;
+    private int yPos=0;
     /**
      * Act - do whatever the Marceline wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,8 +19,30 @@ public class Marceline extends Actor
     public void act() 
     {
         setImage(gifMarceline.getCurrentImage());
-        // Add your action code here.
         
+        setLocation( getX() + xPos , getY() + yPos );
+        World mundo=getWorld();
+        if( this.getX() >= getWorld().getWidth() - 20 )
+        {
+            xPos = xPos * -1 ;
+        }
+        
+        if( this.getX() <= 20 )
+        {
+            xPos = xPos * -1 ;
+        }
+        
+        if( this.getY() <= getWorld().getHeight()/2 )
+        {
+            yPos=1;
+        }
+        
+        if( this.getY() >= getWorld().getHeight()/2 )
+        {
+            yPos=-1;
+        }
+        
+ 
     }    
     
     

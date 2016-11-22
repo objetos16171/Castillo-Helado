@@ -37,6 +37,7 @@ public class MyWorld extends World
     public MyWorld()
     {
         this(new ReyHelado());
+        prepare();
     }
     
     public MyWorld(ReyHelado rey)
@@ -255,8 +256,6 @@ public class MyWorld extends World
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
 
-        
-        
         etiquetaVida etiquetavida = new etiquetaVida();
         addObject(etiquetavida,542,35);
         etiquetavida.setLocation(550,28);
@@ -270,5 +269,10 @@ public class MyWorld extends World
         etiquetapuntos.setLocation(618,28);
         etiquetapuntos.setLocation(614,28);
 
+        Marceline marceline = new Marceline();
+        addObject(marceline,606,189);
+        marceline.setLocation(622,206);
+        
+        
     }
 }

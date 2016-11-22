@@ -11,7 +11,7 @@ public class dulcePrincesa extends Actor
     private int velX=-4;
     private int dirY=2;
     private GifImage dulcePrincesaGifIzquierda = new GifImage("dulcePrincesa.gif");
-    private GifImage dulcePrincesaGifDerecha = new GifImage("dulcePrincesa2.gif");
+    //private GifImage dulcePrincesaGifDerecha = new GifImage("dulcePrincesa2.gif");
     /**
      * Act - do whatever the dulcePrincesa wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

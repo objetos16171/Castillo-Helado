@@ -130,7 +130,6 @@ public class MyWorld2 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(senorP,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
         }
     }
     
@@ -140,7 +139,6 @@ public class MyWorld2 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
         }
     }
     
@@ -150,7 +148,6 @@ public class MyWorld2 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
         }
     }
     
