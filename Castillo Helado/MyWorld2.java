@@ -61,7 +61,7 @@ public class MyWorld2 extends World
         dulceSenorP();
         dulcePanDeCanela();
         dulcePaleta();
-        //inmune();
+        inmune();
         juegoPerdido();
         
     }
@@ -157,7 +157,9 @@ public class MyWorld2 extends World
     public void inmune()
     {
         
-         if(contadorPuntos.getValue()>= 100)
+         if( (contadorPuntos.getValue()>= 100) &&
+             (contadorPuntos.getValue()<=149)
+           )
             {
               
                addObject(marceline,500,300);
@@ -170,8 +172,7 @@ public class MyWorld2 extends World
               inmuneReturn();
               return;
               
-             
-               
+      
          }
          
          if(contadorPuntos.getValue()>= 150)  
