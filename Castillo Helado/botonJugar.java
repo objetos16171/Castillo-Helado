@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class botonJugar extends Actor
 {
     private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
+    private GifImage gifAyuda = new GifImage("jugarBoton.gif");
+
     
     /**
      * Act - do whatever the botonJugar wants to do. This method is called whenever
@@ -16,6 +18,7 @@ public class botonJugar extends Actor
      */
     public void act() 
     {
+         setImage(gifAyuda.getCurrentImage());
        
          if (Greenfoot.mouseClicked(this))
          {

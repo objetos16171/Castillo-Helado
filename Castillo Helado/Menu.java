@@ -22,7 +22,7 @@ public class Menu extends World
     
         public void act()
     {
-         setPaintOrder( MarcelineMenu.class , botonAyuda.class ,botonJugar.class, CopoDeNieveMenu.class , ReyHeladoMenu.class );
+         setPaintOrder( botonAyuda.class ,botonJugar.class,tituloMenu.class, copoElegante.class , MarcelineMenu.class , CopoDeNieveMenu.class , ReyHeladoMenu.class, NubeMenu.class );
          nevada();
         
     }
@@ -46,6 +46,14 @@ public class Menu extends World
     public void started()
     {
         musicaDeFondo.playLoop();
+       
+        
+        
+    }
+    
+    public void stopped()
+    {
+        musicaDeFondo.stop();
        
         
         
@@ -95,5 +103,10 @@ public class Menu extends World
         addObject(nubemenu6,118,59);
         NubeMenu nubemenu7 = new NubeMenu();
         addObject(nubemenu7,84,97);
+        tituloMenu titulomenu = new tituloMenu();
+        addObject(titulomenu,457,360);
+        copoElegante copoelegante = new copoElegante();
+        addObject(copoelegante,351,262);
+        
     }
 }
