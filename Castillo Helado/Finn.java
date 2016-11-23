@@ -11,7 +11,7 @@ public class Finn extends Actor
     private GifImage finnGif = new GifImage ("finnNuevo.gif");
     private int xVel=3;
     private int xVelBala=5;
-    private tronquitos Tronquitos; 
+    private tronquito Tronquito; 
     /**
      * Act - do whatever the Finn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,7 +19,7 @@ public class Finn extends Actor
     
     public Finn()
     {
-        Tronquitos = new tronquitos();
+        Tronquito = new tronquito();
     }
     
     public void act() 
@@ -39,13 +39,11 @@ public class Finn extends Actor
     {
         World mundo = getWorld();
         if ( this.getX() <= getWorld().getWidth()-100)   
-        {
-            
-       
-            getWorld().addObject( Tronquitos , this.getX()+xVelBala ,this.getY());
-            
+        {   
+            getWorld().addObject( Tronquito , this.getX()+xVelBala ,this.getY());   
        }
     }
+    
     /**
      * Quita a al actor cuando llega al borde del mundo 
      */

@@ -23,8 +23,7 @@ public class MyWorld extends World
     private Finn finn;
     private ricardio vida;
    
-    private GreenfootImage imagenDeFondo1 = new GreenfootImage("Ice_Kingdom2.png");
-    
+       
     
     private dulcePrincesa dulceprincesa;
     private perdiste Perdiste; 
@@ -37,13 +36,14 @@ public class MyWorld extends World
     public MyWorld()
     {
         this(new ReyHelado());
-        prepare();
+        
     }
     
     public MyWorld(ReyHelado rey)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
+        Greenfoot.setWorld(new Menu());
         contadorPuntos = new Counter("puntos ");
         addObject(contadorPuntos,631,27);
         contadorVidas = new Counter("vidas ");
@@ -156,7 +156,7 @@ public class MyWorld extends World
     public void ataqueFinn()
     {
         if( ( ( reyHelado.getX()>= 0 ) || ( reyHelado.getX() <= getWidth()/2 ) )
-          &&( ( reyHelado.getY()>= 450 )  ))
+               &&( ( reyHelado.getY()>= 450 )  ))
         {
             addObject(finn, 20, 400);   
         }
@@ -166,17 +166,14 @@ public class MyWorld extends World
     
     public void act()
     {
-        setBackground(imagenDeFondo1);    
+        musicaDeFondo.playLoop();
         lluviaPinguino();   
         aparecePrincesa();
         ataqueArcoiris();
         enemigojake();
         ataqueFinn();
+        
         juegoPerdido();
-        
-        
-        
-        
     }
     
    public void enemigojake()

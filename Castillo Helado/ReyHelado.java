@@ -234,7 +234,7 @@ public class ReyHelado extends Actor
     
     public void tocaDisparoTronquitos()
     {
-        if(isTouching(tronquitos.class))
+        if(isTouching(tronquito.class))
         {
             World mundo = getWorld();
             setLocation( 50  , getWorld().getHeight()/3 );
