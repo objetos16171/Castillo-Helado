@@ -16,7 +16,7 @@ public class Menu extends World
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(700, 500, 1); 
         prepare();
     }
     
@@ -72,12 +72,8 @@ public class Menu extends World
      */
     private void prepare()
     {
-        ReyHeladoMenu reyheladomenu = new ReyHeladoMenu();
-        addObject(reyheladomenu,99,313);
-        ReyHeladoMenu reyheladomenu2 = new ReyHeladoMenu();
-        addObject(reyheladomenu2,99,314);
         ReyHeladoMenu reyheladomenu3 = new ReyHeladoMenu();
-        addObject(reyheladomenu3,99,314);
+        addObject(reyheladomenu3,99,414);
         botonAyuda botonayuda = new botonAyuda();
         addObject(botonayuda,120, 100);
         botonJugar botonjugar = new botonJugar();
