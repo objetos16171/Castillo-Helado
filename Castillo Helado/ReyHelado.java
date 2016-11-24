@@ -221,12 +221,16 @@ public class ReyHelado extends Actor
     private void siguienteNivel()
     {
         MyWorld mundo=(MyWorld)getWorld();
-        
         if (getY() < getWorld().getHeight()-450) {
             if (nivel == 1) {
                 nivel = 2;
-                Greenfoot.setWorld(new MyWorld2(this));
+                Greenfoot.setWorld(new MyWorld2(this, 
+                                                ((MyWorld)mundo).regresaPuntuacion() , 
+                                                ((MyWorld)mundo).regresaVida()) 
+                                                 ); 
                 Greenfoot.playSound("que me da que me da.wav");
+                
+                
             }
             
         }

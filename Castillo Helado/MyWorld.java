@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +48,7 @@ public class MyWorld extends World
         contadorPuntos = new Counter("puntos ");
         addObject(contadorPuntos,631,27);
         contadorVidas = new Counter("vidas ");
-        contadorVidas.setValue(3);
+        contadorVidas.setValue(5);
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
         arcoiris = new Arcoiris();
@@ -212,6 +213,18 @@ public class MyWorld extends World
         contadorVidas.add(-1);
     }
     
+    public int regresaPuntuacion()
+    {
+        int puntos=0;
+        return(puntos=contadorPuntos.getValue());
+    }
+    
+    public int regresaVida()
+    {
+        int vidas=0;
+        return(vidas=contadorVidas.getValue());
+    }
+    
     /**
      * Si las vidas llegan a cero el juego se termina y el juego se detiene 
      */
@@ -266,10 +279,6 @@ public class MyWorld extends World
         etiquetapuntos.setLocation(618,28);
         etiquetapuntos.setLocation(614,28);
 
-        Marceline marceline = new Marceline();
-        addObject(marceline,606,189);
-        marceline.setLocation(622,206);
-        
         
     }
 }

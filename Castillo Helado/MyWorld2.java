@@ -6,6 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class MyWorld2 extends World
 {
     
@@ -32,7 +33,7 @@ public class MyWorld2 extends World
      */
     
     
-    public MyWorld2(ReyHelado rey)
+    public MyWorld2(ReyHelado rey, int valorContadorAnterior, int valorVidaAnterior)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
@@ -41,7 +42,8 @@ public class MyWorld2 extends World
         tiempoInmune = new Counter("inmunidad ");
         addObject(contadorPuntos,631,27);
         
-        contadorVidas.setValue(3);
+        contadorPuntos.setValue( valorContadorAnterior );
+        contadorVidas.setValue( valorVidaAnterior );
         addObject(contadorVidas,532,27);
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
@@ -75,7 +77,6 @@ public class MyWorld2 extends World
             addObject(pinguino,Greenfoot.getRandomNumber(getWidth()),0);        
         }
     }
-    
     
     
     /**
