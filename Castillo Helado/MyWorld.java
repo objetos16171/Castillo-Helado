@@ -15,7 +15,7 @@ public class MyWorld extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.wav");
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
     private ReyHelado reyHelado;
@@ -264,7 +264,5 @@ public class MyWorld extends World
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
 
-        
-        
     }
 }

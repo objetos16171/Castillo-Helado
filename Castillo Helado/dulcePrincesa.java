@@ -11,32 +11,28 @@ public class dulcePrincesa extends Actor
     private int velX=-4;
     private int dirY=2;
     private GifImage dulcePrincesaGifIzquierda = new GifImage("dulcePrincesa.gif");
-    //private GifImage dulcePrincesaGifDerecha = new GifImage("dulcePrincesa2.gif");
+    
     /**
      * Act - do whatever the dulcePrincesa wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {  
-        
        setImage(dulcePrincesaGifIzquierda.getCurrentImage());
        setLocation( getX()+velX , getY() + dirY );
        vuelaAterriza();
        avanzaRetrocede();
        arrojaCorazon();
-       adios();
-       
-       
-        
+       adios();   
     }
+    
     /**
      * Este metodo quita a la dulce princesa cuando llega al inicio del ancho del
      * mundo 
      */
     public void adios()
     {
-        World mundo=getWorld();
-        
+        World mundo=getWorld();    
         if( this.getX() <= 10){
             mundo.removeObject(this);
         }

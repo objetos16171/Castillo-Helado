@@ -13,7 +13,7 @@ public class MyWorld3 extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     private SimpleTimer reloj;
     //dulce gente
     private mentita menta;
@@ -144,7 +144,7 @@ public class MyWorld3 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
+         
         }
     }
     
@@ -154,7 +154,7 @@ public class MyWorld3 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
+         
         }
     }
     

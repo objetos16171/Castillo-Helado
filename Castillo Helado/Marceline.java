@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Marceline extends Actor
 {
-    
+     
     private GifImage gifMarceline= new GifImage("marcelineCanta.gif");
     private int xPos=4;
     private int yPos=0;
@@ -18,6 +18,7 @@ public class Marceline extends Actor
      */
     public void act() 
     {
+            
         setImage(gifMarceline.getCurrentImage());
         
         setLocation( getX() + xPos , getY() + yPos );
@@ -41,9 +42,17 @@ public class Marceline extends Actor
         {
             yPos=-1;
         }
-        
+        tocaCancion();
  
     }    
-    
+    public void tocaCancion()
+    {
+        if(this.getX()>=150 && this.getX()<=151)
+        {
+        Greenfoot.playSound("Marceline.wav");
+        }
+        
+        
+    }
     
 }

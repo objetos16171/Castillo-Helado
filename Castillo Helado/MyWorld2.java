@@ -14,7 +14,7 @@ public class MyWorld2 extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     private SimpleTimer reloj;
     //dulce gente
     private mentita menta;
@@ -27,7 +27,7 @@ public class MyWorld2 extends World
     public Counter tiempoInmune;
     public final int TIEMPO = 30;
     private perdiste Perdiste;
-    private int activa=0;
+    
     /**
      * Constructor for objects of class MyWorld2.
      * 
@@ -46,7 +46,7 @@ public class MyWorld2 extends World
         addObject(contadorPuntos,631,27);
         contadorPuntos.setValue( valorContadorAnterior );
         contadorVidas.setValue( valorVidaAnterior );
-        addObject(contadorVidas,532,27);
+        addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
         marceline = new Marceline();
@@ -154,7 +154,7 @@ public class MyWorld2 extends World
          if( contadorPuntos.getValue()>= 100 && contadorPuntos.getValue()<= 149   )  
             {
               addObject(marceline,500,300);
-              addObject(tiempoInmune,50,80);
+              addObject(tiempoInmune,250,80);
               this.removeObject(menta);
               this.removeObject(senorP);
               this.removeObject(pan);
@@ -162,40 +162,33 @@ public class MyWorld2 extends World
               contadorInmune();
          }
          
-         if (tiempoInmune.getValue() <= 0)
+         if (tiempoInmune.getValue() <= -1)
          
          {
-             System.out.println("entro reloj");
              this.removeObject(marceline);
              this.removeObject(tiempoInmune);    
              dulceMentita();
              dulceSenorP();
              dulcePanDeCanela();
              dulcePaleta();
-             
          }     
          
-         if(
-             (contadorPuntos.getValue() >= 151)
-         
-         )
-         
+         if((contadorPuntos.getValue() >= 150))
          {
-             
              this.removeObject(marceline);
              this.removeObject(tiempoInmune);    
              dulceMentita();
              dulceSenorP();
              dulcePanDeCanela();
              dulcePaleta();
-             
+     
          }
     }
     
     public void contadorInmune(){
         if(relojMarceline.millisElapsed() >= 1000)
         {
-            if( tiempoInmune.getValue()!=0 )
+            if( tiempoInmune.getValue()!=-1 )
             {
                  tiempoInmune.add(-1);
                  relojMarceline.mark();

@@ -19,7 +19,6 @@ public class botonAyuda extends Actor
          if (Greenfoot.mouseClicked(this))
          {
              World menu = getWorld();
-             ((Menu)menu).quitaMusica();
              Greenfoot.setWorld(new Ayuda());
              
             }

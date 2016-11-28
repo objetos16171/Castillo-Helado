@@ -75,6 +75,8 @@ public class ReyHelado extends Actor
      */
     public void agarraPinguino()
     {
+        GreenfootSound sonidoAggarPinguino = new GreenfootSound ("quien te dijo que puedes Volar.wav");
+
         MyWorld mundo = (MyWorld)getWorld();
         Actor Pinguino;
         Pinguino = getOneObjectAtOffset(0,0,Pinguino.class);
@@ -83,11 +85,14 @@ public class ReyHelado extends Actor
             mundo.incrementaPinguinos();
             mundo.removeObject(Pinguino);
             if(Greenfoot.getRandomNumber(5)<2){
-                Greenfoot.playSound("quien te dijo que puedes Volar.wav");
+                //Greenfoot.playSound("quien te dijo que puedes Volar.wav");
+                sonidoAggarPinguino.play();
             }
             else if(Greenfoot.getRandomNumber(8)<2)
             {
-                        Greenfoot.playSound("que.wav"); 
+                sonidoAggarPinguino.stop();        
+                Greenfoot.playSound("que.wav"); 
+                        
             }
         }
         
