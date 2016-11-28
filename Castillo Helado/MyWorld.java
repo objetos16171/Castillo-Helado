@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.Color;
 /**
- * Write a description of class MyWorld here.
+ * Esta clase se esta diseñada para el nivel cuenta con contador de vidas y puntos tres enemigos, plataformas.
  * 
  * @Soto Avila Carolina, Escobar Chavez Jose Emmanuel 
  * @3 de Noviembre del 2016
@@ -18,14 +18,9 @@ public class MyWorld extends World
     private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
-    
     private ReyHelado reyHelado;
-    
     private Finn finn;
     private ricardio vida;
-   
-       
-    
     private dulcePrincesa dulceprincesa;
     private perdiste Perdiste; 
     
@@ -45,11 +40,11 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
         Greenfoot.setWorld(new Menu());
-        contadorPuntos = new Counter("puntos ");
+        contadorPuntos = new Counter("PUNTOS: ");
         addObject(contadorPuntos,631,27);
-        contadorVidas = new Counter("vidas ");
+        contadorVidas = new Counter("VIDAS: ");
         contadorVidas.setValue(5);
-        addObject(contadorVidas,532,27);
+        addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
         arcoiris = new Arcoiris();
         finn = new Finn();
@@ -63,7 +58,6 @@ public class MyWorld extends World
     */
     public void lluviaPinguino()
     {
-        int x;
         pinguino = new Pinguino();
         if (Greenfoot.getRandomNumber(getWidth()) < 10) 
         {
@@ -80,15 +74,13 @@ public class MyWorld extends World
 
     }
     
-   
-    
     /**
      * Aparace la dulce princesa en el mundo cuando se junta cierta cantidad de puntuación
      * 
      */
     public void ayudaAlRey()
     {   
-        if(contadorPuntos.getValue()>=35 && contadorPuntos.getValue()<=40    )
+        if(contadorPuntos.getValue() >= 90 && contadorPuntos.getValue() <= 99    )
         {
             dulceprincesa = new dulcePrincesa();
             addObject(dulceprincesa, getWidth()-20 , getHeight()-30 );
@@ -147,7 +139,9 @@ public class MyWorld extends World
      */
     public void ataqueArcoiris()
     {
-        if( ( ( reyHelado.getX() >= 0 ) && ( reyHelado.getX() <= 40 )  )  )
+        if(  (( reyHelado.getX() >= 0 ) && ( reyHelado.getX() <= 100 ))  || 
+             ((reyHelado.getY()  >=0) && (reyHelado.getY()  <=30 ))
+             )
         {
         addObject(arcoiris,61,87);
         }
@@ -172,8 +166,7 @@ public class MyWorld extends World
         aparecePrincesa();
         ataqueArcoiris();
         enemigojake();
-        ataqueFinn();
-        
+        ataqueFinn();    
         juegoPerdido();
     }
     
@@ -213,12 +206,18 @@ public class MyWorld extends World
         contadorVidas.add(-1);
     }
     
+    /**
+     * Devuelve el valor total de los puntos conseguidos por el jugador 
+     */
     public int regresaPuntuacion()
     {
         int puntos=0;
         return(puntos=contadorPuntos.getValue());
     }
     
+    /**
+     * Devuelve el valor total de vidas con las que cuenta el jugador 
+     */
     public int regresaVida()
     {
         int vidas=0;
@@ -232,10 +231,9 @@ public class MyWorld extends World
     {
         if(contadorVidas.getValue()==0)
         {
-            
+   
             Perdiste = new perdiste();
             addObject( Perdiste, getWidth()/2 , getHeight()/2  );
-            
             Greenfoot.stop();
            
         }

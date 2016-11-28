@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @Soto\ Avila\ Carolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ \r\n\ @3\ de\ Noviembre\ del\ 2016\r\n
+comment0.text=\r\n\ Esta\ clase\ se\ esta\ dise\u00F1ada\ para\ el\ nivel\ cuenta\ con\ contador\ de\ vidas\ y\ puntos\ tres\ enemigos,\ plataformas.\r\n\ \r\n\ @Soto\ Avila\ Carolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ \r\n\ @3\ de\ Noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=MyWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
@@ -21,8 +21,10 @@ comment15.target=void\ decrementaVidas()
 comment15.text=\r\n\ Disminuye\ las\ vidas\ al\ encontrarse\ con\ un\ enemigo\ \r\n
 comment16.params=
 comment16.target=int\ regresaPuntuacion()
+comment16.text=\r\n\ Devuelve\ el\ valor\ total\ de\ los\ puntos\ conseguidos\ por\ el\ jugador\ \r\n
 comment17.params=
 comment17.target=int\ regresaVida()
+comment17.text=\r\n\ Devuelve\ el\ valor\ total\ de\ vidas\ con\ las\ que\ cuenta\ el\ jugador\ \r\n
 comment18.params=
 comment18.target=void\ juegoPerdido()
 comment18.text=\r\n\ Si\ las\ vidas\ llegan\ a\ cero\ el\ juego\ se\ termina\ y\ el\ juego\ se\ detiene\ \r\n

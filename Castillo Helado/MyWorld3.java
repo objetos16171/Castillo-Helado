@@ -40,9 +40,9 @@ public class MyWorld3 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPuntos = new Counter("puntos ");
-        contadorVidas = new Counter("vidas ");
-        tiempoInmune = new Counter("inmunidad ");
+        contadorPuntos = new Counter("PUNTOS: ");
+        contadorVidas = new Counter("VIDAS: ");
+        tiempoInmune = new Counter("INMUNIDAD: ");
         addObject(contadorPuntos,631,27);
         
         contadorVidas.setValue(3);
