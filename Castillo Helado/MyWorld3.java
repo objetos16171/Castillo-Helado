@@ -225,10 +225,7 @@ public class MyWorld3 extends World
         addObject(plataforma2,100,350);
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
-        etiquetaVida etiquetavida = new etiquetaVida();
-        addObject(etiquetavida,517,28);
-        etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
-        addObject(etiquetapuntos,614,28);
+        
     }
    
    }

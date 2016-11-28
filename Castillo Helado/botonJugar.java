@@ -26,6 +26,7 @@ public class botonJugar extends Actor
              ((Menu)menu).quitaMusica();
              Greenfoot.setWorld(new MyWorld());
              
+             
             }
         // Add your action code here.
     }    

@@ -266,19 +266,7 @@ public class MyWorld extends World
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
 
-        etiquetaVida etiquetavida = new etiquetaVida();
-        addObject(etiquetavida,542,35);
-        etiquetavida.setLocation(550,28);
-        etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
-        addObject(etiquetapuntos,648,33);
-
-        etiquetavida.setLocation(554,31);
-
-        etiquetapuntos.setLocation(647,32);
-        etiquetavida.setLocation(517,28);
-        etiquetapuntos.setLocation(618,28);
-        etiquetapuntos.setLocation(614,28);
-
+        
         
     }
 }
