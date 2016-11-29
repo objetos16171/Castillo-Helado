@@ -14,7 +14,6 @@ public class MyWorld2 extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     private SimpleTimer reloj;
     //dulce gente
     private mentita menta;

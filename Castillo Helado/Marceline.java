@@ -9,9 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Marceline extends Actor
 {
      
-    private GifImage gifMarceline= new GifImage("marcelineCanta.gif");
+    private GifImage gifMarceline= new GifImage("Marce.gif");
     private int xPos=4;
-    private int yPos=0;
+    private int yPos=1;
     /**
      * Act - do whatever the Marceline wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -33,25 +33,27 @@ public class Marceline extends Actor
             xPos = xPos * -1 ;
         }
         
-        if( this.getY() <= getWorld().getHeight()/2 )
+        if( this.getY() <= 20 )
         {
-            yPos=1;
+            yPos=yPos*-1;
         }
         
-        if( this.getY() >= getWorld().getHeight()/2 )
+        if( this.getY() >= getWorld().getHeight()-30 )
         {
-            yPos=-1;
+            yPos=yPos*-1;
         }
         tocaCancion();
  
     }    
     public void tocaCancion()
     {
-        if(this.getX()>=150 && this.getX()<=151)
-        {
-        Greenfoot.playSound("Marceline.wav");
-        }
+        World mundo=getWorld();
         
+        
+        if(this.getX() >= getWorld().getWidth() - 20)
+        {
+        Greenfoot.playSound("Soy tu Problema - Marceline plus.wav");
+        }
         
     }
     
