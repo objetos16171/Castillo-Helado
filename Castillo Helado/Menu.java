@@ -107,6 +107,6 @@ public class Menu extends World
         addObject(titulomenu,457,360);
         copoElegante copoelegante = new copoElegante();
         addObject(copoelegante,351,262);
-        
+
     }
 }
