@@ -38,13 +38,12 @@ public class ReyHelado3 extends Actor
         controlIzqDer();
         bajaConPlataforma();
         saltoConGravedad();
-        //agarraPinguino();
-        //ataqueMentita();
-        //ataqueSenorP();
-        //ataquePanDeCanela();
-        //ataquePaleta();
+        agarraPinguino();
+        ataqueMentita();
+        ataquePaleta();
         
-        //siguienteNivel();
+        
+       
     }    
     
     /**
