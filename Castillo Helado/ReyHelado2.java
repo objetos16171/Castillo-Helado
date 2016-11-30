@@ -234,11 +234,10 @@ public class ReyHelado2 extends Actor
         MyWorld3 mundo=(MyWorld3)getWorld();
         
         if (getY() < getWorld().getHeight()-150) {
-            if (nivel == 2) {
+            if (nivel == 2) 
+            {
                 nivel = 3;
                 Greenfoot.setWorld(new MyWorld3( ));
-                
-                
             }
             
         }

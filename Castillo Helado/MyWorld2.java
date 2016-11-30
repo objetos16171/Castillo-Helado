@@ -6,6 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class MyWorld2 extends World
 {
     
@@ -13,7 +14,6 @@ public class MyWorld2 extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
     private SimpleTimer reloj;
     //dulce gente
     private mentita menta;
@@ -25,6 +25,7 @@ public class MyWorld2 extends World
     private SimpleTimer relojMarceline;
     public Counter tiempoInmune;
     public final int TIEMPO = 30;
+    private perdiste Perdiste;
     
     /**
      * Constructor for objects of class MyWorld2.
@@ -32,24 +33,22 @@ public class MyWorld2 extends World
      */
     
     
-    public MyWorld2(ReyHelado rey)
+    public MyWorld2(ReyHelado rey, int valorContadorAnterior, int valorVidaAnterior)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPuntos = new Counter("puntos ");
-        contadorVidas = new Counter("vidas ");
-        tiempoInmune = new Counter("inmunidad ");
+        contadorPuntos = new Counter("PUNTOS: ");
+        contadorVidas = new Counter("VIDAS: ");
+        tiempoInmune = new Counter("INMUNIDAD: ");
+        tiempoInmune.setValue(TIEMPO);
+        removeObject(tiempoInmune);
         addObject(contadorPuntos,631,27);
-        
-        contadorVidas.setValue(3);
-        addObject(contadorVidas,532,27);
+        contadorPuntos.setValue( valorContadorAnterior );
+        contadorVidas.setValue( valorVidaAnterior );
+        addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
         marceline = new Marceline();
-        
-        tiempoInmune.setValue(TIEMPO);
-        addObject(tiempoInmune,420,27);
-        
         prepare();
     }
     
@@ -68,7 +67,6 @@ public class MyWorld2 extends World
     
     public void lluviaPinguino()
     {
-        int x;
         pinguino = new Pinguino();
         if (Greenfoot.getRandomNumber(getWidth()) < 10) 
         {
@@ -77,14 +75,12 @@ public class MyWorld2 extends World
     }
     
     
-    
     /**
      * Incrementa el contador al agarrar los pinguinos que caen del cielo
      */
     public void incrementaPinguinos()
     {
-        contadorPuntos.add(10);
-        
+        contadorPuntos.add(10);       
     }
     
     /**
@@ -94,7 +90,6 @@ public class MyWorld2 extends World
     public void incrementaPrincesas()
     {
         contadorPuntos.add(20);
-        
     }
     
     /**
@@ -111,13 +106,15 @@ public class MyWorld2 extends World
     public void juegoPerdido()
     {
         if(contadorVidas.getValue()==0){
+            Perdiste = new perdiste();
+            addObject( Perdiste, getWidth()/2 , getHeight()/2  );
             Greenfoot.stop();
         }
     }
     
     public void dulceMentita()
     {
-       menta =new mentita(); 
+       menta = new mentita(); 
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(menta,Greenfoot.getRandomNumber(getWidth()),0);
@@ -126,56 +123,46 @@ public class MyWorld2 extends World
     
     public void dulceSenorP()
     {
-       senorP =new senorPanquesito(); 
+       senorP = new senorPanquesito(); 
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(senorP,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
         }
     }
     
     public void dulcePanDeCanela()
     {
-       pan =new panDeCanela(); 
+       pan = new panDeCanela(); 
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
         }
     }
     
     public void dulcePaleta()
     {
-       paletita =new paleta(); 
+       paletita = new paleta(); 
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
         }
     }
     
     public void inmune()
-    {
-        
-         if( (contadorPuntos.getValue()>= 100) &&
-             (contadorPuntos.getValue()<=149)
-           )
+    {  
+         if( contadorPuntos.getValue()>= 100 && contadorPuntos.getValue()<= 149   )  
             {
-              
-               addObject(marceline,500,300);
-               
-               this.removeObject(menta);
-               this.removeObject(senorP);
-               this.removeObject(pan);
-               this.removeObject(paletita);
-               
-              inmuneReturn();
-              return;
-              
-      
+              addObject(marceline,500,300);
+              addObject(tiempoInmune,250,80);
+              this.removeObject(menta);
+              this.removeObject(senorP);
+              this.removeObject(pan);
+              this.removeObject(paletita); 
+              contadorInmune();
          }
          
-         if(contadorPuntos.getValue()>= 150)  
+         if (tiempoInmune.getValue() <= -1)
+         
          {
              this.removeObject(marceline);
              this.removeObject(tiempoInmune);    
@@ -183,32 +170,29 @@ public class MyWorld2 extends World
              dulceSenorP();
              dulcePanDeCanela();
              dulcePaleta();
-             
          }     
          
+         if((contadorPuntos.getValue() >= 150))
+         {
+             this.removeObject(marceline);
+             this.removeObject(tiempoInmune);    
+             dulceMentita();
+             dulceSenorP();
+             dulcePanDeCanela();
+             dulcePaleta();
+     
+         }
     }
     
-    public void inmuneReturn(){
-        
-        if(relojMarceline.millisElapsed() >= 1000){
+    public void contadorInmune(){
+        if(relojMarceline.millisElapsed() >= 1000)
+        {
+            if( tiempoInmune.getValue()!=-1 )
+            {
                  tiempoInmune.add(-1);
                  relojMarceline.mark();
-              }
-        eliminaMarceline();
-    }
-    
-    public void eliminaMarceline()
-    {
-        if(tiempoInmune.getValue() == 0)
-         {
-                    this.removeObject(marceline);
-                    this.removeObject(tiempoInmune);
-                    dulceMentita();
-                    dulceSenorP();
-                    dulcePanDeCanela();
-                    dulcePaleta();
-                    
-         }
+            }
+        }
     }
      
     
@@ -222,10 +206,8 @@ public class MyWorld2 extends World
         addObject(plataforma2,100,350);
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
-        etiquetaVida etiquetavida = new etiquetaVida();
-        addObject(etiquetavida,517,28);
-        etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
-        addObject(etiquetapuntos,614,28);
+        
+        
     }
    
    }

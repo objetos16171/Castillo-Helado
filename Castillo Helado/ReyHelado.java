@@ -32,8 +32,6 @@ public class ReyHelado extends Actor
      */
     public void act() 
     {
-   
-        
         setImage(gifReyHelado.getCurrentImage());
         controlIzqDer();
         bajaConPlataforma();
@@ -77,8 +75,9 @@ public class ReyHelado extends Actor
      */
     public void agarraPinguino()
     {
+        GreenfootSound sonidoAggarPinguino = new GreenfootSound ("quien te dijo que puedes Volar.wav");
+
         MyWorld mundo = (MyWorld)getWorld();
-       
         Actor Pinguino;
         Pinguino = getOneObjectAtOffset(0,0,Pinguino.class);
         if(Pinguino != null)
@@ -86,14 +85,15 @@ public class ReyHelado extends Actor
             mundo.incrementaPinguinos();
             mundo.removeObject(Pinguino);
             if(Greenfoot.getRandomNumber(5)<2){
-                Greenfoot.playSound("quien te dijo que puedes Volar.wav");
+                //Greenfoot.playSound("quien te dijo que puedes Volar.wav");
+                sonidoAggarPinguino.play();
             }
             else if(Greenfoot.getRandomNumber(8)<2)
             {
-                        Greenfoot.playSound("que.wav"); 
-            
+                sonidoAggarPinguino.stop();        
+                Greenfoot.playSound("que.wav"); 
+                        
             }
-            
         }
         
     }
@@ -206,27 +206,28 @@ public class ReyHelado extends Actor
         if(isTouching(Arcoiris.class))
         {
             mundo.decrementaVidas();
-            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight()/2 );
+            this.setLocation( this.getX()+200 , this.getY() );
             Greenfoot.playSound("si yo no hice nada.wav");
         }
         
         if(isTouching(Finn.class))
         {
             mundo.decrementaVidas();
-            this.setLocation( getWorld().getWidth()/2 , getWorld().getHeight()/2 );
-            
+            this.setLocation( this.getX() , getWorld().getHeight()/2 );
         }
     }
    
-    private void siguienteNivel()
+    public void siguienteNivel()
     {
         MyWorld mundo=(MyWorld)getWorld();
-        
-        if (getY() < getWorld().getHeight()-450) {
+        if (getY() < getWorld().getHeight()-490) {
             if (nivel == 1) {
                 nivel = 2;
-                Greenfoot.setWorld(new MyWorld2(this));
-                Greenfoot.playSound("que me da que me da.wav");
+                Greenfoot.setWorld(new MyWorld2(this, 
+                                                ((MyWorld)mundo).regresaPuntuacion() , 
+                                                ((MyWorld)mundo).regresaVida()) 
+                                                 ); 
+                Greenfoot.playSound("que me da que me da.wav");      
             }
             
         }
@@ -234,10 +235,10 @@ public class ReyHelado extends Actor
     
     public void tocaDisparoTronquitos()
     {
-        if(isTouching(tronquitos.class))
+        if(isTouching(tronquito.class))
         {
             World mundo = getWorld();
-            setLocation( 50  , getWorld().getHeight()/3 );
+            setLocation( this.getX()-50  , this.getY()-50 );
         }
     }
     

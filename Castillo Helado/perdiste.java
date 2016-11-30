@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class perdiste extends Actor
 {
-    private GreenfootImage perdiste = new GreenfootImage("gameOver2.png");
+      private GifImage gifPerdiste = new GifImage("perdiste.gif");
     /**
      * Act - do whatever the perdiste wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        setImage(perdiste);
-        // Add your action code here.
-    }    
+        setImage(gifPerdiste.getCurrentImage());
+    } 
+    
 }

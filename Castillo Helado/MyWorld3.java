@@ -13,7 +13,7 @@ public class MyWorld3 extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("ManlorettePartySong.wav");
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     private SimpleTimer reloj;
     //dulce gente
     private mentita menta;
@@ -40,9 +40,9 @@ public class MyWorld3 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPuntos = new Counter("puntos ");
-        contadorVidas = new Counter("vidas ");
-        tiempoInmune = new Counter("inmunidad ");
+        contadorPuntos = new Counter("PUNTOS: ");
+        contadorVidas = new Counter("VIDAS: ");
+        tiempoInmune = new Counter("INMUNIDAD: ");
         addObject(contadorPuntos,631,27);
         
         contadorVidas.setValue(3);
@@ -144,7 +144,7 @@ public class MyWorld3 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
+         
         }
     }
     
@@ -154,7 +154,7 @@ public class MyWorld3 extends World
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
+         
         }
     }
     
@@ -225,10 +225,7 @@ public class MyWorld3 extends World
         addObject(plataforma2,100,350);
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
-        etiquetaVida etiquetavida = new etiquetaVida();
-        addObject(etiquetavida,517,28);
-        etiquetaPuntos etiquetapuntos = new etiquetaPuntos();
-        addObject(etiquetapuntos,614,28);
+        
     }
    
    }
