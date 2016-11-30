@@ -41,6 +41,8 @@ public class ReyHelado3 extends Actor
         agarraPinguino();
         ataqueMentita();
         ataquePaleta();
+        golpeAlReyHelado();
+        tocaDisparoTronquitos();
         
         
        
@@ -205,5 +207,28 @@ public class ReyHelado3 extends Actor
         }
      }
    
+     public void golpeAlReyHelado(){
+        MyWorld3 mundo=(MyWorld3)getWorld();
+        if(isTouching(Arcoiris.class))
+        {
+            mundo.decrementaVidas();
+            this.setLocation( this.getX()+200 , this.getY() );
+            Greenfoot.playSound("si yo no hice nada.wav");
+        }
+        
+        if(isTouching(Finn.class))
+        {
+            mundo.decrementaVidas();
+            this.setLocation( this.getX() , getWorld().getHeight()/2 );
+        }
+    }
    
+    public void tocaDisparoTronquitos()
+    {
+        if(isTouching(tronquito.class))
+        {
+            World mundo = getWorld();
+            setLocation( this.getX()-50  , this.getY()-50 );
+        }
+    }
 }

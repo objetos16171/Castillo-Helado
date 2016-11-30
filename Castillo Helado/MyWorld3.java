@@ -13,18 +13,13 @@ public class MyWorld3 extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     private SimpleTimer reloj;
-    //dulce gente
+    //enemigos
     private mentita menta;
-    private senorPanquesito senorP;
-    private panDeCanela pan;
     private paleta paletita;
-    //inmunidad
-    private Marceline marceline;
-    private SimpleTimer relojMarceline;
-    public Counter tiempoInmune;
-    public final int TIEMPO = 30;
+    private Finn finn;
+    private Arcoiris arcoiris;
+   
     private perdiste Perdiste;
     
     /**
@@ -43,16 +38,13 @@ public class MyWorld3 extends World
         super(700, 500, 1); 
         contadorPuntos = new Counter("PUNTOS: ");
         contadorVidas = new Counter("VIDAS: ");
-        tiempoInmune = new Counter("INMUNIDAD: ");
-        tiempoInmune.setValue(TIEMPO);
-        removeObject(tiempoInmune);
         addObject(contadorPuntos,631,27);
         contadorPuntos.setValue( valorContadorAnterior );
         contadorVidas.setValue( valorVidaAnterior );
         addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
-        relojMarceline = new SimpleTimer();
-        marceline = new Marceline();
+        finn = new Finn();
+        arcoiris = new Arcoiris();
         prepare();
     }
     
@@ -62,6 +54,8 @@ public class MyWorld3 extends World
         lluviaPinguino();   
         dulceMentita();
         dulcePaleta();
+        ataqueFinn();
+        ataqueArcoiris();
         juegoPerdido();
         
     }
@@ -160,6 +154,30 @@ public class MyWorld3 extends World
         
     }
    
+    public void ataqueFinn()
+    {
+        if( ( ( reyhelado3.getX()>= 0 ) || ( reyhelado3.getX() <= getWidth()/2 ) )
+               &&( ( reyhelado3.getY()>= 450 )  ))
+        {
+            addObject(finn, 20, 400);   
+        }
+       
+    }
+    
+     /**
+     * El actor arcoiris saldrad volando y rebotara hasta que 
+     * consiga pegarle al Rey Helado
+     */
+    public void ataqueArcoiris()
+    {
+        if(  (( reyhelado3.getX() >= 0 ) && ( reyhelado3.getX() <= 100 ))  || 
+             ((reyhelado3.getY()  >=0) && (reyhelado3.getY()  <=30 ))
+             )
+        {
+        addObject(arcoiris,61,87);
+        }
+        
+    }
    }
    
    
