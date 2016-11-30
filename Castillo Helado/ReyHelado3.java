@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ReyHelado2 here.
+ * Write a description of class ReyHelado3 here.
  * 
  * @author Soto Avila Carolina, Jose Emmanuel Escobar Chavez
  * @version 4 de Noviembre del 2016
  */
-public class ReyHelado2 extends Actor
+public class ReyHelado3 extends Actor
 {
     
     private int velocidad=5;
@@ -21,13 +21,13 @@ public class ReyHelado2 extends Actor
      private boolean bajaConPlataforma2 = true;
     /**constructor */
     
-    public ReyHelado2()
+    public ReyHelado3()
     {
-        nivel = 2;
+        nivel = 3;
     }
     
     /**
-     * Act - do whatever the ReyHelado2 wants to do. This method is called whenever
+     * Act - do whatever the ReyHelado3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -38,12 +38,13 @@ public class ReyHelado2 extends Actor
         controlIzqDer();
         bajaConPlataforma();
         saltoConGravedad();
-        agarraPinguino();
-        ataqueMentita();
-        ataqueSenorP();
-        ataquePanDeCanela();
-        ataquePaleta();
-        siguienteNivel();
+        //agarraPinguino();
+        //ataqueMentita();
+        //ataqueSenorP();
+        //ataquePanDeCanela();
+        //ataquePaleta();
+        
+        //siguienteNivel();
     }    
     
     /**
@@ -78,7 +79,7 @@ public class ReyHelado2 extends Actor
      */
     public void agarraPinguino()
     {
-        MyWorld2 mundo = (MyWorld2)getWorld();
+        MyWorld3 mundo = (MyWorld3)getWorld();
        
         Actor Pinguino;
         Pinguino = getOneObjectAtOffset(0,0,Pinguino.class);
@@ -148,7 +149,7 @@ public class ReyHelado2 extends Actor
     {
         if (!enPlataforma())
         {
-            MyWorld2 mundo=(MyWorld2)getWorld();
+            MyWorld3 mundo=(MyWorld3)getWorld();
             if(getY()<=mundo.getHeight()-getImage().getWidth()/2)
             setLocation(getX(), getY()+ velocidad);
         }
@@ -181,7 +182,7 @@ public class ReyHelado2 extends Actor
     }
     
     public void ataqueMentita(){
-        MyWorld2 mundo = (MyWorld2)getWorld();
+        MyWorld3 mundo = (MyWorld3)getWorld();
         Actor mentita;
         mentita = getOneObjectAtOffset(0,0,mentita.class);
         if(mentita != null)
@@ -192,32 +193,9 @@ public class ReyHelado2 extends Actor
         }
     }
     
-    public void ataqueSenorP(){
-        MyWorld2 mundo = (MyWorld2)getWorld();
-        Actor senorPanquesito;
-        senorPanquesito = getOneObjectAtOffset(0,0,senorPanquesito.class);
-        if(senorPanquesito != null)
-        {
-            mundo. decrementaVidas();
-            mundo.removeObject(senorPanquesito);
-            
-        }
-    }
-    
-    public void ataquePanDeCanela(){
-        MyWorld2 mundo = (MyWorld2)getWorld();
-        Actor panDeCanela;
-        panDeCanela = getOneObjectAtOffset(0,0,panDeCanela.class);
-        if(panDeCanela != null)
-        {
-            mundo. decrementaVidas();
-            mundo.removeObject(panDeCanela);
-            
-        }
-    }
-    
+   
     public void ataquePaleta(){
-        MyWorld2 mundo = (MyWorld2)getWorld();
+        MyWorld3 mundo = (MyWorld3)getWorld();
         Actor paleta;
         paleta = getOneObjectAtOffset(0,0,paleta.class);
         if(paleta != null)
@@ -228,20 +206,5 @@ public class ReyHelado2 extends Actor
         }
      }
    
-      public void siguienteNivel()
-    {
-        MyWorld2 mundo=(MyWorld2)getWorld();
-        if (getY() < getWorld().getHeight()-490) {
-            if (nivel == 2) {
-                nivel = 3;
-                Greenfoot.setWorld(new MyWorld3(this, 
-                                                ((MyWorld2)mundo).regresaPuntuacion() , 
-                                                ((MyWorld2)mundo).regresaVida()) 
-                                                 ); 
-                Greenfoot.playSound("que me da que me da.wav");      
-            }
-            
-        }
-    }
-    
+   
 }

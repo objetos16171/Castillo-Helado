@@ -15,6 +15,7 @@ public class MyWorld2 extends World
     private Counter contadorPuntos;
     private Counter contadorVidas;
     private SimpleTimer reloj;
+   
     //dulce gente
     private mentita menta;
     private senorPanquesito senorP;
@@ -26,6 +27,8 @@ public class MyWorld2 extends World
     public Counter tiempoInmune;
     public final int TIEMPO = 30;
     private perdiste Perdiste;
+    
+    
     
     /**
      * Constructor for objects of class MyWorld2.
@@ -195,6 +198,23 @@ public class MyWorld2 extends World
         }
     }
      
+    /**
+     * Devuelve el valor total de los puntos conseguidos por el jugador 
+     */
+    public int regresaPuntuacion()
+    {
+        int puntos=0;
+        return(puntos=contadorPuntos.getValue());
+    }
+    
+    /**
+     * Devuelve el valor total de vidas con las que cuenta el jugador 
+     */
+    public int regresaVida()
+    {
+        int vidas=0;
+        return(vidas=contadorVidas.getValue());
+    }
     
     private void prepare()
     {

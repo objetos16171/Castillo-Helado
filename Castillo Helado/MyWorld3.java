@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld3 extends World
 {
     
-    private ReyHelado reyhelado; 
+    private ReyHelado3 reyhelado3; 
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
@@ -25,35 +25,34 @@ public class MyWorld3 extends World
     private SimpleTimer relojMarceline;
     public Counter tiempoInmune;
     public final int TIEMPO = 30;
+    private perdiste Perdiste;
     
     /**
      * Constructor for objects of class MyWorld3.
      * 
      */
-    public MyWorld3()
-    {
-        this(new ReyHelado());
-    }
-   
+    /**
+     * Constructor for objects of class MyWorld2.
+     * 
+     */
     
-    public MyWorld3(ReyHelado rey)
+    
+    public MyWorld3(ReyHelado2 rey, int valorContadorAnterior, int valorVidaAnterior)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
         contadorPuntos = new Counter("PUNTOS: ");
         contadorVidas = new Counter("VIDAS: ");
         tiempoInmune = new Counter("INMUNIDAD: ");
+        tiempoInmune.setValue(TIEMPO);
+        removeObject(tiempoInmune);
         addObject(contadorPuntos,631,27);
-        
-        contadorVidas.setValue(3);
-        addObject(contadorVidas,532,27);
+        contadorPuntos.setValue( valorContadorAnterior );
+        contadorVidas.setValue( valorVidaAnterior );
+        addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
         marceline = new Marceline();
-        
-        tiempoInmune.setValue(TIEMPO);
-        addObject(tiempoInmune,420,27);
-        
         prepare();
     }
     
@@ -62,17 +61,13 @@ public class MyWorld3 extends World
             
         lluviaPinguino();   
         dulceMentita();
-        dulceSenorP();
-        dulcePanDeCanela();
         dulcePaleta();
-        //inmune();
         juegoPerdido();
         
     }
     
     public void lluviaPinguino()
     {
-        int x;
         pinguino = new Pinguino();
         if (Greenfoot.getRandomNumber(getWidth()) < 10) 
         {
@@ -81,14 +76,12 @@ public class MyWorld3 extends World
     }
     
     
-    
     /**
      * Incrementa el contador al agarrar los pinguinos que caen del cielo
      */
     public void incrementaPinguinos()
     {
-        contadorPuntos.add(10);
-        inmune();
+        contadorPuntos.add(10);       
     }
     
     /**
@@ -98,7 +91,6 @@ public class MyWorld3 extends World
     public void incrementaPrincesas()
     {
         contadorPuntos.add(20);
-        inmune();
     }
     
     /**
@@ -115,110 +107,49 @@ public class MyWorld3 extends World
     public void juegoPerdido()
     {
         if(contadorVidas.getValue()==0){
+            Perdiste = new perdiste();
+            addObject( Perdiste, getWidth()/2 , getHeight()/2  );
             Greenfoot.stop();
         }
     }
     
     public void dulceMentita()
     {
-       menta =new mentita(); 
+       menta = new mentita(); 
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(menta,Greenfoot.getRandomNumber(getWidth()),0);
         }
     }
     
-    public void dulceSenorP()
-    {
-       senorP =new senorPanquesito(); 
-       if (Greenfoot.getRandomNumber(getWidth()) < 5) 
-        {
-         addObject(senorP,Greenfoot.getRandomNumber(getWidth()),0);
-         Greenfoot.playSound("azucar.wav");
-        }
-    }
-    
-    public void dulcePanDeCanela()
-    {
-       pan =new panDeCanela(); 
-       if (Greenfoot.getRandomNumber(getWidth()) < 5) 
-        {
-         addObject(pan,Greenfoot.getRandomNumber(getWidth()),0);
-         
-        }
-    }
-    
     public void dulcePaleta()
     {
-       paletita =new paleta(); 
+       paletita = new paleta(); 
        if (Greenfoot.getRandomNumber(getWidth()) < 5) 
         {
          addObject(paletita,Greenfoot.getRandomNumber(getWidth()),0);
-         
         }
     }
     
-    public void inmune()
+      public int regresaPuntuacion()
     {
-        
-         if(contadorPuntos.getValue()>= 100)
-            {
-              
-               addObject(marceline,500,300);
-               
-               this.removeObject(menta);
-               this.removeObject(senorP);
-               this.removeObject(pan);
-               this.removeObject(paletita);
-               
-              inmuneReturn();
-              return;
-              
-             
-               
-         }
-         
-         if(contadorPuntos.getValue()>= 150)  
-         {
-             this.removeObject(marceline);
-             this.removeObject(tiempoInmune);    
-             dulceMentita();
-             dulceSenorP();
-             dulcePanDeCanela();
-             dulcePaleta();
-             
-         }     
-         
+        int puntos=0;
+        return(puntos=contadorPuntos.getValue());
     }
     
-    public void inmuneReturn(){
-        
-        if(relojMarceline.millisElapsed() >= 1000){
-                 tiempoInmune.add(-1);
-                 relojMarceline.mark();
-              }
-        eliminaMarceline();
-    }
-    
-    public void eliminaMarceline()
+    /**
+     * Devuelve el valor total de vidas con las que cuenta el jugador 
+     */
+    public int regresaVida()
     {
-        if(tiempoInmune.getValue() == 0)
-         {
-                    this.removeObject(marceline);
-                    this.removeObject(tiempoInmune);
-                    dulceMentita();
-                    dulceSenorP();
-                    dulcePanDeCanela();
-                    dulcePaleta();
-                    
-         }
+        int vidas=0;
+        return(vidas=contadorVidas.getValue());
     }
-     
     
     private void prepare()
     {
-        reyhelado = new ReyHelado();
-        addObject(reyhelado, getWidth()/2 , getHeight()/2 );
+        reyhelado3 = new ReyHelado3();
+        addObject(reyhelado3, getWidth()/2 , getHeight()/2 );
         plataforma plataforma = new plataforma();
         addObject(plataforma,120,150);
         plataforma2 plataforma2 = new plataforma2();
@@ -226,7 +157,11 @@ public class MyWorld3 extends World
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
         
+        
     }
    
    }
+   
+   
+   
 
