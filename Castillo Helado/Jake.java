@@ -11,11 +11,7 @@ public class Jake extends Actor
     /** the amount of change in x during each act */
     private int velX=2;
     
-    /** the amount of change in y during each act */
-    /*private int velY;
     
-    private int ydireccion=450;
-    private int xdireccion=650;*/
     
    private GifImage jakeAnimado = new GifImage("JakeAnimado.gif");
     /**
@@ -32,7 +28,7 @@ public class Jake extends Actor
     public void mueveJake()
     {
       World mundo = getWorld();
-       //setLocation(getX()-5, getY());
+       
        if(getX()<2){
            ((MyWorld)mundo).enemigojake();
             getWorld().removeObject(this);

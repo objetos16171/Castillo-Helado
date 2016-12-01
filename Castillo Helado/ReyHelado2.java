@@ -180,6 +180,9 @@ public class ReyHelado2 extends Actor
         return TeclaPresionada ;
     }
     
+    /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
     public void ataqueMentita(){
         MyWorld2 mundo = (MyWorld2)getWorld();
         Actor mentita;
@@ -192,6 +195,9 @@ public class ReyHelado2 extends Actor
         }
     }
     
+    /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
     public void ataqueSenorP(){
         MyWorld2 mundo = (MyWorld2)getWorld();
         Actor senorPanquesito;
@@ -204,6 +210,9 @@ public class ReyHelado2 extends Actor
         }
     }
     
+    /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
     public void ataquePanDeCanela(){
         MyWorld2 mundo = (MyWorld2)getWorld();
         Actor panDeCanela;
@@ -216,6 +225,9 @@ public class ReyHelado2 extends Actor
         }
     }
     
+    /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
     public void ataquePaleta(){
         MyWorld2 mundo = (MyWorld2)getWorld();
         Actor paleta;
@@ -228,6 +240,9 @@ public class ReyHelado2 extends Actor
         }
      }
    
+     /**
+      * metodo que pasa al rey helado al siguiente mundo
+      */
       public void siguienteNivel()
     {
         MyWorld2 mundo=(MyWorld2)getWorld();

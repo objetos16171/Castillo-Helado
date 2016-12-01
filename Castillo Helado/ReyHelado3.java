@@ -20,7 +20,9 @@ public class ReyHelado3 extends Actor
     
      private boolean bajaConPlataforma2 = true;
     /**constructor */
-    
+    /**
+      * metodo que pasa al rey helado al siguiente mundo
+      */
     public ReyHelado3()
     {
         nivel = 3;
@@ -184,6 +186,9 @@ public class ReyHelado3 extends Actor
         return TeclaPresionada ;
     }
     
+    /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
     public void ataqueMentita(){
         MyWorld3 mundo = (MyWorld3)getWorld();
         Actor mentita;
@@ -196,7 +201,9 @@ public class ReyHelado3 extends Actor
         }
     }
     
-   
+   /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
     public void ataquePaleta(){
         MyWorld3 mundo = (MyWorld3)getWorld();
         Actor paleta;
@@ -209,6 +216,9 @@ public class ReyHelado3 extends Actor
         }
      }
    
+     /**
+     * el rey helado pierde vidas al tocar al enemigo
+     */
      public void golpeAlReyHelado(){
         MyWorld3 mundo=(MyWorld3)getWorld();
         if(isTouching(Arcoiris.class))
@@ -224,7 +234,10 @@ public class ReyHelado3 extends Actor
             this.setLocation( this.getX() , getWorld().getHeight()/2 );
         }
     }
-   
+    
+   /**
+     * ataque del enemigo fin que quita vidas al rey helado
+     */
     public void tocaDisparoTronquitos()
     {
         if(isTouching(tronquito.class))
@@ -234,6 +247,10 @@ public class ReyHelado3 extends Actor
         }
     }
     
+    /**
+     * el jugador gana
+     * 
+     */
      public void Ganaste()
     {
         MyWorld3 mundo=(MyWorld3)getWorld();

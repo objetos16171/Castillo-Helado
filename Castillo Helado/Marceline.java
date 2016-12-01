@@ -45,6 +45,10 @@ public class Marceline extends Actor
         tocaCancion();
  
     }    
+    
+    /**
+     * cancion de aparicion de marceline
+     */
     public void tocaCancion()
     {
         World mundo=getWorld();

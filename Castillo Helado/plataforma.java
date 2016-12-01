@@ -26,6 +26,10 @@ public class plataforma extends Actor
         muevePlataforma();
     }    
     
+    /**
+     * mueve la plataforma de derecha a izquierda 
+     * 
+     */
     public void muevePlataforma(){
        World mundo=getWorld();
         

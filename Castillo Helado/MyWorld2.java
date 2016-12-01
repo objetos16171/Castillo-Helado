@@ -55,6 +55,9 @@ public class MyWorld2 extends World
         prepare();
     }
     
+    /**
+     * metodo que llama todas las acciones del segundo mundo
+     */
     public void act()
     {
             
@@ -68,6 +71,12 @@ public class MyWorld2 extends World
         
     }
     
+    
+    /** Hace una lluvia de pinguino añadiento un objeto de tipo pinguino
+    * usando como ubicacion en su coordenada x el metodo getRandomNumber
+    * y estableciendo un rango para generarlos a partir del ancho del mundo
+    * y bajando a partir  del inicio del alto del mundo 
+    */
     public void lluviaPinguino()
     {
         pinguino = new Pinguino();
@@ -115,6 +124,9 @@ public class MyWorld2 extends World
         }
     }
     
+    /**
+     * Actor enemigo que cae quitando vidas al rey helado
+     */
     public void dulceMentita()
     {
        menta = new mentita(); 
@@ -123,6 +135,10 @@ public class MyWorld2 extends World
          addObject(menta,Greenfoot.getRandomNumber(getWidth()),0);
         }
     }
+    
+    /**
+     * Actor enemigo que cae quitando vidas al rey helado
+     */
     
     public void dulceSenorP()
     {
@@ -133,6 +149,9 @@ public class MyWorld2 extends World
         }
     }
     
+    /**
+     * Actor enemigo que cae quitando vidas al rey helado
+     */
     public void dulcePanDeCanela()
     {
        pan = new panDeCanela(); 
@@ -142,6 +161,9 @@ public class MyWorld2 extends World
         }
     }
     
+    /**
+     * Actor enemigo que cae quitando vidas al rey helado
+     */
     public void dulcePaleta()
     {
        paletita = new paleta(); 
@@ -151,6 +173,11 @@ public class MyWorld2 extends World
         }
     }
     
+    /**
+     * metodo que elimina los enemigos si el jugador junta 100 puntos,la
+     * inmunidad dura 30 segundos cuando este tiempo se termina los enemigos
+     * vuelven a caer
+     */
     public void inmune()
     {  
          if( contadorPuntos.getValue()>= 100 && contadorPuntos.getValue()<= 149   )  
@@ -187,6 +214,9 @@ public class MyWorld2 extends World
          }
     }
     
+    /**
+     * contador de tiempo de inmunidad
+     */
     public void contadorInmune(){
         if(relojMarceline.millisElapsed() >= 1000)
         {
@@ -216,6 +246,11 @@ public class MyWorld2 extends World
         return(vidas=contadorVidas.getValue());
     }
     
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
     private void prepare()
     {
         reyhelado2 = new ReyHelado2();

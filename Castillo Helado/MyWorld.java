@@ -148,6 +148,10 @@ public class MyWorld extends World
         
     }
     
+    /**
+     * Actor enemigo que aparecera cuando el rey helado 
+     * este en la primer plataforma
+     */
     public void ataqueFinn()
     {
         if( ( ( reyHelado.getX()>= 0 ) || ( reyHelado.getX() <= getWidth()/2 ) )
@@ -158,7 +162,9 @@ public class MyWorld extends World
        
     }
    
-    
+    /**
+     * metodo que llama todas las acciones de el primer mundo
+     */
     public void act()
     {
         musicaDeFondo.playLoop();
@@ -170,6 +176,10 @@ public class MyWorld extends World
         juegoPerdido();
     }
     
+    /**
+     * Actor enemigo que aparece despues de dos minutos en la 
+     * plataforma inicial
+     */
    public void enemigojake()
     {
         if(reloj.millisElapsed()> 20000){

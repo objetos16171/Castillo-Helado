@@ -48,6 +48,9 @@ public class MyWorld3 extends World
         prepare();
     }
     
+    /**
+     * acciones que se realizan en el mundo 3
+     */
     public void act()
     {
             
@@ -60,6 +63,11 @@ public class MyWorld3 extends World
         
     }
     
+    /** Hace una lluvia de pinguino añadiento un objeto de tipo pinguino
+    * usando como ubicacion en su coordenada x el metodo getRandomNumber
+    * y estableciendo un rango para generarlos a partir del ancho del mundo
+    * y bajando a partir  del inicio del alto del mundo 
+    */
     public void lluviaPinguino()
     {
         pinguino = new Pinguino();
@@ -107,6 +115,9 @@ public class MyWorld3 extends World
         }
     }
     
+    /**
+     * Actor enemigo que cae quitando vidas al rey helado
+     */
     public void dulceMentita()
     {
        menta = new mentita(); 
@@ -116,6 +127,9 @@ public class MyWorld3 extends World
         }
     }
     
+   /**
+     * Actor enemigo que cae quitando vidas al rey helado
+     */
     public void dulcePaleta()
     {
        paletita = new paleta(); 
@@ -125,6 +139,9 @@ public class MyWorld3 extends World
         }
     }
     
+    /**
+     * Devuelve el valor total de los puntos conseguidos por el jugador 
+     */
       public int regresaPuntuacion()
     {
         int puntos=0;
@@ -140,6 +157,10 @@ public class MyWorld3 extends World
         return(vidas=contadorVidas.getValue());
     }
     
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
     private void prepare()
     {
         reyhelado3 = new ReyHelado3();
@@ -153,6 +174,10 @@ public class MyWorld3 extends World
         
     }
    
+    /**
+     * Actor enemigo que aparecera cuando el rey helado 
+     * este en la primer plataforma
+     */
     public void ataqueFinn()
     {
         if( ( ( reyhelado3.getX()>= 0 ) || ( reyhelado3.getX() <= getWidth()/2 ) )

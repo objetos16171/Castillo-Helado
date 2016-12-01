@@ -6,4 +6,5 @@ comment1.target=void\ act()
 comment1.text=\r\nact\=\ contiene\ actos\ realizados\ por\ la\ dulce\ gente\ \r\n
 comment2.params=
 comment2.target=void\ caida()
+comment2.text=\r\n\ metodo\ que\ hace\ caer\ a\ los\ enemigos\r\n
 numComments=3

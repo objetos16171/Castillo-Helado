@@ -20,7 +20,9 @@ public abstract class DulceGente extends Actor
         caida();
     }
     
-   
+   /**
+    * metodo que hace caer a los enemigos
+    */
     public void caida()
     {
         World mundo = getWorld();

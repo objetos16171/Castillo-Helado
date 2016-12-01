@@ -216,7 +216,12 @@ public class ReyHelado extends Actor
             this.setLocation( this.getX() , getWorld().getHeight()/2 );
         }
     }
-   
+    
+   /**
+    * 
+    * el rey helado pasa al siguiente mundo
+    * 
+    */
     public void siguienteNivel()
     {
         MyWorld mundo=(MyWorld)getWorld();

@@ -20,6 +20,10 @@ public class ricardio extends Actor
         veHaciaElContador();
     }
     
+    /**
+     * el actor sube hacia el contador y desaparece
+     * 
+     */
     public void veHaciaElContador()
     {
         World mundo=getWorld();

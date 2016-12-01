@@ -19,6 +19,10 @@ public class Ayuda extends World
         super(700, 500, 1); 
         prepare();
     }
+    
+    /**
+     * metodo para agragar boton de ayuda
+     */
     public void prepare()
     {
         botonVolverAyuda botonayuda = new botonVolverAyuda();
