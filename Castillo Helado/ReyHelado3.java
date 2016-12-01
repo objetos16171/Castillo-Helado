@@ -43,6 +43,7 @@ public class ReyHelado3 extends Actor
         ataquePaleta();
         golpeAlReyHelado();
         tocaDisparoTronquitos();
+        Ganaste();
         
         
        
@@ -232,4 +233,15 @@ public class ReyHelado3 extends Actor
             setLocation( this.getX()-50  , this.getY()-50 );
         }
     }
+    
+     public void Ganaste()
+    {
+        MyWorld3 mundo=(MyWorld3)getWorld();
+        if (getY() < getWorld().getHeight()-490) {
+                Greenfoot.setWorld(new Ganador()); 
+                                                
+                Greenfoot.playSound("que me da que me da.wav");      
+            }
+            
+        }
 }
