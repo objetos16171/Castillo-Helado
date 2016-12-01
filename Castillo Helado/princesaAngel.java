@@ -1,17 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class princesaAngel here.
+ * Write a description of class  here.
+ * Esta clase forma parte de la clase Princesa las 
+ * cuales tienen ya un valor establecido al ser tocadas
+ * por el Rey Helado.
  * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ * @author Carolina Soto Avila,Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
+ */ 
 public class princesaAngel extends Princesa
 {
     /**
-     * Act - do whatever the princesaAngel wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    * Realiza las el metodo act de la clase padre
+    */
     public void act() 
     {
         super.act();

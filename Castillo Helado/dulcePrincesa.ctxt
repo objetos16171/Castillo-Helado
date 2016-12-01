@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=dulcePrincesa
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ dulcePrincesa\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Karolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ \ \r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ dulcePrincesa\ here.\r\n\ Esta\ clase\ es\ una\ ayudante\ que\ aaprece\ con\ cierta\r\n\ cantid\r\n\ @author\ Soto\ Avila\ Karolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ \ \r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ dulcePrincesa\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

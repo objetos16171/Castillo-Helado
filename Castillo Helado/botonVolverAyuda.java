@@ -2,9 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class botonVolerMenu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Esta clase regresa al menu principal actua como boton 
+ * @author Soto Avila Carolina,Jose Emmanuel Escobar Chávez 
+ * @version 4 de noviembre del 2016
  */
 public class botonVolverAyuda extends Actor
 {

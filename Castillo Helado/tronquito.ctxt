@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=tronquito
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ tronquitos\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description.\r\n\ Esta\ clase\ su\ papel\ es\ de\ bala\ en\ conjunto\ con\ el\ objeto\ Finn\ \r\n\ @author\ Carolina\ Soto\ Avila,\ Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ tronquitos\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

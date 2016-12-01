@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=princesaFantasma
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ princesaFantasma\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ classhere.\r\n\ Esta\ clase\ forma\ parte\ de\ la\ clase\ Princesa\ las\ \r\n\ cuales\ tienen\ ya\ un\ valor\ establecido\ al\ ser\ tocadas\r\n\ por\ el\ Rey\ Helado.\r\n\ \r\n\ @author\ Carolina\ Soto\ Avila,Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ princesaFantasma\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Realiza\ las\ el\ metodo\ act\ de\ la\ clase\ padre\r\n
 numComments=2

@@ -2,20 +2,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class plataforma here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Este objeto sirve para que el rey helado pueda quedarse resguardarseun rato
+ * pero como son de hielo patinará cuando se encuentre encima de esta. 
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class plataforma extends Actor
 {
-    /** the amount of change in x during each act */
     private int velX=2;
+    private int xdireccion=120;
     
-    /** the amount of change in y during each act */
-     private int xdireccion=120;
-    
-    
-   
     /**
      * Act - do whatever the plataforma wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

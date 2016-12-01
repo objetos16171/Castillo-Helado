@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class botonJugar here.
+ * Esta clase forma parte de menu principal del juego.
  * 
  * @author Soto Avila Carolina, Jose Emmanuel Escobar Cjhávez  
  * @version 3 de noviembre del 2016

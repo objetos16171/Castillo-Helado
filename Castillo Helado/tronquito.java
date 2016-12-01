@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class tronquitos here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Write a description.
+ * Esta clase su papel es de bala en conjunto con el objeto Finn 
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class tronquito extends Actor
 {

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Pinguino
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pinguino\ here.\r\n\ \r\n\ @author\ Soto\ Avila\ Karolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ Escobar\ Chavez\ \r\n\ @version\ 4\ de\ Noviembre\ del\ 2016\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ here.\r\n\ Este\ objeto\ aparece\ desde\ lo\ alto\ del\ mundo\ \r\n\ y\ desaparece\ al\ final\ del\ mundo\r\n\ @author\ Carolina\ Soto\ Avila,\ Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Pinguino\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
+ * Write a description of class here.
  * Esta clase es otro de los enemigos se encarga de 
  * salir y disparar muchos tronquito que si llegan a tocar
  * al rey helado se pondra en diferentes lados.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ * @author Soto Avila Carolina, Jose Emmanuel Escobar Cjhávez  
+ * @version 3 de noviembre del 2016 
+  */
 public class Finn extends Actor
 {
     private GifImage finnGif = new GifImage ("finnNuevo.gif");
@@ -23,6 +23,11 @@ public class Finn extends Actor
         Tronquito = new tronquito();
     }
     
+    /**
+     * En este metodo movera a esta clase hasta llegar al limite de la anchura
+     * establecera una imagen de tipo gif y los metodos atacaFinn y quitaFinn 
+     * se mantendrán activos. 
+     */
     public void act() 
     {
         World mundo = getWorld();

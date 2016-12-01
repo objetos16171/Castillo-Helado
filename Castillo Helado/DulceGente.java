@@ -1,16 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class DulceGente here.
- * 
- * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
- * @version 4 de Noviembre del 2016
+ * Write a description of class  here.
+ * Clase de la dulce gente es una clase enemigo 
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public abstract class DulceGente extends Actor
 {
     private int velC=5;
-    
-    
+   
     /**
      *act= contiene actos realizados por la dulce gente 
      */

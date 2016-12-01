@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Pinguino here.
- * 
- * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
- * @version 4 de Noviembre del 2016
+ * Write a description of class here.
+ * Este objeto aparece desde lo alto del mundo 
+ * y desaparece al final del mundo
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class Pinguino extends Actor
 {

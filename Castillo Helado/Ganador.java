@@ -2,9 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Ganador here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Este objeto aparece cuando el jugador gana o termina el juego 
+ * @Sto Avila Carolina, José Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class Ganador extends World
 {

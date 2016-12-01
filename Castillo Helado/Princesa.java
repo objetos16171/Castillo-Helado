@@ -1,24 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Princesa here.
+ * Clase padre de todas las princesas
  * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ * @author Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
+ */ 
 public abstract class Princesa extends Actor
 {
     
     private int velocidad=5;
     /**
-     * Act - do whatever the Princesa wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * El objeto gira y desapacere a llegar al límite
+     * el objeto desaparece.
      */
     public void act() 
     {
-
         World mundo = getWorld();
-
         setLocation(getX()+velocidad, getY());
         if(Greenfoot.getRandomNumber(10)<5)
         {

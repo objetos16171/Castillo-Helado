@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Menu here.
- * 
+ * Menu de bienvenida al jueg
  * @author (your name) 
  * @version (a version number or a date)
  */

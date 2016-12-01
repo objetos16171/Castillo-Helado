@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=NubeMenu
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ NubesMenu\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ here\r\n\ Este\ objeto\ aparece\ en\ el\ men\u00FA\ de\ inicio\ \r\n\ @author\ Carolina\ Soto\ Avila,\ Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ NubesMenu\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Se\ borra\ el\ objeto\ al\ llega\ al\ inicio\ del\ mundo\r\n
 numComments=2

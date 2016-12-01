@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Marceline
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Marceline\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ \ here.\r\n\ Es\ el\ ayudante\ aparece\ da\ inmunidad\ de\ 30\ segundos\r\n\ al\ rey\ helado\r\n\ @author\ Carolina\ Soto\ Avila,\ Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Marceline\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Establece\ el\ gif,\ y\ se\ cambia\ de\ direcci\u00F3n\ en\ las\ coordenadas\ x\ o\ y\r\n\ cuando\ se\ llega\ al\ limite\ y\ al\ inicio\ del\ mundo.\r\n
 comment2.params=
 comment2.target=void\ tocaCancion()
-comment2.text=\r\n\ cancion\ de\ aparicion\ de\ marceline\ \r\n\ cantara\ cuanto\ toque\ el\ rango\ establecido\r\n\ de\ la\ anchura\ y\ altura\ del\ mundo\ \r\n
+comment2.text=\r\n\ Canci\u00F3n\ de\ aparicion\ de\ marceline\ \r\n\ cantara\ cuanto\ toque\ el\ rango\ establecido\r\n\ de\ la\ anchura\ y\ altura\ del\ mundo\ \r\n
 numComments=3

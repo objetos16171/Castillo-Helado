@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=perdiste
-comment0.text=\r\nimagen\ que\ aparece\ cuando\ el\ jugador\ pierde\r\n
+comment0.text=\r\n\r\n\ Write\ a\ description\ of\ class\ here.\r\n\ imagen\ que\ aparece\ cuando\ el\ jugador\ pierde\r\n\ @author\ Carolina\ Soto\ Avila,\ Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ perdiste\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

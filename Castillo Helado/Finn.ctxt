@@ -1,11 +1,12 @@
 #BlueJ class context
 comment0.target=Finn
-comment0.text=\r\n\ Esta\ clase\ es\ otro\ de\ los\ enemigos\ se\ encarga\ de\ \r\n\ salir\ y\ disparar\ muchos\ tronquito\ que\ si\ llegan\ a\ tocar\r\n\ al\ rey\ helado\ se\ pondra\ en\ diferentes\ lados.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ here.\r\n\ Esta\ clase\ es\ otro\ de\ los\ enemigos\ se\ encarga\ de\ \r\n\ salir\ y\ disparar\ muchos\ tronquito\ que\ si\ llegan\ a\ tocar\r\n\ al\ rey\ helado\ se\ pondra\ en\ diferentes\ lados.\r\n\ @author\ Soto\ Avila\ Carolina,\ Jose\ Emmanuel\ Escobar\ Cjh\u00E1vez\ \ \r\n\ @version\ 3\ de\ noviembre\ del\ 2016\ \r\n
 comment1.params=
 comment1.target=Finn()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Finn\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ En\ este\ metodo\ movera\ a\ esta\ clase\ hasta\ llegar\ al\ limite\ de\ la\ anchura\r\n\ establecera\ una\ imagen\ de\ tipo\ gif\ y\ los\ metodos\ atacaFinn\ y\ quitaFinn\ \r\n\ se\ mantendr\u00E1n\ activos.\ \r\n
 comment3.params=
 comment3.target=void\ atacaFinn()
 comment3.text=\r\n\ El\ actor\ Finn\ invoca\ \ mediante\ una\ dance\ a\ un\ grupo\ de\ tronquitos\ para\ atacar\ al\ rey\ helado\ \r\n

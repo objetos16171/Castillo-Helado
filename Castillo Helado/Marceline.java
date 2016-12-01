@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
- * Write a description of class Marceline here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Write a description of class  here.
+ * Es el ayudante aparece da inmunidad de 30 segundos
+ * al rey helado
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class Marceline extends Actor
 {
@@ -13,8 +15,8 @@ public class Marceline extends Actor
     private int xPos=1;
     private int yPos=1;
     /**
-     * Act - do whatever the Marceline wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Establece el gif, y se cambia de dirección en las coordenadas x o y
+     * cuando se llega al limite y al inicio del mundo.
      */
     public void act() 
     {
@@ -47,7 +49,7 @@ public class Marceline extends Actor
     }    
     
     /**
-     * cancion de aparicion de marceline 
+     * Canción de aparicion de marceline 
      * cantara cuanto toque el rango establecido
      * de la anchura y altura del mundo 
      */

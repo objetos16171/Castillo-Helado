@@ -1,7 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- *imagen que aparece cuando el jugador pierde
+ * Write a description of class here.
+ * imagen que aparece cuando el jugador pierde
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class perdiste extends Actor
 {

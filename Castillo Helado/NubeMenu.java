@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
- * Write a description of class NubesMenu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Write a description of class here
+ * Este objeto aparece en el menú de inicio 
+ * @author Carolina Soto Avila, Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
  */
 public class NubeMenu extends Actor
 {
     private int xDir=-3;
     /**
-     * Act - do whatever the NubesMenu wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Se borra el objeto al llega al inicio del mundo
      */
     public void act() 
     {

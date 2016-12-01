@@ -2,7 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class dulcePrincesa here.
- * 
+ * Esta clase es una ayudante que aaprece con cierta
+ * cantidad de puntos para dar más vidas al rey helado.
  * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel  
  * @version 4 de noviembre del 2016
  */
