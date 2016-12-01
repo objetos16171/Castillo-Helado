@@ -138,8 +138,9 @@ public class ReyHelado3 extends Actor
      */ 
     public boolean enPlataforma()
     {
-        Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma.class);    
+        Actor actor = getOneObjectAtOffset (0, getImage().getHeight()/2,plataforma2.class);    
         return actor != null;
+        
     } 
     
     /**

@@ -144,13 +144,12 @@ public class MyWorld3 extends World
     {
         reyhelado3 = new ReyHelado3();
         addObject(reyhelado3, getWidth()/2 , getHeight()/2 );
-        plataforma plataforma = new plataforma();
-        addObject(plataforma,120,150);
         plataforma2 plataforma2 = new plataforma2();
         addObject(plataforma2,100,350);
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
-        
+        plataforma2 plataforma4 = new plataforma2();
+        addObject(plataforma4,350,350);
         
     }
    
