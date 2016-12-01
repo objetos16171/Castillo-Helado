@@ -3,5 +3,5 @@ comment0.target=copoElegante
 comment0.text=\r\n\ Esta\ clase\ solo\ aparecer\u00E1\ en\ el\ men\u00FA\ principal\ del\ juego\r\n\ \r\n\ @author\ Soto\ Avila\ Carolina,\ Jos\u00E9\ Emmanuel\ Escobar\ Chavez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n
+comment1.text=\r\n\ En\ este\ m\u00E9todo\ solo\ se\ movera\ en\ peque\u00F1os\ intervalor\ \r\n
 numComments=2

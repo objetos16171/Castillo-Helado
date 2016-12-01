@@ -3,5 +3,5 @@ comment0.target=Princesa
 comment0.text=\r\n\ Clase\ padre\ de\ todas\ las\ princesas\r\n\ \r\n\ @author\ Jose\ Emmanuel\ Escobar\ Ch\u00E1vez\r\n\ @version\ 4\ de\ noviembre\ del\ 2016\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ El\ objeto\ gira\ y\ desapacere\ a\ llegar\ al\ l\u00EDmite\r\n\ el\ objeto\ desaparece\r\n
+comment1.text=\r\n\ El\ objeto\ gira\ y\ desapacere\ a\ llegar\ al\ l\u00EDmite\r\n\ el\ objeto\ desaparece.\r\n
 numComments=2
