@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld3 here.
+ * Esta clase es el nivel 3 tiene 3 obstaculos, los contadores de vida  y sus respectivos pinguinos
+ * princesas y obstaculos.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Soto Avila Carolina, Escobar Chavez Jose Emmanuel 
+ * @3 de Noviembre del 2016 
  */
 public class MyWorld3 extends World
 {
@@ -22,15 +23,16 @@ public class MyWorld3 extends World
    
     private perdiste Perdiste;
     
+     private princesaTostada princesatostada ;
+     private princesaMusculos princesamusculos ;
+     private princesaMora princesamora;
+     private princesaFantasma princesafantasma;
+     private GreenfootSound musicaDeFondo = new GreenfootSound ("What am I to you - Adventure Time Finn the human Instrumental Song Arrangement.mp3");
+    
     /**
      * Constructor for objects of class MyWorld3.
      * 
      */
-    /**
-     * Constructor for objects of class MyWorld2.
-     * 
-     */
-    
     
     public MyWorld3(ReyHelado2 rey, int valorContadorAnterior, int valorVidaAnterior)
     {    
@@ -45,6 +47,10 @@ public class MyWorld3 extends World
         reloj = new SimpleTimer();
         finn = new Finn();
         arcoiris = new Arcoiris();
+        princesatostada = new princesaTostada();
+        princesamusculos = new princesaMusculos();
+        princesamora = new princesaMora();
+        princesafantasma = new princesaFantasma();
         prepare();
     }
     
@@ -53,16 +59,44 @@ public class MyWorld3 extends World
      */
     public void act()
     {
-            
+        musicaDeFondo.playLoop();    
         lluviaPinguino();   
         dulceMentita();
         dulcePaleta();
         ataqueFinn();
         ataqueArcoiris();
         juegoPerdido();
+        aparecePrincesa();
         
     }
     
+    /**
+     * Este metodo aparecera princesas aleatoriamente en el mundo
+     */
+    public void aparecePrincesa()
+    {
+        if (Greenfoot.getRandomNumber(10000) < 5) 
+        {
+            addObject(princesatostada,0 ,300);
+        }
+        else
+        if (Greenfoot.getRandomNumber(2000) < 5)
+        {
+            addObject(princesamusculos,0 ,100);
+        }
+        else
+        if (Greenfoot.getRandomNumber(3000) < 5) 
+        {
+            addObject(princesafantasma, 0 ,400);
+        }
+        else
+        if (Greenfoot.getRandomNumber(4000) < 5)
+        {
+            addObject(princesamora, 0 ,200);
+        }
+        
+    }
+
     /** Hace una lluvia de pinguino añadiento un objeto de tipo pinguino
     * usando como ubicacion en su coordenada x el metodo getRandomNumber
     * y estableciendo un rango para generarlos a partir del ancho del mundo
@@ -109,8 +143,10 @@ public class MyWorld3 extends World
     public void juegoPerdido()
     {
         if(contadorVidas.getValue()==0){
+            
             Perdiste = new perdiste();
             addObject( Perdiste, getWidth()/2 , getHeight()/2  );
+            quitaMusica();
             Greenfoot.stop();
         }
     }
@@ -202,8 +238,21 @@ public class MyWorld3 extends World
         }
         
     }
+    
+    /**
+     * Este método se encarga quitar la musica cuando se presiona el boton
+     * detener de la interfaz de greenfoot
+     */
+    public void stopped()
+    {
+        musicaDeFondo.stop();
+    }
+    
+     /**
+     * Este método detiene el fondo musical  
+     */
+    public void quitaMusica()
+    {
+        musicaDeFondo.stop();
+    }
    }
-   
-   
-   
-

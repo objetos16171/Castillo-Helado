@@ -249,11 +249,12 @@ public class ReyHelado2 extends Actor
         if (getY() < getWorld().getHeight()-490) {
             if (nivel == 2) {
                 nivel = 3;
+                mundo.quitaMusica();
                 Greenfoot.setWorld(new MyWorld3(this, 
                                                 ((MyWorld2)mundo).regresaPuntuacion() , 
                                                 ((MyWorld2)mundo).regresaVida()) 
                                                  ); 
-                Greenfoot.playSound("que me da que me da.wav");      
+                Greenfoot.playSound("reyHeladoGritando.wav");      
             }
             
         }

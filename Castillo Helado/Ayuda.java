@@ -1,31 +1,59 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ayuda here.
+ * Esta clase sirve para dar un breve explicación de lo que los elementos que conforman el juego.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Soto Avila Carolina, Escobar Chavez Jose Emmanuel 
+ * @3 de Noviembre del 2016 
  */
 public class Ayuda extends World
 {
     private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
-    /**
+    botonVolverAyuda botonayuda;
+      /**
      * Constructor for objects of class Ayuda.
      * 
      */
     public Ayuda()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(700, 500, 1); 
+        super(700, 500, 1);
+        botonayuda = new botonVolverAyuda();
         prepare();
     }
     
     /**
-     * metodo para agragar boton de ayuda
+     * El metodo act para esta clase se encargará de poner la musica de fondo
+     * y regresar al menu principal mediante el mouse y se quitará el fondo
+     * musical.
+     */
+    public void act()
+    {
+        musicaDeFondo.play();
+       
+         if (Greenfoot.mouseClicked(botonayuda))
+         {
+            Menu menu = new Menu();   
+            musicaDeFondo.stop();
+            menu.musica();
+            Greenfoot.setWorld(menu);
+         }
+        
+    }
+    
+    /**
+     * Detiene el sonido si se presiono el boton de pausa en la interfaz de greenfoot
+     */
+    public void stopped()
+    {
+        musicaDeFondo.stop();
+    }
+    
+    /**
+     * metodo para agregar boton de ayuda
      */
     public void prepare()
     {
-        botonVolverAyuda botonayuda = new botonVolverAyuda();
         addObject(botonayuda,130, 450);
     }
     

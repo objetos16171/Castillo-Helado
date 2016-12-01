@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ReyHelado here.
+ * Esta clase es para que el jugador mueva controle al rey Healdo.
  * 
  * @author Soto Avila Carolina, Jose Emmanuel Escobar Chavez
  * @version 4 de Noviembre del 2016
@@ -18,7 +18,8 @@ public class ReyHelado extends Actor
     private GreenfootImage reyHeladoDerecha = new GreenfootImage("sprite3Derecha.png");
     private GreenfootImage reyHeladoEspacio = new GreenfootImage("spriteSalto.png");
     
-     private boolean bajaConPlataforma2 = true;
+    
+    private boolean bajaConPlataforma2 = true;
     /**constructor */
     
     public ReyHelado()
@@ -34,6 +35,7 @@ public class ReyHelado extends Actor
     {
         setImage(gifReyHelado.getCurrentImage());
         controlIzqDer();
+        
         bajaConPlataforma();
         saltoConGravedad();
         agarraPinguino();
@@ -228,6 +230,7 @@ public class ReyHelado extends Actor
         if (getY() < getWorld().getHeight()-490) {
             if (nivel == 1) {
                 nivel = 2;
+                mundo.quitaMusica();
                 Greenfoot.setWorld(new MyWorld2(this, 
                                                 ((MyWorld)mundo).regresaPuntuacion() , 
                                                 ((MyWorld)mundo).regresaVida()) 
@@ -238,6 +241,9 @@ public class ReyHelado extends Actor
         }
     }
     
+    /** 
+     * Este metodo sirve para cambiar de posicion al rey helado si es tocado por una bala
+     */
     public void tocaDisparoTronquitos()
     {
         if(isTouching(tronquito.class))

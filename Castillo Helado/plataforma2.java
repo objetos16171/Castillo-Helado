@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class plataforma2 here.
+ * Esta clase sirve para que el rey helado se pude apoyar 
  * 
  * @author Soto Avila Karolina, Escobar Chavez Jose Emmanuel Escobar Chavez 
  * @version 4 de Noviembre del 2016
@@ -10,8 +10,7 @@ public class plataforma2 extends Actor
 {
     private int velY=-5;
     /**
-     * Act - do whatever the plataforma2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * El metodo act movera de posicion en el eje de la Y de abajo hacia arriba
      */
     public void act() 
     {

@@ -6,5 +6,5 @@ comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Marceline\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ tocaCancion()
-comment2.text=\r\n\ c\r\n
+comment2.text=\r\n\ cancion\ de\ aparicion\ de\ marceline\ \r\n\ cantara\ cuanto\ toque\ el\ rango\ establecido\r\n\ de\ la\ anchura\ y\ altura\ del\ mundo\ \r\n
 numComments=3

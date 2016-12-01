@@ -1,17 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class copoElegante here.
+ * Esta clase solo aparecerá en el menú principal del juego
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Carolina, José Emmanuel Escobar Chavez
+ * @version 4 de noviembre del 2016
  */
 public class copoElegante extends Actor
 {
     private int posX=0;
     /**
-     * Act - do whatever the copoElegante wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * En este método solo se movera en pequeños intervalor 
      */
     public void act() 
     {

@@ -46,7 +46,7 @@ public class ReyHelado3 extends Actor
         golpeAlReyHelado();
         tocaDisparoTronquitos();
         Ganaste();
-        
+        agarraPrincesa();
         
        
     }    
@@ -255,10 +255,31 @@ public class ReyHelado3 extends Actor
     {
         MyWorld3 mundo=(MyWorld3)getWorld();
         if (getY() < getWorld().getHeight()-490) {
+                
                 Greenfoot.setWorld(new Ganador()); 
                                                 
                 Greenfoot.playSound("que me da que me da.wav");      
             }
             
+    }
+    
+    /**
+     * Cuando el rey helado coincide con las coordenadas de un objeto tipo princesa
+     * es eliminado del mundo y se incrementa el contador de princesas
+     */
+    public void agarraPrincesa()
+    {   
+        
+        MyWorld3 mundo =(MyWorld3)getWorld();
+        Actor Princesa;
+        Princesa = getOneObjectAtOffset(0,0,Princesa.class);
+        
+        if(Princesa!=null)
+        {
+           mundo.removeObject(Princesa);
+           mundo.incrementaPrincesas();
+           Greenfoot.playSound("amoAlasprincesas.wav");
+           ((MyWorld3)mundo).incrementaPrincesas();
         }
+    }
 }

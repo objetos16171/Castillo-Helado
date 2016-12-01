@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=CopoDeNieveMenu
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ CopoDeNieveMenu\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Es\ una\ paque\u00F1a\ representacion\ para\ simular\ una\ nevada\r\n\ \r\n\ @Soto\ Avila\ Csf+fnolins,\ Jose\ Emmanuel\ Escobar\ Chavez\ \ \r\n\ @3\ de\ noviembre\ el\ 2026\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ copoDeNieve\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ El\ m\u00E9todo\ act\ se\ encarga\ de\ girar\ el\ copo\ de\ nieve\ y\ si\ llega\ a\ la\ parter\r\n\ inferior\ del\ mundo\ para\ as\u00ED\ repetidamente\ .\r\n
 numComments=2

@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class princesaEsqueleto here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ * 
+ * @author Jose Emmanuel Escobar Chávez
+ * @version 4 de noviembre del 2016
+ */ 
 public class princesaEsqueleto extends Princesa
 {
     /**

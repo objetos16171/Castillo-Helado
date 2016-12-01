@@ -15,7 +15,7 @@ public class MyWorld extends World
     private Pinguino pinguino;
     private Counter contadorPuntos;
     private Counter contadorVidas;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.wav");
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Adventure Time - Manlorette Party Song.mp3");
     private SimpleTimer reloj;
     private Arcoiris arcoiris;
     private ReyHelado reyHelado;
@@ -98,7 +98,7 @@ public class MyWorld extends World
             addObject(new PrincesaDeFuego(),0 ,300);
         }
         
-        if (Greenfoot.getRandomNumber(20000) < 5)
+        if (Greenfoot.getRandomNumber(2000) < 5)
         {
             addObject(new princesaEsqueleto(),0 ,100);
         }
@@ -108,7 +108,7 @@ public class MyWorld extends World
             addObject(new princesaDeTrapo(), 0 ,400);
         }
         
-        if (Greenfoot.getRandomNumber(40000) < 5)
+        if (Greenfoot.getRandomNumber(4000) < 5)
         {
             addObject(new princesaAngel(), 0 ,200);
         }
@@ -121,7 +121,6 @@ public class MyWorld extends World
     public void started()
     {
         reloj.mark();
-        musicaDeFondo.playLoop();
         
     }
     
@@ -232,6 +231,14 @@ public class MyWorld extends World
     {
         int vidas=0;
         return(vidas=contadorVidas.getValue());
+    }
+    
+    /**
+     * Este método detiene el fondo musical  
+     */
+    public void quitaMusica()
+    {
+        musicaDeFondo.stop();
     }
     
     /**

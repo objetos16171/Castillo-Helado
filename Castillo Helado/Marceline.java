@@ -10,7 +10,7 @@ public class Marceline extends Actor
 {
      
     private GifImage gifMarceline= new GifImage("Marce.gif");
-    private int xPos=4;
+    private int xPos=1;
     private int yPos=1;
     /**
      * Act - do whatever the Marceline wants to do. This method is called whenever
@@ -47,18 +47,23 @@ public class Marceline extends Actor
     }    
     
     /**
-     * cancion de aparicion de marceline
+     * cancion de aparicion de marceline 
+     * cantara cuanto toque el rango establecido
+     * de la anchura y altura del mundo 
      */
     public void tocaCancion()
     {
         World mundo=getWorld();
         
-        
         if(this.getX() >= getWorld().getWidth() - 20)
         {
-        Greenfoot.playSound("Soy tu Problema - Marceline plus.wav");
+        Greenfoot.playSound("Marci.wav");
         }
         
+        if(this.getY() >= getWorld().getHeight() - 20)
+        {
+        Greenfoot.playSound("Marci.wav");
+        }
+        
+        }
     }
-    
-}

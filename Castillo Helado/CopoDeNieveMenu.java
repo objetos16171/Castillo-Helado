@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CopoDeNieveMenu here.
+ * Es una paqueña representacion para simular una nevada
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Soto Avila Csf+fnolins, Jose Emmanuel Escobar Chavez  
+ * @3 de noviembre el 2026
  */
 public class CopoDeNieveMenu extends Actor
 {
     private int velCaida=2;
     /**
-     * Act - do whatever the copoDeNieve wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * El método act se encarga de girar el copo de nieve y si llega a la parter
+     * inferior del mundo para así repetidamente .
      */
-    public void act() 
+    public void act()
     {
         turn(-2);
         setLocation( getX() , getY()+ velCaida );

@@ -27,6 +27,7 @@ public class MyWorld2 extends World
     public Counter tiempoInmune;
     public final int TIEMPO = 30;
     private perdiste Perdiste;
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.wav");
     
     
     
@@ -60,7 +61,7 @@ public class MyWorld2 extends World
      */
     public void act()
     {
-            
+        musicaDeFondo.playLoop();    
         lluviaPinguino();   
         dulceMentita();
         dulceSenorP();
@@ -120,6 +121,7 @@ public class MyWorld2 extends World
         if(contadorVidas.getValue()==0){
             Perdiste = new perdiste();
             addObject( Perdiste, getWidth()/2 , getHeight()/2  );
+            quitaMusica();
             Greenfoot.stop();
         }
     }
@@ -265,5 +267,21 @@ public class MyWorld2 extends World
         
     }
    
+    /**
+     * Este método se encarga quitar la musica cuando se presiona el boton
+     * detener de la interfaz de greenfoot
+     */
+    public void stopped()
+    {
+        musicaDeFondo.stop();
+    }
+    
+     /**
+     * Este método detiene el fondo musical  
+     */
+    public void quitaMusica()
+    {
+        musicaDeFondo.stop();
+    }
    }
 

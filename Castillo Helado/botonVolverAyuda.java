@@ -47,8 +47,9 @@ public class botonVolverAyuda extends Actor
     {
          if (Greenfoot.mouseClicked(this))
          {
-             World menu = getWorld();
-             Greenfoot.setWorld(new Menu());        
+             
+             Greenfoot.setWorld(new Menu());   
+                                      
          }
         
     }

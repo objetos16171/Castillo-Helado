@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class paredDeHielo here.
+ * Esta clase se utiliza como finalidad estetica del proyecto
+ * para acomodar los contadores o hacer una barra de puntuación
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Carolina, Escobar Chavéz Jose Emmanuel 
+ * @version 4 de noviembre del 2016
  */
 public class paredDeHielo extends Actor
 {
@@ -14,8 +15,6 @@ public class paredDeHielo extends Actor
      */
     public void act() 
     {
-        World mundo = getWorld();
         getWorld().setPaintOrder(Pinguino.class,Princesa.class,ReyHelado.class,Counter.class,paredDeHielo.class);
-        // Add your action code here.
     }    
 }

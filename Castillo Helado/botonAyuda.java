@@ -15,13 +15,10 @@ public class botonAyuda extends Actor
      */
     public void act() 
     {
-        setImage(gifAyuda.getCurrentImage());
-         if (Greenfoot.mouseClicked(this))
-         {
-             World menu = getWorld();
-             Greenfoot.setWorld(new Ayuda());
-             
-            }
+         setImage(gifAyuda.getCurrentImage());
+         
+         
+         
       
         // Add your action code here.
     }    

@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-   private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
+    botonJugar botonjugar;
+    botonAyuda botonayuda;
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     /**
      * Constructor for objects of class Menu.
      * 
@@ -16,7 +18,10 @@ public class Menu extends World
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(700, 500, 1); 
+        botonjugar = new botonJugar();
+        botonayuda = new botonAyuda();
         prepare();
     }
     
@@ -24,7 +29,21 @@ public class Menu extends World
     {
          setPaintOrder( botonAyuda.class ,botonJugar.class,tituloMenu.class, copoElegante.class , MarcelineMenu.class , CopoDeNieveMenu.class , ReyHeladoMenu.class, NubeMenu.class );
          nevada();
-        
+         
+         
+         if (Greenfoot.mouseClicked(botonayuda))
+         {
+            musicaDeFondo.stop(); 
+            Greenfoot.setWorld(new Ayuda());
+         }
+         
+         if (Greenfoot.mouseClicked(botonjugar))
+         {
+             musicaDeFondo.stop();
+             Greenfoot.setWorld(new MyWorld());
+             
+         }
+
     }
     
     /**
@@ -39,40 +58,23 @@ public class Menu extends World
         }
     }
     
-    /** 
-     * Metodo que controla el inicio de la música 
-     */
-    
-    public void started()
-    {
-        musicaDeFondo.playLoop();
-       
-        
-        
-    }
-    
-    public void stopped()
-    {
-        musicaDeFondo.stop();
-       
-        
-        
-    }
-    
     /**
      * Metodo que detiene el fondo musical
      */
-    public void quitaMusica()
+    public void stopped()
     {
         musicaDeFondo.stop();        
     }
     
-    /**
-     * Se crea varios objetos de tipo NubeMenu para 
-     * crear una animacion de varias nubes utilizando
-     * varios numeros aleatorios.
-     */
-
+    public void started()
+    {
+        musica();
+    }
+    
+    public void musica()
+    {
+        musicaDeFondo.play();
+    }
 
     /**
      * Prepare the world for the start of the program.
@@ -82,9 +84,9 @@ public class Menu extends World
     {
         ReyHeladoMenu reyheladomenu3 = new ReyHeladoMenu();
         addObject(reyheladomenu3,99,414);
-        botonAyuda botonayuda = new botonAyuda();
+        
         addObject(botonayuda,120, 100);
-        botonJugar botonjugar = new botonJugar();
+        
         addObject(botonjugar,220,170);
         MarcelineMenu marcelinemenu = new MarcelineMenu();
         addObject(marcelinemenu,487,259);

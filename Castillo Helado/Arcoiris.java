@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Arcoiris here.
+ * Clase que se encarga de ser enemigo del rey helado
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author SotoAvila Carolina
+ * @version  3 de noviembre del 2016
  */
 public class Arcoiris extends Actor
 {
@@ -24,7 +24,7 @@ public class Arcoiris extends Actor
     }
     
     /**
-     * Se encargara de quitarle puntos de vida al rey helado volando por los aires a lo ancho del mundo y bajando y subiendo en el eje de las y 
+     * Se encargara de quitarle puntos de vida al rey helado volando por los aires a lo ancho del mundo y bajando y subiendo en el eje de las Y 
      */
     public void ataca()
     {

@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MarcelineMenu here.
+ * Clase se encarga unicamente para la presentación del proyecto.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Soto Avila Carolina, José Emmanuel Escobar Chavez 
+ * @version 4 de noviembre del 2016
  */
 public class MarcelineMenu extends Actor
 {
     private GifImage gifMarcelineMenu = new GifImage("marcelineBajo.gif");
-     private int direccion=3;
+    private int direccion=3;
 
      /**
-     * Act - do whatever the MarcelineMenu wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * En el act unimente se establecio una imagen gif 
+     * cambia de direccion cuand ves que llega al limite o al principio del mundo
      */
     public void act() 
     {
