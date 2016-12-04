@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Dec 04 13:35:26 CST 2016
+#Sun Dec 04 13:38:02 CST 2016
 target49.type=ClassTarget
 target24.type=ClassTarget
 class.NubeMenu.superclass=greenfoot.Actor
@@ -128,6 +128,7 @@ target2.width=80
 dependency11.to=Counter
 target14.height=50
 target2.showInterface=false
+class.botonCreditos.superclass=greenfoot.Actor
 target23.typeParameters=
 target37.showInterface=false
 class.botonJugar.superclass=greenfoot.Actor
@@ -672,6 +673,7 @@ target38.showInterface=false
 dependency7.type=UsesDependency
 dependency64.to=Finn
 target6.typeParameters=
+class.botonCreditos.image=creditosBoton.gif
 class.princesaEsqueleto.superclass=Princesa
 target26.name=GifImage
 target27.y=190

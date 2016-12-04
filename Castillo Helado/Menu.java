@@ -10,6 +10,7 @@ public class Menu extends World
 {
     botonJugar botonjugar;
     botonAyuda botonayuda;
+    botonCreditos botoncreditos;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
     /**
      * Constructor for objects of class Menu.
@@ -22,12 +23,13 @@ public class Menu extends World
         super(700, 500, 1); 
         botonjugar = new botonJugar();
         botonayuda = new botonAyuda();
+        botoncreditos = new botonCreditos();
         prepare();
     }
     
         public void act()
     {
-         setPaintOrder( botonAyuda.class ,botonJugar.class,tituloMenu.class, copoElegante.class , MarcelineMenu.class , CopoDeNieveMenu.class , ReyHeladoMenu.class, NubeMenu.class );
+         setPaintOrder( botonAyuda.class ,botonJugar.class,botonCreditos.class,tituloMenu.class, copoElegante.class , MarcelineMenu.class , CopoDeNieveMenu.class , ReyHeladoMenu.class, NubeMenu.class );
          nevada();
          
          
@@ -43,7 +45,14 @@ public class Menu extends World
              Greenfoot.setWorld(new MyWorld());
              
          }
-
+         
+         if (Greenfoot.mouseClicked(botoncreditos))
+         {
+             musicaDeFondo.stop();
+             Greenfoot.setWorld(new Creditos());
+             
+         }
+         
     }
     
     /**
@@ -86,8 +95,9 @@ public class Menu extends World
         addObject(reyheladomenu3,99,414);
         
         addObject(botonayuda,120, 100);
-        
         addObject(botonjugar,220,170);
+        addObject(botoncreditos,320,240);
+        
         MarcelineMenu marcelinemenu = new MarcelineMenu();
         addObject(marcelinemenu,487,259);
 
@@ -109,6 +119,7 @@ public class Menu extends World
         addObject(titulomenu,457,360);
         copoElegante copoelegante = new copoElegante();
         addObject(copoelegante,351,262);
+        
 
     }
 }
