@@ -24,11 +24,12 @@ public class MyWorld2 extends World
     //inmunidad
     private Marceline marceline;
     private SimpleTimer relojMarceline;
-    public Counter tiempoInmune;
-    public final int TIEMPO = 30;
+    private Counter tiempoInmune;
+    private final int TIEMPO = 30;
     private perdiste Perdiste;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.wav");
     
+   
     
     
     /**

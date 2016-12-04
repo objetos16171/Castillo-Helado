@@ -200,13 +200,13 @@ public class MyWorld3 extends World
     private void prepare()
     {
         reyhelado3 = new ReyHelado3();
-        addObject(reyhelado3, getWidth()/2 , getHeight()/2 );
+        addObject(reyhelado3, getWidth()-450 , getHeight()/2 );
         plataforma2 plataforma2 = new plataforma2();
         addObject(plataforma2,100,350);
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
         plataforma2 plataforma4 = new plataforma2();
-        addObject(plataforma4,350,350);
+        addObject(plataforma4,350,100);
         
     }
    
