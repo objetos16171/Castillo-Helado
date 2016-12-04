@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ayuda extends World
 {
     private GreenfootSound musicaDeFondo = new GreenfootSound ("Everybody Wants To Rule The World Instrumental Version.mp3");
-    botonVolverAyuda botonayuda;
+    private botonVolverAyuda botonayuda;
       /**
      * Constructor for objects of class Ayuda.
      * 

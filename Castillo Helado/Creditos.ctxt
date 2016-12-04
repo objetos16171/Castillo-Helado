@@ -1,7 +1,16 @@
 #BlueJ class context
 comment0.target=Creditos
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Creditos\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Esta\ clase\ muestra\ los\ creditos\ generales\ del\ juego\r\n\ \r\n\ @Soto\ Avila\ Carolina,\ Escobar\ Chavez\ Jose\ Emmanuel\ \r\n\ @3\ de\ Noviembre\ del\ 2016\ \r\n
 comment1.params=
 comment1.target=Creditos()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Creditos.\r\n\ \r\n
-numComments=2
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ El\ metodo\ act\ para\ esta\ clase\ se\ encargar\u00E1\ de\ poner\ la\ musica\ de\ fondo\r\n\ y\ regresar\ al\ menu\ principal\ mediante\ el\ mouse\ y\ se\ quitar\u00E1\ el\ fondo\r\n\ musical.\r\n
+comment3.params=
+comment3.target=void\ stopped()
+comment3.text=\r\n\ Detiene\ el\ sonido\ si\ se\ presiono\ el\ boton\ de\ pausa\ en\ la\ interfaz\ de\ greenfoot\r\n
+comment4.params=
+comment4.target=void\ prepare()
+comment4.text=\r\n\ metodo\ para\ agregar\ boton\ de\ ayuda\r\n
+numComments=5
