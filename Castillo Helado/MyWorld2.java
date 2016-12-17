@@ -27,7 +27,7 @@ public class MyWorld2 extends World
     private Counter tiempoInmune;
     private final int TIEMPO = 30;
     private perdiste Perdiste;
-    private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.wav");
+    private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.mp3");
     
    
     
@@ -42,15 +42,15 @@ public class MyWorld2 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
-        contadorPuntos = new Counter("PUNTOS: ");
-        contadorVidas = new Counter("VIDAS: ");
-        tiempoInmune = new Counter("INMUNIDAD: ");
+        contadorPuntos = new Counter("PUNTOS:");
+        contadorVidas = new Counter("VIDAS:");
+        tiempoInmune = new Counter("INMUNIDAD:");
         tiempoInmune.setValue(TIEMPO);
         removeObject(tiempoInmune);
-        addObject(contadorPuntos,631,27);
+        addObject(contadorPuntos,625,40);        
+        addObject(contadorVidas,480,40);
         contadorPuntos.setValue( valorContadorAnterior );
         contadorVidas.setValue( valorVidaAnterior );
-        addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
         marceline = new Marceline();
@@ -111,7 +111,10 @@ public class MyWorld2 extends World
      */
     public void decrementaVidas()
     {
+        if(contadorVidas.getValue() != -1)
+        {
         contadorVidas.add(-1);
+        }
     }
     
     /**
@@ -183,10 +186,10 @@ public class MyWorld2 extends World
      */
     public void inmune()
     {  
-         if( contadorPuntos.getValue()>= 100 && contadorPuntos.getValue()<= 149   )  
+         if( contadorPuntos.getValue()>= 250 && contadorPuntos.getValue()<= 299   )  
             {
               addObject(marceline,500,300);
-              addObject(tiempoInmune,250,80);
+              addObject(tiempoInmune,295,76);              
               this.removeObject(menta);
               this.removeObject(senorP);
               this.removeObject(pan);
@@ -205,7 +208,7 @@ public class MyWorld2 extends World
              dulcePaleta();
          }     
          
-         if((contadorPuntos.getValue() >= 150))
+         if((contadorPuntos.getValue() >= 300))
          {
              this.removeObject(marceline);
              this.removeObject(tiempoInmune);    
@@ -265,6 +268,9 @@ public class MyWorld2 extends World
         plataforma2 plataforma3 = new plataforma2();
         addObject(plataforma3,600,350);
         
+        
+        paredDeHielo paredDeHielo = new  paredDeHielo();
+        addObject(paredDeHielo,545,40);
         
     }
    

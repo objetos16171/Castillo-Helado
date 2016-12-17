@@ -254,7 +254,7 @@ public class ReyHelado3 extends Actor
      public void Ganaste()
     {
         MyWorld3 mundo=(MyWorld3)getWorld();
-        if (getY() < getWorld().getHeight()-490) {
+        if (mundo.regresaPuntuacion() >= 600) {
                 
                 Greenfoot.setWorld(new Ganador()); 
                                                 

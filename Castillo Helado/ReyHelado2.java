@@ -246,7 +246,7 @@ public class ReyHelado2 extends Actor
       public void siguienteNivel()
     {
         MyWorld2 mundo=(MyWorld2)getWorld();
-        if (getY() < getWorld().getHeight()-490) {
+        if (mundo.regresaPuntuacion() >= 400) {
             if (nivel == 2) {
                 nivel = 3;
                 mundo.quitaMusica();

@@ -40,10 +40,10 @@ public class MyWorld3 extends World
         super(700, 500, 1); 
         contadorPuntos = new Counter("PUNTOS: ");
         contadorVidas = new Counter("VIDAS: ");
-        addObject(contadorPuntos,631,27);
+        addObject(contadorPuntos,625,40);        
+        addObject(contadorVidas,480,40);
         contadorPuntos.setValue( valorContadorAnterior );
         contadorVidas.setValue( valorVidaAnterior );
-        addObject(contadorVidas,500,27);
         reloj = new SimpleTimer();
         finn = new Finn();
         arcoiris = new Arcoiris();
@@ -134,7 +134,9 @@ public class MyWorld3 extends World
      */
     public void decrementaVidas()
     {
+        if(contadorVidas.getValue() != -1){
         contadorVidas.add(-1);
+        }
     }
     
     /**
@@ -207,6 +209,8 @@ public class MyWorld3 extends World
         addObject(plataforma3,600,350);
         plataforma2 plataforma4 = new plataforma2();
         addObject(plataforma4,350,100);
+        paredDeHielo paredDeHielo = new  paredDeHielo();
+        addObject(paredDeHielo,545,40);
         
     }
    

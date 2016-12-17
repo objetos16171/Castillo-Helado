@@ -40,11 +40,12 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 500, 1); 
         Greenfoot.setWorld(new Menu());
-        contadorPuntos = new Counter("PUNTOS: ");
-        addObject(contadorPuntos,631,27);
-        contadorVidas = new Counter("VIDAS: ");
+        contadorPuntos = new Counter("PUNTOS:");
+        addObject(contadorPuntos,625,40);        
+        contadorVidas = new Counter("VIDAS:");
+        addObject(contadorVidas,480,40);
         contadorVidas.setValue(5);
-        addObject(contadorVidas,500,27);
+
         reloj = new SimpleTimer();
         arcoiris = new Arcoiris();
         finn = new Finn();
@@ -212,7 +213,10 @@ public class MyWorld extends World
      */
     public void decrementaVidas()
     {
+        if(contadorVidas.getValue() != -1)
+        {
         contadorVidas.add(-1);
+        }
     }
     
     /**
@@ -280,6 +284,9 @@ public class MyWorld extends World
 
         plataforma2 plataforma22 = new plataforma2();
         addObject(plataforma22,609,395);
+        
+        paredDeHielo paredDeHielo = new  paredDeHielo();
+        addObject(paredDeHielo,545,40);
 
     }
 }
