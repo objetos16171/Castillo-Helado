@@ -28,6 +28,8 @@ public class MyWorld3 extends World
      private princesaMora princesamora;
      private princesaFantasma princesafantasma;
      private GreenfootSound musicaDeFondo = new GreenfootSound ("What am I to you - Adventure Time Finn the human Instrumental Song Arrangement.mp3");
+     
+    
     
     /**
      * Constructor for objects of class MyWorld3.
@@ -51,6 +53,7 @@ public class MyWorld3 extends World
         princesamusculos = new princesaMusculos();
         princesamora = new princesaMora();
         princesafantasma = new princesaFantasma();
+        
         prepare();
     }
     
@@ -64,9 +67,11 @@ public class MyWorld3 extends World
         dulceMentita();
         dulcePaleta();
         ataqueFinn();
+    
         ataqueArcoiris();
-        juegoPerdido();
         aparecePrincesa();
+        juegoPerdido();
+
         
     }
     
@@ -212,8 +217,13 @@ public class MyWorld3 extends World
         paredDeHielo paredDeHielo = new  paredDeHielo();
         addObject(paredDeHielo,545,40);
         
+        paredDeHielo2 paredDeHielo2 = new  paredDeHielo2();
+        addObject(paredDeHielo2,80,40);
+        
+        Label label = new Label ("NIVEL 3", 24 );
+        addObject( label , 93 , 40 );
     }
-   
+    
     /**
      * Actor enemigo que aparecera cuando el rey helado 
      * este en la primer plataforma
@@ -259,4 +269,5 @@ public class MyWorld3 extends World
     {
         musicaDeFondo.stop();
     }
+    
    }

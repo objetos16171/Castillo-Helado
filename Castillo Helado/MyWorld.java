@@ -45,9 +45,9 @@ public class MyWorld extends World
         contadorVidas = new Counter("VIDAS:");
         addObject(contadorVidas,480,40);
         contadorVidas.setValue(5);
-
         reloj = new SimpleTimer();
         arcoiris = new Arcoiris();
+        dulceprincesa = new dulcePrincesa();
         finn = new Finn();
         prepare();
     }
@@ -81,12 +81,14 @@ public class MyWorld extends World
      */
     public void ayudaAlRey()
     {   
-        if(contadorPuntos.getValue() >= 90 && contadorPuntos.getValue() <= 99    )
+        if( (contadorPuntos.getValue() >= 90 && contadorPuntos.getValue() <= 99 )    
+              
+        )
         {
-            dulceprincesa = new dulcePrincesa();
             addObject(dulceprincesa, getWidth()-20 , getHeight()-30 );
             Greenfoot.playSound("risaPrincesa.wav");
-        }   
+        }
+        
     }
     
     /**
@@ -287,6 +289,12 @@ public class MyWorld extends World
         
         paredDeHielo paredDeHielo = new  paredDeHielo();
         addObject(paredDeHielo,545,40);
+        
+        paredDeHielo2 paredDeHielo2 = new  paredDeHielo2();
+        addObject(paredDeHielo2,80,40);
+        
+        Label label = new Label ("NIVEL 1", 24 );
+        addObject( label , 93 , 40 );
 
     }
 }

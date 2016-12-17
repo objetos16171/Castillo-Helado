@@ -28,7 +28,7 @@ public class MyWorld2 extends World
     private final int TIEMPO = 30;
     private perdiste Perdiste;
     private GreenfootSound musicaDeFondo = new GreenfootSound ("Grassland Overworld.mp3");
-    
+    private paredDeHielo2 paredDeHielo2otra ;
    
     
     
@@ -54,6 +54,7 @@ public class MyWorld2 extends World
         reloj = new SimpleTimer();
         relojMarceline = new SimpleTimer();
         marceline = new Marceline();
+        paredDeHielo2otra = new  paredDeHielo2();
         prepare();
     }
     
@@ -189,7 +190,10 @@ public class MyWorld2 extends World
          if( contadorPuntos.getValue()>= 250 && contadorPuntos.getValue()<= 299   )  
             {
               addObject(marceline,500,300);
-              addObject(tiempoInmune,295,76);              
+              addObject(tiempoInmune,270,40);
+              addObject(paredDeHielo2otra,270,40);
+        
+              
               this.removeObject(menta);
               this.removeObject(senorP);
               this.removeObject(pan);
@@ -202,6 +206,7 @@ public class MyWorld2 extends World
          {
              this.removeObject(marceline);
              this.removeObject(tiempoInmune);    
+             this.removeObject(paredDeHielo2otra);    
              dulceMentita();
              dulceSenorP();
              dulcePanDeCanela();
@@ -211,7 +216,8 @@ public class MyWorld2 extends World
          if((contadorPuntos.getValue() >= 300))
          {
              this.removeObject(marceline);
-             this.removeObject(tiempoInmune);    
+             this.removeObject(tiempoInmune); 
+             this.removeObject(paredDeHielo2otra);    
              dulceMentita();
              dulceSenorP();
              dulcePanDeCanela();
@@ -271,6 +277,14 @@ public class MyWorld2 extends World
         
         paredDeHielo paredDeHielo = new  paredDeHielo();
         addObject(paredDeHielo,545,40);
+        
+        
+        paredDeHielo2 paredDeHielo2 = new  paredDeHielo2();
+        addObject(paredDeHielo2,80,40);
+        
+      
+        Label label = new Label ("NIVEL 2", 24 );
+        addObject( label , 93 , 40 );
         
     }
    

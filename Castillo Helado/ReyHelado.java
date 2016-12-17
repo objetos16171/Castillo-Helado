@@ -208,7 +208,7 @@ public class ReyHelado extends Actor
         if(isTouching(Arcoiris.class))
         {
             mundo.decrementaVidas();
-            this.setLocation( this.getX()+200 , this.getY() );
+            this.setLocation( mundo.getHeight()-10 , this.getY() );
             Greenfoot.playSound("si yo no hice nada.wav");
         }
         
